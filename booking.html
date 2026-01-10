@@ -173,26 +173,66 @@
                         <h3>Rosewood Condo</h3>
                         <div class="property-location">📍 Woodlands</div>
                     </div>
-                    <div class="property-details">
-                        <p class="property-address">15 Rosewood Drive, Singapore 737939</p>
-                        <p class="property-price">SGD$1,100 <span class="per-month">per month</span></p>
-                        
-                        <div class="features-section">
-                            <h4>Key Features:</h4>
-                            <div class="features-list">
-                                <span class="feature-badge">🏊 Swimming Pool</span>
-                                <span class="feature-badge">🛍️ Shopping</span>
-                                <span class="feature-badge">🚇 Near Subway</span>
-                                <span class="feature-badge">❄️ Air Conditioner</span>
+                    
+                    <!-- Property Tabs -->
+                    <div class="property-tabs">
+                        <button class="property-tab-btn active" onclick="switchTab(event, 'rosewood-offer')">✨ Offer</button>
+                        <button class="property-tab-btn" onclick="switchTab(event, 'rosewood-photos')">📸 Photos</button>
+                        <button class="property-tab-btn" onclick="switchTab(event, 'rosewood-details')">📋 Details</button>
+                    </div>
+
+                    <!-- Offer Tab -->
+                    <div id="rosewood-offer" class="property-tab-content active">
+                        <div class="offer-banner">
+                            <div class="offer-icon">🎉</div>
+                            <div class="offer-text">
+                                <h4>Special Offer</h4>
+                                <p>One-time SG$60 discount on this property</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="contact-section">
-                            <p><strong>Contact:</strong></p>
-                            <p>📧 contact@uhomes.com</p>
-                            <p>📱 +65 9123 4567</p>
+                    <!-- Photos Tab -->
+                    <div id="rosewood-photos" class="property-tab-content">
+                        <div class="property-photos-grid">
+                            <div class="photo-item" onclick="openPhotoModal('https://media.uhzcdn.com/image/1395/01JDA3EA13JC5EFCWN8XX6JESP_z.webp', 'Master Room')">
+                                <img src="https://media.uhzcdn.com/image/1395/01JDA3EA13JC5EFCWN8XX6JESP_z.webp" alt="Master Room">
+                                <p>Master Room</p>
+                            </div>
+                            <div class="photo-item" onclick="openPhotoModal('https://media.uhzcdn.com/image/1391/01JDA32GRP03GZ45RDNEZW0ZSP_z.webp', 'Common Room 1')">
+                                <img src="https://media.uhzcdn.com/image/1391/01JDA32GRP03GZ45RDNEZW0ZSP_z.webp" alt="Common Room 1">
+                                <p>Common Room 1</p>
+                            </div>
+                            <div class="photo-item" onclick="openPhotoModal('https://media.uhzcdn.com/image/1391/01JDA3ECNFBFKB4P56C90VSWC2_z.webp', 'Common Room 2')">
+                                <img src="https://media.uhzcdn.com/image/1391/01JDA3ECNFBFKB4P56C90VSWC2_z.webp" alt="Common Room 2">
+                                <p>Common Room 2</p>
+                            </div>
                         </div>
-                        <button onclick="openBookingModal(1100)" class="book-now-btn">Book Now</button>
+                    </div>
+
+                    <!-- Details Tab -->
+                    <div id="rosewood-details" class="property-tab-content active">
+                        <div class="property-details">
+                            <p class="property-address">15 Rosewood Drive, Singapore 737939</p>
+                            <p class="property-price">SGD$1,100 <span class="per-month">per month</span></p>
+                            
+                            <div class="features-section">
+                                <h4>Key Features:</h4>
+                                <div class="features-list">
+                                    <span class="feature-badge">🏊 Swimming Pool</span>
+                                    <span class="feature-badge">🛍️ Shopping</span>
+                                    <span class="feature-badge">🚇 Near Subway</span>
+                                    <span class="feature-badge">❄️ Air Conditioner</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-section">
+                                <p><strong>Contact:</strong></p>
+                                <p>📧 contact@uhomes.com</p>
+                                <p>📱 +65 9123 4567</p>
+                            </div>
+                            <button onclick="openBookingModal(1100)" class="book-now-btn">Book Now</button>
+                        </div>
                     </div>
                 </div>
 
@@ -908,6 +948,15 @@
         </div>
     </div>
 
+    <!-- Photo Modal -->
+    <div id="photoModal" class="photo-modal">
+        <div class="photo-modal-content">
+            <div class="photo-modal-title" id="photoModalTitle"></div>
+            <button class="photo-modal-close" onclick="closePhotoModal()">✕</button>
+            <img id="photoModalImage" src="" alt="Property Photo">
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -1164,6 +1213,63 @@
                 closeThankYouModal();
             }
         }
+
+        // Property Tab Switching
+        function switchTab(event, tabName) {
+            event.preventDefault();
+            
+            // Hide all tab contents in the same property card
+            const card = event.target.closest('.property-card');
+            const tabContents = card.querySelectorAll('.property-tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tab buttons in the same property card
+            const tabBtns = card.querySelectorAll('.property-tab-btn');
+            tabBtns.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show the selected tab
+            const selectedTab = card.querySelector('#' + tabName);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+            
+            // Mark the clicked button as active
+            event.target.classList.add('active');
+        }
+
+        // Photo Modal Functions
+        function openPhotoModal(imageUrl, title) {
+            const modal = document.getElementById('photoModal');
+            const modalImg = document.getElementById('photoModalImage');
+            const modalTitle = document.getElementById('photoModalTitle');
+            
+            modalImg.src = imageUrl;
+            modalTitle.textContent = title;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePhotoModal() {
+            const modal = document.getElementById('photoModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close photo modal when clicking outside the image
+        document.addEventListener('DOMContentLoaded', function() {
+            const photoModal = document.getElementById('photoModal');
+            if (photoModal) {
+                photoModal.addEventListener('click', function(event) {
+                    if (event.target === photoModal) {
+                        closePhotoModal();
+                    }
+                });
+            }
+        });
     </script>
 
     <script src="styles.js"></script>
