@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Student Housing - TravelMate Singapore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">TravelMate</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="student-housing.html">Student Housing</a></li>
+                <li><a href="budget-hotels.html">Budget Hotels</a></li>
+                <li><a href="short-term-stays.html">Short-Term Rentals (Cove)</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section for Booking -->
+    <section class="booking-hero">
+        <div class="hero-content">
+            <h1>Book Your Student Housing</h1>
+            <p>Explore and reserve your perfect accommodation in Singapore</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <h2>Available Student Housing Properties</h2>
+            <p class="section-intro">Browse through our 20 available student housing options and book your ideal accommodation</p>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <button class="filter-toggle-btn" onclick="toggleFilterPanel()">🔍 Filter Properties</button>
+                <div id="filterPanel" class="filter-panel hidden">
+                    <div class="filter-panel-header">
+                        <h3>Filter by:</h3>
+                        <button class="filter-close-btn" onclick="toggleFilterPanel()">✕</button>
+                    </div>
+                    <div class="filter-panel-content">
+                        <div class="filter-category">
+                            <h4>💰 Price Range (SGD)</h4>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="price-filter" value="600-800" onchange="applyFilters()"> $600 - $800
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="price-filter" value="800-1000" onchange="applyFilters()"> $800 - $1,000
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="price-filter" value="1000-1100" onchange="applyFilters()"> $1,000 - $1,100
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="price-filter" value="1100-1300" onchange="applyFilters()"> $1,100 - $1,300
+                            </label>
+                        </div>
+
+                        <div class="filter-category">
+                            <h4>📍 Location</h4>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Woodlands" onchange="applyFilters()"> Woodlands
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Choa Chu Kang" onchange="applyFilters()"> Choa Chu Kang
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Clementi" onchange="applyFilters()"> Clementi
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Joo Chiat" onchange="applyFilters()"> Joo Chiat
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Bishan" onchange="applyFilters()"> Bishan
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Novena" onchange="applyFilters()"> Novena
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Cashew" onchange="applyFilters()"> Cashew
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Siglap" onchange="applyFilters()"> Siglap
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Bedok" onchange="applyFilters()"> Bedok
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Parkway Parade" onchange="applyFilters()"> Parkway Parade
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Jurong East" onchange="applyFilters()"> Jurong East
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Ang Mo Kio" onchange="applyFilters()"> Ang Mo Kio
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Ubi" onchange="applyFilters()"> Ubi
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Tampines" onchange="applyFilters()"> Tampines
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Marine Parade" onchange="applyFilters()"> Marine Parade
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Toa Payoh" onchange="applyFilters()"> Toa Payoh
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Serangoon" onchange="applyFilters()"> Serangoon
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Katong" onchange="applyFilters()"> Katong
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Bukit Merah" onchange="applyFilters()"> Bukit Merah
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="location-filter" value="Outram" onchange="applyFilters()"> Outram
+                            </label>
+                        </div>
+
+                        <div class="filter-category">
+                            <h4>✨ Key Features</h4>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="feature-filter" value="Swimming Pool" onchange="applyFilters()"> 🏊 Swimming Pool
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="feature-filter" value="Near Subway" onchange="applyFilters()"> 🚇 Near Subway
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="feature-filter" value="Air Conditioner" onchange="applyFilters()"> ❄️ Air Conditioner
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="feature-filter" value="Gym" onchange="applyFilters()"> 🏋️ Gym
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="feature-filter" value="Shopping" onchange="applyFilters()"> 🛍️ Shopping
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="feature-filter" value="Security" onchange="applyFilters()"> 🔒 Security
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-panel-footer">
+                        <button onclick="resetFilters()" class="btn-reset-filters">Reset Filters</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Properties Grid -->
+            <div class="properties-grid">
+                <!-- Property 1: Rosewood Condo -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Rosewood Condo</h3>
+                        <div class="property-location">📍 Woodlands</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">15 Rosewood Drive, Singapore 737939</p>
+                        <p class="property-price">SGD$1,100 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🏊 Swimming Pool</span>
+                                <span class="feature-badge">🛍️ Shopping</span>
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4567</p>
+                        </div>
+                        <button onclick="openBookingModal(1100)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 2: The Warren -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>The Warren</h3>
+                        <div class="property-location">📍 Choa Chu Kang</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">37 Choa Chu Kang Loop, Singapore 689675</p>
+                        <p class="property-price">SGD$1,050 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">🏋️ Gym</span>
+                                <span class="feature-badge">🏊 Swimming Pool</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4568</p>
+                        </div>
+                        <button onclick="openBookingModal(1050)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 3: Maysprings -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Maysprings</h3>
+                        <div class="property-location">📍 Clementi</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">2 Petir Road, Singapore 678265</p>
+                        <p class="property-price">SGD$700 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🏋️ Gym</span>
+                                <span class="feature-badge">🧺 Laundry</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4569</p>
+                        </div>
+                        <button onclick="openBookingModal(700)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 4: The Madeira -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>The Madeira</h3>
+                        <div class="property-location">📍 Joo Chiat</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">321 Joo Chiat Place, Singapore 427717</p>
+                        <p class="property-price">SGD$1,280 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🏊 Swimming Pool</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🛍️ Shopping</span>
+                                <span class="feature-badge">🔒 Security</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4570</p>
+                        </div>
+                        <button onclick="openBookingModal(1280)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 5: Bishan Park Condominium -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Bishan Park Condominium</h3>
+                        <div class="property-location">📍 Bishan</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">654 Bright Hill Road, Singapore 574117</p>
+                        <p class="property-price">SGD$800 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🏊 Swimming Pool</span>
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🏋️ Gym</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4571</p>
+                        </div>
+                        <button onclick="openBookingModal(800)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 6: Ivory Heights -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Ivory Heights</h3>
+                        <div class="property-location">📍 Novena</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">987 Novena Drive, Singapore 307506</p>
+                        <p class="property-price">SGD$1,040 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🛍️ Shopping</span>
+                                <span class="feature-badge">🏋️ Gym</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4572</p>
+                        </div>
+                        <button onclick="openBookingModal(1040)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 7: Cashew Heights -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Cashew Heights</h3>
+                        <div class="property-location">📍 Cashew</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">147 Cashew Road, Singapore 679024</p>
+                        <p class="property-price">SGD$690 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🧺 Laundry</span>
+                                <span class="feature-badge">🔒 Security</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4573</p>
+                        </div>
+                        <button onclick="openBookingModal(690)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 8: Lagoon View -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Lagoon View</h3>
+                        <div class="property-location">📍 Siglap</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">258 Siglap Road, Singapore 456123</p>
+                        <p class="property-price">SGD$850 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🏊 Swimming Pool</span>
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🏋️ Gym</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4574</p>
+                        </div>
+                        <button onclick="openBookingModal(850)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 9: Eastpoint Green -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Eastpoint Green</h3>
+                        <div class="property-location">📍 Bedok</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">369 Bedok Road, Singapore 469411</p>
+                        <p class="property-price">SGD$890 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🛍️ Shopping</span>
+                                <span class="feature-badge">🧺 Laundry</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4575</p>
+                        </div>
+                        <button onclick="openBookingModal(890)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 10: Aquarius by the Park -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Aquarius by the Park</h3>
+                        <div class="property-location">📍 Parkway Parade</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">475 East Coast Terrace, Singapore 428987</p>
+                        <p class="property-price">SGD$1,280 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🏊 Swimming Pool</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🛍️ Shopping</span>
+                                <span class="feature-badge">🔒 Security</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4576</p>
+                        </div>
+                        <button onclick="openBookingModal(1280)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 11: The Meyer Place -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>The Meyer Place</h3>
+                        <div class="property-location">📍 Jurong East</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">582 Jurong East Street 32, Singapore 600582</p>
+                        <p class="property-price">SGD$1,000 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🛍️ Shopping</span>
+                                <span class="feature-badge">🏋️ Gym</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4577</p>
+                        </div>
+                        <button onclick="openBookingModal(1000)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 12: Elias Green -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Elias Green</h3>
+                        <div class="property-location">📍 Ang Mo Kio</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">695 Ang Mo Kio Avenue 8, Singapore 569843</p>
+                        <p class="property-price">SGD$980 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🏋️ Gym</span>
+                                <span class="feature-badge">🔒 Security</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4578</p>
+                        </div>
+                        <button onclick="openBookingModal(980)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 13: 334 Ubi Ave 1 -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>334 Ubi Ave 1</h3>
+                        <div class="property-location">📍 Ubi</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">334 Ubi Avenue 1, Singapore 408623</p>
+                        <p class="property-price">SGD$690 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🧺 Laundry</span>
+                                <span class="feature-badge">🔒 Security</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4579</p>
+                        </div>
+                        <button onclick="openBookingModal(690)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 14: TRE Residences -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>TRE Residences</h3>
+                        <div class="property-location">📍 Tampines</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">803 Chai Chee Lane, Singapore 469034</p>
+                        <p class="property-price">SGD$1,280 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🏊 Swimming Pool</span>
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🛍️ Shopping</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4580</p>
+                        </div>
+                        <button onclick="openBookingModal(1280)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 15: Principal Garden -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Principal Garden</h3>
+                        <div class="property-location">📍 Marine Parade</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">924 East Coast Road, Singapore 459106</p>
+                        <p class="property-price">SGD$1,100 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🏊 Swimming Pool</span>
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🏋️ Gym</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4581</p>
+                        </div>
+                        <button onclick="openBookingModal(1100)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 16: Horizon Towers -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Horizon Towers</h3>
+                        <div class="property-location">📍 Toa Payoh</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">1036 Lorong 6 Toa Payoh, Singapore 310036</p>
+                        <p class="property-price">SGD$1,250 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🏊 Swimming Pool</span>
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🔒 Security</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4582</p>
+                        </div>
+                        <button onclick="openBookingModal(1250)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 17: The Clement Canopy -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>The Clement Canopy</h3>
+                        <div class="property-location">📍 Clementi</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">1147 Clementi Avenue 3, Singapore 129959</p>
+                        <p class="property-price">SGD$990 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🏋️ Gym</span>
+                                <span class="feature-badge">🧺 Laundry</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4583</p>
+                        </div>
+                        <button onclick="openBookingModal(990)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 18: 25 Woodleigh Close -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>25 Woodleigh Close</h3>
+                        <div class="property-location">📍 Serangoon</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">25 Woodleigh Close, Singapore 357840</p>
+                        <p class="property-price">SGD$1,278 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🏊 Swimming Pool</span>
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🛍️ Shopping</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4584</p>
+                        </div>
+                        <button onclick="openBookingModal(1278)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 19: Summerdale -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Summerdale</h3>
+                        <div class="property-location">📍 Katong</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">1258 Mountbatten Road, Singapore 437744</p>
+                        <p class="property-price">SGD$890 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🛍️ Shopping</span>
+                                <span class="feature-badge">🔒 Security</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4585</p>
+                        </div>
+                        <button onclick="openBookingModal(890)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Property 20: Caspian -->
+                <div class="property-card">
+                    <div class="property-header">
+                        <h3>Caspian</h3>
+                        <div class="property-location">📍 Bukit Merah</div>
+                    </div>
+                    <div class="property-details">
+                        <p class="property-address">1369 Bukit Merah View, Singapore 150369</p>
+                        <p class="property-price">SGD$700 <span class="per-month">per month</span></p>
+                        
+                        <div class="features-section">
+                            <h4>Key Features:</h4>
+                            <div class="features-list">
+                                <span class="feature-badge">🚇 Near Subway</span>
+                                <span class="feature-badge">❄️ Air Conditioner</span>
+                                <span class="feature-badge">🏋️ Gym</span>
+                                <span class="feature-badge">🧺 Laundry</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-section">
+                            <p><strong>Contact:</strong></p>
+                            <p>📧 contact@uhomes.com</p>
+                            <p>📱 +65 9123 4586</p>
+                        </div>
+                        <button onclick="openBookingModal(700)" class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Information Modal -->
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+            <button class="booking-modal-close" onclick="closeBookingModal()">&times;</button>
+            
+            <!-- Step 1: Booking Guide -->
+            <div id="step1" class="booking-step-container active">
+                <h2>Booking & Payment Guide</h2>
+                
+                <div class="booking-step">
+                    <h3>Step 1: Enter Details</h3>
+                    <p>Enter your name, Phone Number, Email Address, Number of Occupants and Duration of Stay (months).</p>
+                </div>
+
+                <div class="booking-step">
+                    <h3>Step 2: Submit Documents</h3>
+                    <p>Submit the required documents such as your passport number, Student Pass and emergency contact.</p>
+                </div>
+
+                <div class="booking-step">
+                    <h3>Step 3: Payment</h3>
+                    <p>Pay the full amount using any of the following payment method: bank transfer, PayNow or card payment.</p>
+                </div>
+
+                <div class="booking-step">
+                    <h3>Step 4: Final</h3>
+                    <p>Wait for further instructions in your email.</p>
+                </div>
+
+                <div class="booking-modal-buttons">
+                    <button onclick="goToStep(2)" class="btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Guest Information Form -->
+            <div id="step2" class="booking-step-container">
+                <h2>Guest Information</h2>
+                <form id="guestForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="guestName">Full Name *</label>
+                        <input type="text" id="guestName" name="guestName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestPhone">Phone Number *</label>
+                        <input type="tel" id="guestPhone" name="guestPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guestEmail">Email Address *</label>
+                        <input type="email" id="guestEmail" name="guestEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="occupants">Number of Occupants *</label>
+                        <select id="occupants" name="occupants" required>
+                            <option value="">Select number of occupants</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5+ People</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stayDuration">Duration of Stay (months) *</label>
+                        <input type="number" id="stayDuration" name="stayDuration" min="1" max="24" placeholder="e.g., 12" required>
+                    </div>
+                </form>
+                <div class="booking-modal-buttons">
+                    <button onclick="goToStep(1)" class="btn-back">Back</button>
+                    <button onclick="validateAndGoToStep(3)" class="btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Application Form -->
+            <div id="step3" class="booking-step-container">
+                <h2>Application Form</h2>
+                <form id="applicationForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="passport">Passport Number *</label>
+                        <input type="text" id="passport" name="passport" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentPass">Student Pass Document *</label>
+                        <input type="file" id="studentPass" name="studentPass" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+                        <small>Accepted formats: PDF, DOC, DOCX, JPG, PNG</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="emergencyContact">Emergency Contact (Name & Phone) *</label>
+                        <input type="text" id="emergencyContact" name="emergencyContact" placeholder="e.g., John Doe, +65 9123 4567" required>
+                    </div>
+                </form>
+                <div class="booking-modal-buttons">
+                    <button onclick="goToStep(2)" class="btn-back">Back</button>
+                    <button onclick="validateAndGoToStep(4)" class="btn-next">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Payment Page -->
+            <div id="step4" class="booking-step-container">
+                <h2>Payment</h2>
+                <div class="payment-section">
+                    <h3>Select Payment Method</h3>
+                    <p class="payment-info">Total Amount: <strong id="totalAmount">SGD$1,100</strong></p>
+                    
+                    <div class="payment-methods">
+                        <label class="payment-option">
+                            <input type="radio" name="paymentMethod" value="bank-transfer" required>
+                            <div class="payment-option-content">
+                                <h4>💳 Bank Transfer</h4>
+                                <p>Direct bank transfer to our account</p>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-option">
+                            <input type="radio" name="paymentMethod" value="paynow" required>
+                            <div class="payment-option-content">
+                                <h4>📱 PayNow</h4>
+                                <p>Fast local transfer using PayNow (Singapore)</p>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-option">
+                            <input type="radio" name="paymentMethod" value="card" required>
+                            <div class="payment-option-content">
+                                <h4>💰 Card Payment</h4>
+                                <p>Visa, Mastercard, or American Express</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="booking-modal-buttons">
+                    <button onclick="goToStep(3)" class="btn-back">Back</button>
+                    <button onclick="completeBooking()" class="btn-done">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="booking-modal">
+        <div class="booking-modal-content thank-you-content">
+            <div class="thank-you-message">
+                <div class="success-icon">✓</div>
+                <h2>Thank You for Booking!</h2>
+                <p>Your booking has been successfully submitted.</p>
+                <p class="thank-you-subtitle">Please wait for further instructions in your email.</p>
+                <button onclick="closeThankYouModal()" class="btn-close-thank-you">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TravelMate. Your trusted guide for Singapore staycations and accommodation.</p>
+            <p>Making student life in Singapore affordable and enjoyable.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentPropertyPrice = 1100;
+
+        // Toggle filter panel
+        function toggleFilterPanel() {
+            const filterPanel = document.getElementById('filterPanel');
+            filterPanel.classList.toggle('hidden');
+        }
+
+        // Close filter panel when clicking outside
+        document.addEventListener('click', function(event) {
+            const filterSection = document.querySelector('.filter-section');
+            if (filterSection && !filterSection.contains(event.target)) {
+                const filterPanel = document.getElementById('filterPanel');
+                filterPanel.classList.add('hidden');
+            }
+        });
+
+        function openBookingModal(price) {
+            currentPropertyPrice = price || 1100;
+            document.getElementById('bookingModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            goToStep(1);
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function goToStep(stepNumber) {
+            // Hide all steps
+            const steps = document.querySelectorAll('.booking-step-container');
+            steps.forEach(step => step.classList.remove('active'));
+            
+            // Show selected step
+            document.getElementById('step' + stepNumber).classList.add('active');
+            
+            // Calculate payment if going to step 4 (Payment)
+            if (stepNumber === 4) {
+                calculatePaymentAmount();
+            }
+        }
+
+        function validateAndGoToStep(stepNumber) {
+            const currentStep = stepNumber - 1;
+            
+            if (currentStep === 2) {
+                const form = document.getElementById('guestForm');
+                if (form.checkValidity() === false) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+            } else if (currentStep === 3) {
+                const form = document.getElementById('applicationForm');
+                if (form.checkValidity() === false) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+            } else if (currentStep === 4) {
+                const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+                if (!paymentMethod) {
+                    alert('Please select a payment method');
+                    return;
+                }
+            }
+            
+            goToStep(stepNumber);
+        }
+
+        function calculatePaymentAmount() {
+            const stayDuration = parseInt(document.getElementById('stayDuration').value) || 1;
+            const totalAmount = currentPropertyPrice * stayDuration;
+            
+            document.getElementById('totalAmount').textContent = 'SGD$' + totalAmount.toLocaleString();
+        }
+
+        function completeBooking() {
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+            if (!paymentMethod) {
+                alert('Please select a payment method');
+                return;
+            }
+            
+            // Show thank you modal
+            document.getElementById('bookingModal').classList.remove('active');
+            document.getElementById('thankYouModal').classList.add('active');
+        }
+
+        function closeThankYouModal() {
+            document.getElementById('thankYouModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Filter functionality
+        function applyFilters() {
+            // Get all checked price filters
+            const priceChecks = Array.from(document.querySelectorAll('.price-filter:checked')).map(el => el.value);
+            
+            // Get all checked location filters
+            const locationChecks = Array.from(document.querySelectorAll('.location-filter:checked')).map(el => el.value);
+            
+            // Get all checked feature filters
+            const featureChecks = Array.from(document.querySelectorAll('.feature-filter:checked')).map(el => el.value);
+
+            const cards = document.querySelectorAll('.property-card');
+            
+            cards.forEach(card => {
+                let show = true;
+
+                // Price filter - show if any selected price range matches
+                if (priceChecks.length > 0) {
+                    const priceText = card.querySelector('.property-price').textContent;
+                    const price = parseInt(priceText.replace(/[^0-9]/g, ''));
+                    let priceMatches = false;
+                    
+                    priceChecks.forEach(priceRange => {
+                        const [minPrice, maxPrice] = priceRange.split('-').map(p => parseInt(p));
+                        if (price >= minPrice && price <= maxPrice) {
+                            priceMatches = true;
+                        }
+                    });
+                    
+                    if (!priceMatches) {
+                        show = false;
+                    }
+                }
+
+                // Location filter - show if any selected location matches
+                if (locationChecks.length > 0 && show) {
+                    const locationText = card.querySelector('.property-location').textContent;
+                    let locationMatches = false;
+                    
+                    locationChecks.forEach(location => {
+                        if (locationText.includes(location)) {
+                            locationMatches = true;
+                        }
+                    });
+                    
+                    if (!locationMatches) {
+                        show = false;
+                    }
+                }
+
+                // Feature filter - show if all selected features are present
+                if (featureChecks.length > 0 && show) {
+                    const featuresText = card.querySelector('.features-list').textContent;
+                    let featureMatches = true;
+                    
+                    featureChecks.forEach(feature => {
+                        if (!featuresText.includes(feature)) {
+                            featureMatches = false;
+                        }
+                    });
+                    
+                    if (!featureMatches) {
+                        show = false;
+                    }
+                }
+
+                card.style.display = show ? 'flex' : 'none';
+            });
+        }
+
+        function resetFilters() {
+            document.querySelectorAll('.price-filter').forEach(cb => cb.checked = false);
+            document.querySelectorAll('.location-filter').forEach(cb => cb.checked = false);
+            document.querySelectorAll('.feature-filter').forEach(cb => cb.checked = false);
+            
+            const cards = document.querySelectorAll('.property-card');
+            cards.forEach(card => {
+                card.style.display = 'flex';
+            });
+        }
+
+        window.onclick = function(event) {
+            const bookingModal = document.getElementById('bookingModal');
+            const thankYouModal = document.getElementById('thankYouModal');
+            if (event.target === bookingModal) {
+                closeBookingModal();
+            }
+            if (event.target === thankYouModal) {
+                closeThankYouModal();
+            }
+        }
+    </script>
+</body>
+</html>
