@@ -59,6 +59,23 @@ body {
     font-weight: bold;
     color: var(--color-red);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--color-red) 0%, rgba(180, 0, 0, 0.8) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px rgba(180, 0, 0, 0.3);
 }
 
 .nav-links {
@@ -1807,6 +1824,117 @@ body {
     border-color: var(--color-red);
     box-shadow: 0 8px 24px rgba(180, 0, 0, 0.15);
     transform: translateY(-8px);
+}
+
+/* ============================================
+   IMAGE GALLERY SLIDER STYLES
+   ============================================ */
+
+.property-image-gallery {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.gallery-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+.gallery-image.active {
+    opacity: 1;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.gallery-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.gallery-dot.active {
+    background-color: var(--color-red);
+    border-color: white;
+}
+
+.gallery-dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.gallery-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-arrow.prev {
+    left: 10px;
+}
+
+.gallery-arrow.next {
+    right: 10px;
+}
+
+.image-counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 10;
 }
 
 .property-header {

@@ -10,7 +10,10 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">TravelMate</div>
+            <div class="logo">
+                <div class="logo-icon">✈️</div>
+                <span>TravelMate</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="student-housing.html">Student Housing</a></li>
@@ -904,6 +907,37 @@
     </footer>
 
     <script>
+        // Image Gallery Functions
+        function changeImage(button, direction) {
+            const gallery = button.closest('.property-image-gallery');
+            const images = gallery.querySelectorAll('.gallery-image');
+            const dots = gallery.querySelectorAll('.gallery-dot');
+            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            let newIndex = (currentIndex + direction + images.length) % images.length;
+            
+            images[currentIndex].classList.remove('active');
+            images[newIndex].classList.add('active');
+            dots[currentIndex].classList.remove('active');
+            dots[newIndex].classList.add('active');
+            
+            gallery.querySelector('.current-image').textContent = newIndex + 1;
+        }
+
+        function selectImage(dot) {
+            const gallery = dot.closest('.property-image-gallery');
+            const images = gallery.querySelectorAll('.gallery-image');
+            const dots = gallery.querySelectorAll('.gallery-dot');
+            const newIndex = Array.from(dots).indexOf(dot);
+            
+            images.forEach(img => img.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            
+            images[newIndex].classList.add('active');
+            dots[newIndex].classList.add('active');
+            
+            gallery.querySelector('.current-image').textContent = newIndex + 1;
+        }
+
         let currentPropertyPrice = 1100;
 
         // Toggle filter panel
