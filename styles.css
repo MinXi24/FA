@@ -3177,14 +3177,16 @@ body {
 
 .hotel-booking-tabs {
     display: flex;
+    flex-wrap: wrap;
     border-bottom: 2px solid #e0e0e0;
     background-color: #f9f9f9;
     padding: 0;
+    min-height: 60px;
 }
 
 .hotel-tab-btn {
-    flex: 1;
-    padding: 1rem 1.5rem;
+    flex: 1 1 calc(25% - 2px);
+    padding: 1rem 0.8rem;
     border: none;
     background: none;
     cursor: pointer;
@@ -3192,7 +3194,24 @@ body {
     color: #666;
     border-bottom: 3px solid transparent;
     transition: all 0.3s ease;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 900px) {
+    .hotel-tab-btn {
+        flex: 1 1 calc(50% - 2px);
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hotel-tab-btn {
+        flex: 1 1 calc(50% - 2px);
+        font-size: 0.75rem;
+    }
 }
 
 .hotel-tab-btn.active {

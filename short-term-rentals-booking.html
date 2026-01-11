@@ -118,6 +118,25 @@
                             <input type="checkbox" class="amenity-filter" value="Near Subway" onchange="applyCoveFilters()"> 🚇 Near Subway
                         </label>
                     </div>
+
+                    <div class="filter-category">
+                        <h4>🎁 Special Offers</h4>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="offer-filter" value="rent rebate" onchange="applyCoveFilters()"> 💰 Rent Rebate
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="offer-filter" value="free cleaning" onchange="applyCoveFilters()"> 🧹 Free Cleaning Session
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="offer-filter" value="shopping voucher" onchange="applyCoveFilters()"> 🛍️ Shopping Voucher
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="offer-filter" value="transport card" onchange="applyCoveFilters()"> 🚌 Transport Card Top-up
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="offer-filter" value="dining credit" onchange="applyCoveFilters()"> 🍽️ Dining Credit
+                        </label>
+                    </div>
                 </div>
                 <div class="filter-panel-footer">
                     <button onclick="resetCoveFilters()" class="btn-reset-filters">Reset Filters</button>
@@ -811,6 +830,7 @@
             const priceFilters = Array.from(document.querySelectorAll('.price-filter:checked')).map(cb => cb.value);
             const locationFilters = Array.from(document.querySelectorAll('.location-filter:checked')).map(cb => cb.value);
             const amenityFilters = Array.from(document.querySelectorAll('.amenity-filter:checked')).map(cb => cb.value);
+            const offerFilters = Array.from(document.querySelectorAll('.offer-filter:checked')).map(cb => cb.value);
 
             const cards = document.querySelectorAll('.hotel-booking-card');
             
@@ -818,10 +838,12 @@
                 const price = parseInt(card.getAttribute('data-price'));
                 const location = card.getAttribute('data-location');
                 const amenities = card.getAttribute('data-amenities').split(',').map(a => a.trim());
+                const offer = card.getAttribute('data-offer') || '';
 
                 let priceMatch = priceFilters.length === 0;
                 let locationMatch = locationFilters.length === 0;
                 let amenityMatch = amenityFilters.length === 0;
+                let offerMatch = offerFilters.length === 0;
 
                 // Price range matching
                 if (priceFilters.length > 0) {
@@ -844,8 +866,13 @@
                     amenityMatch = amenityFilters.every(filter => amenities.includes(filter));
                 }
 
+                // Offer matching - ANY selected offer must be present
+                if (offerFilters.length > 0) {
+                    offerMatch = offerFilters.some(filter => offer.toLowerCase().includes(filter.toLowerCase()));
+                }
+
                 // Show card only if all conditions are met
-                card.style.display = (priceMatch && locationMatch && amenityMatch) ? 'flex' : 'none';
+                card.style.display = (priceMatch && locationMatch && amenityMatch && offerMatch) ? 'flex' : 'none';
             });
         }
 
@@ -854,6 +881,7 @@
             document.querySelectorAll('.price-filter').forEach(cb => cb.checked = false);
             document.querySelectorAll('.location-filter').forEach(cb => cb.checked = false);
             document.querySelectorAll('.amenity-filter').forEach(cb => cb.checked = false);
+            document.querySelectorAll('.offer-filter').forEach(cb => cb.checked = false);
             
             const cards = document.querySelectorAll('.hotel-booking-card');
             cards.forEach(card => {
