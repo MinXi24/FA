@@ -4232,6 +4232,39 @@ body {
     transform: translateY(-0.2rem);
 }
 
+/* Offers Tab */
+.hotel-booking-offers {
+    display: none;
+    padding: 1.5rem;
+    flex: 1;
+    animation: fadeIn 0.3s ease;
+}
+
+.hotel-booking-offers.active {
+    display: block;
+}
+
+.hotel-booking-offers h4 {
+    color: var(--color-red);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.hotel-booking-offers p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-left: 4px solid var(--color-green);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.hotel-booking-offers strong {
+    color: var(--color-red);
+}
+
 /* Floorplan/VR Tab */
 .hotel-booking-floorplan {
     display: none;
