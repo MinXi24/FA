@@ -3951,3 +3951,40 @@ body {
         font-size: 12px;
     }
 }
+
+/* Offer Checkbox Styles */
+.offer-checkbox-section {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.offer-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.8rem;
+    background-color: #fff3e0;
+    border-radius: 6px;
+    border: 1px solid #ffe0b2;
+    transition: all 0.2s ease;
+}
+
+.offer-checkbox:hover {
+    background-color: #ffe0b2;
+    border-color: #ff9800;
+}
+
+.offer-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.8rem;
+    cursor: pointer;
+    accent-color: var(--color-orange);
+}
+
+.offer-checkbox span {
+    color: var(--color-dark-gray);
+    font-size: 0.95rem;
+    font-weight: 500;
+}

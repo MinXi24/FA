@@ -630,9 +630,27 @@
                             <span>Price per Night:</span>
                             <span id="summaryPrice"></span>
                         </div>
+                        <div class="summary-item">
+                            <span>Subtotal (excluding tax):</span>
+                            <span id="summarySubtotal"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span>GST & Service Tax (10%):</span>
+                            <span id="summaryTax"></span>
+                        </div>
+                        <div id="discountLineItem" class="summary-item" style="display:none; color:#27ae60;">
+                            <span>Promotional Discount:</span>
+                            <span id="summaryDiscount"></span>
+                        </div>
                         <div class="summary-item total">
                             <span>Total Amount:</span>
                             <span id="summaryTotal"></span>
+                        </div>
+                        <div class="offer-checkbox-section">
+                            <label class="offer-checkbox">
+                                <input type="checkbox" id="applyOfferCheckbox" onchange="updatePaymentSummary()">
+                                <span>Apply promotional offers/discounts (10% off)</span>
+                            </label>
                         </div>
                     </div>
                     <div class="payment-methods">
@@ -918,8 +936,39 @@
             document.getElementById('summaryCheckOut').textContent = bookingData.checkOut || '';
             document.getElementById('summaryNights').textContent = bookingData.nights || '0';
             document.getElementById('summaryPrice').textContent = 'SGD $' + (bookingData.roomPrice || 0) + '/night';
-            const total = (bookingData.roomPrice || 0) * (bookingData.nights || 0);
+            updatePaymentSummary();
+        }
+
+        function updatePaymentSummary() {
+            const roomPrice = bookingData.roomPrice || 0;
+            const nights = bookingData.nights || 0;
+            const subtotal = roomPrice * nights;
+            const tax = subtotal * 0.10; // 10% GST & Service Tax
+            let total = subtotal + tax;
+            
+            // Check if offer checkbox is checked
+            const applyOffer = document.getElementById('applyOfferCheckbox').checked;
+            let discount = 0;
+            
+            if (applyOffer) {
+                // Apply 10% discount on the subtotal
+                discount = subtotal * 0.10;
+                total = (subtotal - discount) + tax;
+            }
+            
+            // Update display
+            document.getElementById('summarySubtotal').textContent = 'SGD $' + subtotal.toFixed(2);
+            document.getElementById('summaryTax').textContent = 'SGD $' + tax.toFixed(2);
             document.getElementById('summaryTotal').textContent = 'SGD $' + total.toFixed(2);
+            
+            // Show/hide discount line
+            const discountLine = document.getElementById('discountLineItem');
+            if (discount > 0) {
+                discountLine.style.display = 'block';
+                document.getElementById('summaryDiscount').textContent = '-SGD $' + discount.toFixed(2);
+            } else {
+                discountLine.style.display = 'none';
+            }
         }
 
         function completeBooking() {
