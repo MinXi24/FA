@@ -1,386 +1,295 @@
-# TravelMate 🌏
+# TravelMate 🚇
 
-**Your AI-Powered Singapore Adventure Companion for Exchange Students**
+A user-friendly website designed to help foreign exchange students at Republic Polytechnic navigate Singapore's public transport system with confidence.
 
----
+## 🎯 Project Overview
 
-## 📋 Product Brief
-
-### Project Name
-**TravelMate**
-
-### One-Line Pitch
-*An AI-powered web platform that transforms the overwhelming experience of foreign exchange students in Singapore into a seamless, stress-free journey through personalized guidance on transport, dining, and leisure activities.*
+**One-Line Pitch:** Build a user-friendly website integrated with a Flowise-powered AI chatbot that displays Singapore's MRT/LRT maps, bus guides, navigation tips, and essential travel information to help foreign exchange students arriving at Republic Polytechnic easily understand and navigate Singapore's public transport system.
 
 ### Why It Matters
-Foreign exchange students at Republic Polytechnic face significant challenges adapting to life in Singapore. Without local knowledge, they struggle with:
-- Navigating Singapore's complex transport system (MRT, buses, alternative routes)
-- Finding affordable, student-friendly dining options
-- Discovering leisure activities and cultural experiences
-- Planning daily life efficiently
 
-Traditional methods (online research, word-of-mouth) are time-consuming, inconsistent, and often lead to missed opportunities and increased stress. TravelMate solves this by providing **real-time, AI-powered recommendations** that adapt to individual preferences, budget constraints, weather conditions, and current location—essentially becoming a knowledgeable local friend available 24/7.
+Foreign exchange students arriving at Republic Polytechnic often struggle to understand Singapore's public transport system, especially when navigating MRT/LRT routes, bus services, and unfamiliar travel patterns. TravelMate provides an interactive website equipped with an AI chatbot and visual transport guides, helping students quickly access accurate directions, learn how to get around confidently, and reduce the stress of adapting to a new environment.
 
-**Impact**: Reduces adaptation stress, saves time, enhances cultural immersion, and ensures students make the most of their Singapore exchange experience.
+## 🎨 Design System
 
----
+### Color Palette
+- **Primary Red:** `#B40000` - Used for primary actions, headings, and important elements
+- **White:** `#FFFFFF` - Background and contrast color
+- **Secondary Green:** `#486220` - Accents, secondary buttons, and highlights
 
-## 🎯 Problem Statement
-
-Foreign exchange students arriving at Republic Polytechnic (RP) often feel overwhelmed during their stay in Singapore. They struggle with:
-- Planning daily life activities
-- Navigating Singapore's transport systems
-- Finding affordable food options
-- Discovering leisure activities
-
-Without proper guidance, students rely on fragmented online research and word-of-mouth advice, leading to stress, wasted time, and missed experiences.
-
----
-
-## 👥 Target Audience
-
-**Primary Users**: Foreign exchange students at Republic Polytechnic
-- **Age Group**: 18-25 years old
-- **Context**: New to Singapore, lacking local knowledge
-- **Needs**: Quick adaptation to Singaporean life, efficient planning tools, budget-friendly recommendations
-- **Tech Proficiency**: Comfortable with mobile and web applications
-
----
-
-## 🤖 AI Solution
-
-### Why Use AI?
-
-1. **Data Processing at Scale**: AI can analyze vast amounts of information about Singapore's attractions, transport routes, food venues, and real-time conditions (weather, events, crowd levels).
-
-2. **Personalization**: Unlike static maps or guides, AI learns user preferences and provides tailored recommendations based on:
-   - Budget constraints
-   - Dietary preferences
-   - Activity interests (cultural, adventure, relaxation)
-   - Time availability
-   - Current location
-
-3. **Real-Time Adaptation**: AI adjusts suggestions dynamically:
-   - Raining? Suggest indoor activities and covered walkways
-   - Peak hour? Recommend alternative transport routes
-   - Weekend? Highlight special events and markets
-
-4. **24/7 Support**: Always available to answer questions and provide guidance, reducing stress and uncertainty.
-
-### Ethical Considerations
-- **Transparency**: Users understand when interacting with AI
-- **Privacy**: No sensitive personal data collected without consent
-- **Inclusivity**: Accessible to all students regardless of background
-- **Accuracy**: Information regularly updated and verified
-
----
-
-## 🎨 Design Principles
-
-### Color Scheme
-- **Primary Red** (#8B4444): Energy, excitement, cultural richness
-- **Primary Green** (#5B7854): Nature, balance, harmony (Singapore = Garden City)
-- **White** (#FFFFFF): Cleanliness, modernity, clarity
-- **Balanced Palette**: Muted tones prevent visual fatigue, creating an appetizing, inviting atmosphere
-
-### UX Principles
-
-1. **Simplicity First**
-   - Clean, uncluttered interface
-   - Clear visual hierarchy
-   - Intuitive navigation
-
-2. **Mobile-First Design**
-   - Responsive across all devices
-   - Touch-friendly interactions
-   - Fast loading times
-
-3. **Accessibility**
-   - WCAG 2.1 AA compliant
-   - Keyboard navigation support
-   - Screen reader friendly
-   - High contrast mode support
-   - Reduced motion options
-
-4. **Progressive Disclosure**
-   - Show essential information first
-   - Details available on demand
-   - Modal system for deep dives
-
-5. **Consistent Patterns**
-   - Predictable interactions
-   - Familiar UI components
-   - Unified visual language
-
----
+### Design Principles
+- **Accessibility First:** WCAG 2.1 AA compliant with proper contrast ratios
+- **Mobile-First Responsive:** Optimized for all screen sizes
+- **Clean & Intuitive:** Easy navigation for first-time users
+- **Performance Optimized:** Fast loading and smooth interactions
 
 ## 🚀 Features
 
-### Core Features (Current Version)
+### Current Features
+- ✅ **Responsive Navigation** - Mobile-friendly hamburger menu with smooth scrolling
+- ✅ **Interactive Hero Section** - Eye-catching introduction with clear CTAs
+- ✅ **Quick Start Guide** - Four key areas: MRT/LRT, Bus Services, Travel Tips, AI Chatbot
+- ✅ **MRT/LRT Map Section** - Interactive map placeholder with line legend
+- ✅ **Bus Guide** - Step-by-step guide for beginners
+- ✅ **Travel Tips** - Essential information cards covering payments, etiquette, apps, etc.
+- ✅ **AI Chatbot Integration** - Ready for Flowise chatbot embed
+- ✅ **FAQ Accordion** - Common questions with expandable answers
+- ✅ **Contact Section** - Hotlines, websites, and feedback options
+- ✅ **Scroll Animations** - Smooth reveal animations for better UX
+- ✅ **Back to Top Button** - Quick navigation for long pages
+- ✅ **Accessibility Features** - Keyboard navigation, ARIA labels, skip links
 
-#### 🏛️ Iconic Landmarks
-- Marina Bay Sands
-- Gardens by the Bay
-- Merlion Park
-- Sentosa Island
+### Planned Features
+- 🔄 **Flowise AI Chatbot** - Integration with custom AI assistant
+- 🔄 **Interactive MRT Map** - Clickable stations with details
+- 🔄 **Route Planner** - Step-by-step journey planning
+- 🔄 **Real-time Updates** - Bus/train timing information
+- 🔄 **Multi-language Support** - Chinese, Malay, Tamil translations
+- 🔄 **Progressive Web App** - Offline functionality
 
-#### 🎭 Cultural Sites
-- Chinatown
-- Little India
-- Kampong Glam
-- Sri Mariamman Temple
+## 📁 Project Structure
 
-#### 🏛️ Museums & Galleries
-- National Museum of Singapore
-- ArtScience Museum
-- Asian Civilisations Museum
-- Science Centre Singapore
-
-#### 💎 Hidden Gems
-- Haji Lane
-- Pulau Ubin
-- Tiong Bahru
-- MacRitchie Reservoir
-
-#### 📱 Essential Information
-- Transport guidance (MRT, buses, SimplyGo)
-- Affordable food options (hawker centers, food courts)
-- Local tips and tricks
-- Useful mobile apps
-
-### JavaScript Features (Interactivity)
-
-1. **Smooth Scrolling Navigation**
-   - Seamless section transitions
-   - Active state indicators
-   - Mobile hamburger menu
-
-2. **Interactive Modal System**
-   - Detailed attraction information
-   - Practical details (hours, admission, transport)
-   - Tips and recommendations
-
-3. **Intersection Observer API**
-   - Performance-optimized scrolling
-   - Lazy content loading
-   - Automatic section detection
-
-4. **Responsive Mobile Menu**
-   - Touch-friendly interactions
-   - Animated hamburger icon
-   - Smooth open/close transitions
-
-5. **State Management**
-   - Centralized app state
-   - Efficient DOM caching
-   - Performance monitoring
-
-6. **Performance Optimizations**
-   - Throttled scroll events
-   - Debounced input handling
-   - Minimal reflows/repaints
-
-### Future Enhancements
-
-- **AI Chatbot Integration**: Natural language queries
-- **Trip Planner**: Custom itinerary builder
-- **Weather Integration**: Activity suggestions based on forecast
-- **Favorites System**: Save and organize attractions
-- **Offline Support**: PWA capabilities
-- **Multi-language Support**: Chinese, Malay, Tamil
-- **Budget Tracker**: Expense monitoring
-- **Social Features**: Share itineraries with friends
-
----
+```
+TravelMate/
+├── index.html              # Main HTML file
+├── css/
+│   └── styles.css         # All styles with CSS variables
+├── js/
+│   └── app.js             # JavaScript functionality
+├── .vscode/
+│   └── settings.json      # Live Server configuration
+├── .gitignore             # Git ignore rules
+└── README.md              # This file
+```
 
 ## 🛠️ Technology Stack
 
 ### Frontend
-- **HTML5**: Semantic, accessible markup
-- **CSS3**: Modern styling with CSS variables, Grid, Flexbox
-- **Vanilla JavaScript**: No dependencies, optimal performance
+- **HTML5** - Semantic markup with accessibility features
+- **CSS3** - Modern CSS with variables, grid, flexbox, and animations
+- **JavaScript (ES6+)** - Vanilla JS with classes and modules
 
-### Development Tools
-- **Git**: Version control
-- **VS Code**: Development environment
-- **Live Server**: Local development server
+### Tools & Services
+- **Live Server** - Development server for live reload
+- **Git** - Version control
+- **Flowise** - AI chatbot platform (to be integrated)
+- **Font Awesome** - Icon library
 
-### Future Stack
-- **Frontend Framework**: React/Vue.js for complex interactions
-- **Backend**: Node.js + Express for API
-- **Database**: MongoDB for user preferences
-- **AI/ML**: OpenAI API or custom model for recommendations
-- **Hosting**: Vercel/Netlify for frontend, AWS/Azure for backend
-
----
-
-## 📂 Project Structure
-
-```
-FA/
-├── index.html              # Main HTML file
-├── css/
-│   └── styles.css          # All styles with CSS variables
-├── js/
-│   └── app.js              # Interactive features and logic
-├── .vscode/
-│   └── settings.json       # Live Server configuration
-├── .gitignore              # Git ignore rules
-└── README.md               # This file
-```
-
----
-
-## 🚀 Getting Started
+## 🚦 Getting Started
 
 ### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- VS Code (recommended) with Live Server extension
-- Git (for version control)
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- [VS Code](https://code.visualstudio.com/) (recommended)
+- [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VS Code
 
 ### Installation
 
-1. **Clone/Open the project**
+1. **Clone the repository**
    ```bash
-   cd "c:\C240 (Tue afternoon)\FA"
+   git clone <your-repo-url>
+   cd TravelMate
    ```
 
-2. **Install Live Server Extension**
-   - Open VS Code
-   - Go to Extensions (Ctrl+Shift+X)
-   - Search "Live Server"
-   - Install by Ritwick Dey
+2. **Open in VS Code**
+   ```bash
+   code .
+   ```
 
-3. **Launch the website**
+3. **Start Live Server**
    - Right-click on `index.html`
    - Select "Open with Live Server"
-   - Browser opens at `http://localhost:5500`
+   - Or press `Alt+L Alt+O`
 
-### Alternative: Direct File Opening
-Simply open `index.html` in any browser (some features may require a server).
+4. **View in browser**
+   - Navigate to `http://127.0.0.1:5500` (default port)
 
----
+## 💻 JavaScript Features
 
-## 🎨 Design Guidelines
+### Performance Optimizations
+- **Debouncing** - Limits rate of function execution for scroll/input events
+- **Throttling** - Controls frequency of scroll handlers
+- **Lazy Loading** - Images and content load as needed
+- **Intersection Observer** - Efficient viewport detection for animations
 
-### Color Usage
+### Interactive Features
+- **Smooth Scrolling** - Native CSS scroll-behavior with JS fallback
+- **Mobile Menu** - Responsive hamburger navigation
+- **Scroll Animations** - Elements fade in on scroll
+- **Back to Top** - Appears after scrolling 300px
+- **Active Navigation** - Updates based on scroll position
+- **FAQ Accordion** - Expandable question/answer sections
 
-```css
---primary-red: #8B4444      /* Headings, CTAs, emphasis */
---primary-green: #5B7854    /* Subheadings, icons, accents */
---accent-red: #A85858       /* Hover states, gradients */
---accent-green: #6F9467     /* Secondary accents */
---white: #FFFFFF            /* Background, text on dark */
---off-white: #F8F7F5        /* Alternate backgrounds */
+### Accessibility Features
+- **Keyboard Navigation** - Full keyboard support
+- **Focus Management** - Visible focus indicators
+- **ARIA Labels** - Screen reader support
+- **Skip Links** - Jump to main content
+- **Semantic HTML** - Proper heading hierarchy
+
+## 🎯 UX Design Principles
+
+### 1. Clarity & Simplicity
+- Clear visual hierarchy with consistent spacing
+- Simple navigation with intuitive labels
+- Concise content with actionable information
+
+### 2. Usability
+- Mobile-first responsive design
+- Touch-friendly buttons (minimum 44x44px)
+- Fast page load (optimized assets)
+- Consistent interaction patterns
+
+### 3. Accessibility
+- WCAG 2.1 AA compliance
+- Proper color contrast (4.5:1 for text)
+- Keyboard navigation support
+- Screen reader compatibility
+- Reduced motion support for users with vestibular disorders
+
+### 4. Visual Design
+- Brand-aligned color palette
+- Consistent spacing using CSS variables
+- Smooth transitions and animations
+- Card-based layout for scannability
+
+### 5. Performance
+- Minimal external dependencies
+- Optimized CSS and JS
+- Performance monitoring
+- Lazy loading for images
+
+## 🔌 Integrating Flowise Chatbot
+
+To integrate your Flowise chatbot:
+
+1. Get your Flowise embed code
+2. Open `js/app.js`
+3. Find the `ChatbotIntegration` class
+4. Add your Flowise embed code in the `loadChatbot()` method:
+
+```javascript
+loadChatbot() {
+    // Replace with your Flowise embed code
+    const script = document.createElement('script');
+    script.src = 'YOUR_FLOWISE_CHATBOT_URL';
+    script.async = true;
+    document.body.appendChild(script);
+}
 ```
 
-### Typography
-- **Primary Font**: Segoe UI (system font for performance)
-- **Headings**: 700 weight, reduced line-height
-- **Body**: 400 weight, 1.6 line-height for readability
+Alternatively, you can add the Flowise iframe directly in `index.html` in the chatbot section:
 
-### Spacing
-- Consistent 8px grid system
-- Generous whitespace for breathing room
-- Responsive padding/margins
+```html
+<div id="flowise-chatbot">
+    <!-- Add your Flowise iframe here -->
+    <iframe src="YOUR_FLOWISE_URL" width="100%" height="600px"></iframe>
+</div>
+```
 
----
+## 📱 Responsive Breakpoints
 
-## 🔧 Configuration
+```css
+/* Mobile: < 480px (default) */
+/* Tablet: 481px - 768px */
+@media (max-width: 768px) { ... }
 
-### Live Server Settings
-Located in `.vscode/settings.json`:
-- **Port**: 5500
-- **Browser**: Chrome (configurable)
-- **Auto-reload**: Enabled
-- **Ignore**: .vscode, .scss, .sass, .ts files
+/* Desktop: 769px - 1200px */
+/* Large Desktop: > 1200px */
+```
 
-### Git Configuration
-- Ignores: node_modules, .DS_Store, IDE files, logs
-- Initial commit created
-- Ready for remote repository
+## 🎨 Customization
 
----
+### Changing Colors
+Edit CSS variables in `css/styles.css`:
 
-## 📱 Browser Support
+```css
+:root {
+    --primary-color: #B40000;    /* Your primary color */
+    --secondary-color: #486220;  /* Your secondary color */
+    --white: #FFFFFF;            /* Background color */
+}
+```
 
-- ✅ Chrome 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Edge 90+
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+### Adding New Sections
+1. Add HTML in `index.html`
+2. Add navigation link in the `<nav>` menu
+3. Add styles in `css/styles.css`
+4. Update active navigation logic in `js/app.js` if needed
 
----
+## 🐛 Browser Support
 
-## ♿ Accessibility Features
+- ✅ Chrome (latest 2 versions)
+- ✅ Firefox (latest 2 versions)
+- ✅ Safari (latest 2 versions)
+- ✅ Edge (latest 2 versions)
+- ⚠️ IE11 (not supported - requires polyfills)
 
-- Semantic HTML5 elements
-- ARIA labels for interactive elements
-- Keyboard navigation support
-- Focus indicators
-- Sufficient color contrast (WCAG AA)
-- Reduced motion support
-- Screen reader friendly
+## 📈 Performance Metrics
 
----
-
-## 📊 Performance
-
-### Optimizations Implemented
-- CSS variables for consistent theming
-- Throttled scroll events
-- Debounced input handlers
-- Intersection Observer for lazy loading
-- Minimal JavaScript dependencies
-- DOM element caching
-- CSS animations over JavaScript
-
-### Metrics Target
+Target performance metrics:
 - First Contentful Paint: < 1.5s
-- Time to Interactive: < 3.0s
-- Lighthouse Score: 90+
-
----
+- Largest Contentful Paint: < 2.5s
+- Time to Interactive: < 3.5s
+- Cumulative Layout Shift: < 0.1
 
 ## 🤝 Contributing
 
-Future contributions welcome for:
-- Additional attraction data
-- Multi-language support
-- AI integration
-- Backend API development
-- Mobile app version
+### Contribution Guidelines
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
----
+### Code Style
+- Use 4 spaces for indentation
+- Follow semantic HTML practices
+- Use BEM methodology for CSS classes
+- Write descriptive comments
+- Keep functions small and focused
+
+## 📝 Future Enhancements
+
+### Phase 1 (Current)
+- ✅ Basic website structure
+- ✅ Responsive design
+- ✅ Core content sections
+
+### Phase 2 (Next)
+- 🔄 Flowise chatbot integration
+- 🔄 Interactive MRT/LRT map
+- 🔄 Real-time transport data
+
+### Phase 3 (Future)
+- 🔄 User accounts & personalization
+- 🔄 Multi-language support
+- 🔄 Progressive Web App (PWA)
+- 🔄 Push notifications for transport updates
 
 ## 📄 License
 
 This project is created for educational purposes at Republic Polytechnic.
 
----
+## 👥 Credits
 
-## 👨‍💻 Development Team
-
-Created as part of the Foundational Abilities curriculum at Republic Polytechnic, Singapore.
-
-**Project Focus**: Solving real-world problems for international exchange students through technology and AI.
-
----
+**Developed for:** Republic Polytechnic Foreign Exchange Students  
+**Course:** C240 - AI Essentials and Innovations  
+**Year:** Year 3 Sem 1  
+**Date:** January 2026
 
 ## 📞 Support
 
-For issues or questions:
-- 📧 Email: hello@travelmate.sg
-- 📍 Location: Republic Polytechnic, Singapore
+For questions or support:
+- **Email:** feedback@travelmate.sg (placeholder)
+- **RP Student Services:** 6510 3000
 
----
-
-## 🌟 Acknowledgments
+## 🙏 Acknowledgments
 
 - Republic Polytechnic for the project opportunity
-- Singapore Tourism Board for attraction information
-- Exchange student community for insights and feedback
+- Land Transport Authority (LTA) for transport information
+- Font Awesome for icons
+- Flowise for AI chatbot platform
 
 ---
 
-**Built with ❤️ for exchange students exploring Singapore**
+**Made with ❤️ for Republic Polytechnic Exchange Students**

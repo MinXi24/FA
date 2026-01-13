@@ -1,10 +1,10 @@
-# TravelMate - Git Ignore File
-
 # Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
 
 # Operating System Files
 .DS_Store
@@ -14,7 +14,7 @@ yarn-error.log*
 .Trashes
 ehthumbs.db
 Thumbs.db
-desktop.ini
+Desktop.ini
 
 # IDE and Editor Files
 .vscode/*
@@ -29,29 +29,60 @@ desktop.ini
 .project
 .classpath
 .settings/
-
-# Build and Distribution
-dist/
-build/
-*.min.js
-*.min.css
+*.sublime-workspace
+*.sublime-project
 
 # Environment Variables
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.development
+.env.test
+.env.production
 
-# Logs
-logs/
+# Build Output
+dist/
+build/
+out/
 *.log
 
+# Cache Files
+.cache/
+.parcel-cache/
+.npm/
+.eslintcache
+.stylelintcache
+
 # Temporary Files
+*.tmp
+*.temp
 tmp/
 temp/
-*.tmp
 
-# Coverage and Testing
+# Test Coverage
 coverage/
 .nyc_output/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# MacOS
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
