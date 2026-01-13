@@ -23,11 +23,12 @@
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#landmarks" class="nav-link">Landmarks</a></li>
-                <li><a href="#cultural" class="nav-link">Cultural Sites</a></li>
+                <li><a href="#Iconic" class="nav-link">Iconic</a></li>
+                <li><a href="#cultural" class="nav-link">Culture</a></li>
                 <li><a href="#museums" class="nav-link">Museums</a></li>
                 <li><a href="#hidden-gems" class="nav-link">Hidden Gems</a></li>
-                <li><a href="#essentials" class="nav-link">Essentials</a></li>
+                <li><a href="#wildlife" class="nav-link">Wildlife</a></li>
+                <li><a href="#sentosa" class="nav-link">Sentosa</a></li>
             </ul>
         </div>
     </nav>
@@ -35,7 +36,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
+        <div class="hero-content" style="text-align: center;">
             <h2 class="hero-title">Welcome to Singapore</h2>
             <p class="hero-subtitle">Your AI-Powered Guide for Exchange Students</p>
             <p class="hero-description">Navigate transport, discover food, and explore leisure activities with personalized recommendations</p>
@@ -77,64 +78,76 @@
     </section>
 
     <!-- Iconic Landmarks Section -->
-    <section class="attractions-section" id="landmarks">
+    <section class="attractions-section" id="Iconic">
         <div class="container">
             <h2 class="section-title">Iconic Landmarks</h2>
             <p class="section-description">Must-visit destinations that define Singapore's skyline and spirit</p>
             <div class="attractions-grid">
-                <article class="attraction-card" data-category="landmark">
-                    <div class="card-image" style="background: linear-gradient(135deg, #8B4444, #A85858);"></div>
-                    <div class="card-content">
-                        <h3>Marina Bay Sands</h3>
-                        <p class="location">📍 Bayfront Avenue</p>
-                        <p>Iconic integrated resort with rooftop infinity pool, SkyPark observation deck, luxury shopping, and stunning city views.</p>
-                        <div class="card-tags">
-                            <span class="tag">Architecture</span>
-                            <span class="tag">Photography</span>
-                        </div>
-                        <button class="learn-more" data-attraction="marina-bay-sands">Learn More</button>
-                    </div>
-                </article>
-
-                <article class="attraction-card" data-category="landmark">
-                    <div class="card-image" style="background: linear-gradient(135deg, #4A7B5C, #5D9973);"></div>
+                <article class="attraction-card" data-category="Iconic">
+                    <div class="card-image" style="background-image: url('images/gardens-by-the-bay.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="card-content">
                         <h3>Gardens by the Bay</h3>
                         <p class="location">📍 Marina Gardens Drive</p>
                         <p>Futuristic nature park featuring Supertree Grove, Cloud Forest, Flower Dome, and spectacular light shows every evening.</p>
                         <div class="card-tags">
                             <span class="tag">Nature</span>
-                            <span class="tag">Free Entry</span>
+                            <span class="tag">⭐ 4.8</span>
                         </div>
-                        <button class="learn-more" data-attraction="gardens-by-the-bay">Learn More</button>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="gardens-by-the-bay">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="gardens-by-the-bay" title="Show on Map">📍 Show on Map</button>
+                        </div>
                     </div>
                 </article>
 
-                <article class="attraction-card" data-category="landmark">
-                    <div class="card-image" style="background: linear-gradient(135deg, #A64B4B, #C15B5B);"></div>
+                <article class="attraction-card" data-category="Iconic">
+                    <div class="card-image" style="background-image: url('images/jewel-changi.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="card-content">
+                        <h3>Jewel Changi (Rain Vortex)</h3>
+                        <p class="location">📍 Changi Airport</p>
+                        <p>Stunning architectural marvel featuring the world's tallest indoor waterfall and lush gardens at Changi Airport.</p>
+                        <div class="card-tags">
+                            <span class="tag">Waterfall</span>
+                            <span class="tag">⭐ 4.9</span>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="jewel-changi">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="jewel-changi" title="Show on Map">📍 Show on Map</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="attraction-card" data-category="Iconic">
+                    <div class="card-image" style="background-image: url('images/marina-bay-sands.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="card-content">
+                        <h3>Marina Bay Sands SkyPark</h3>
+                        <p class="location">📍 Bayfront Avenue</p>
+                        <p>Iconic integrated resort with rooftop infinity pool, SkyPark observation deck, luxury shopping, and stunning city views.</p>
+                        <div class="card-tags">
+                            <span class="tag">Architecture</span>
+                            <span class="tag">⭐ 4.6</span>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="marina-bay-sands">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="marina-bay-sands" title="Show on Map">📍 Show on Map</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="attraction-card" data-category="Iconic">
+                    <div class="card-image" style="background-image: url('images/merlion.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="card-content">
                         <h3>Merlion Park</h3>
                         <p class="location">📍 One Fullerton</p>
                         <p>Singapore's iconic symbol - a mythical creature with a lion's head and fish body, perfect for photo opportunities.</p>
                         <div class="card-tags">
-                            <span class="tag">Landmark</span>
                             <span class="tag">Free</span>
+                            <span class="tag">⭐ 4.5</span>
                         </div>
-                        <button class="learn-more" data-attraction="merlion">Learn More</button>
-                    </div>
-                </article>
-
-                <article class="attraction-card" data-category="landmark">
-                    <div class="card-image" style="background: linear-gradient(135deg, #5B7B5B, #6F9A6F);"></div>
-                    <div class="card-content">
-                        <h3>Sentosa Island</h3>
-                        <p class="location">📍 Sentosa Gateway</p>
-                        <p>Resort island with beaches, Universal Studios, S.E.A. Aquarium, cable car rides, and endless entertainment options.</p>
-                        <div class="card-tags">
-                            <span class="tag">Beach</span>
-                            <span class="tag">Theme Park</span>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="merlion">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="merlion" title="Show on Map">📍 Show on Map</button>
                         </div>
-                        <button class="learn-more" data-attraction="sentosa">Learn More</button>
                     </div>
                 </article>
             </div>
@@ -148,35 +161,7 @@
             <p class="section-description">Experience Singapore's rich multicultural heritage</p>
             <div class="attractions-grid">
                 <article class="attraction-card" data-category="cultural">
-                    <div class="card-image" style="background: linear-gradient(135deg, #8D5B4B, #A86E5B);"></div>
-                    <div class="card-content">
-                        <h3>Chinatown</h3>
-                        <p class="location">📍 Chinatown District</p>
-                        <p>Vibrant neighborhood with traditional shophouses, Buddha Tooth Relic Temple, hawker centers, and Chinese heritage.</p>
-                        <div class="card-tags">
-                            <span class="tag">Heritage</span>
-                            <span class="tag">Food</span>
-                        </div>
-                        <button class="learn-more" data-attraction="chinatown">Learn More</button>
-                    </div>
-                </article>
-
-                <article class="attraction-card" data-category="cultural">
-                    <div class="card-image" style="background: linear-gradient(135deg, #5B7854, #6F9467);"></div>
-                    <div class="card-content">
-                        <h3>Little India</h3>
-                        <p class="location">📍 Serangoon Road</p>
-                        <p>Colorful district showcasing Indian culture through temples, shops, authentic cuisine, and vibrant street art.</p>
-                        <div class="card-tags">
-                            <span class="tag">Culture</span>
-                            <span class="tag">Shopping</span>
-                        </div>
-                        <button class="learn-more" data-attraction="little-india">Learn More</button>
-                    </div>
-                </article>
-
-                <article class="attraction-card" data-category="cultural">
-                    <div class="card-image" style="background: linear-gradient(135deg, #9B5B5B, #B36E6E);"></div>
+                    <div class="card-image" style="background-image: url('images/kampong-glam.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="card-content">
                         <h3>Kampong Glam</h3>
                         <p class="location">📍 Arab Street</p>
@@ -185,21 +170,44 @@
                             <span class="tag">History</span>
                             <span class="tag">Halal Food</span>
                         </div>
-                        <button class="learn-more" data-attraction="kampong-glam">Learn More</button>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="kampong-glam">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="kampong-glam" title="Show on Map">📍 Show on Map</button>
+                        </div>
                     </div>
                 </article>
 
                 <article class="attraction-card" data-category="cultural">
-                    <div class="card-image" style="background: linear-gradient(135deg, #6B7B5B, #809670);"></div>
+                    <div class="card-image" style="background-image: url('images/peranakan-museum.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="card-content">
-                        <h3>Sri Mariamman Temple</h3>
-                        <p class="location">📍 South Bridge Road</p>
-                        <p>Singapore's oldest Hindu temple with stunning gopuram (tower), ornate sculptures, and cultural significance.</p>
+                        <h3>Peranakan Museum</h3>
+                        <p class="location">📍 Armenian Street</p>
+                        <p>Dedicated to Peranakan culture, showcasing the unique heritage of Straits Chinese communities through artifacts and exhibits.</p>
                         <div class="card-tags">
-                            <span class="tag">Temple</span>
-                            <span class="tag">Free Entry</span>
+                            <span class="tag">Heritage</span>
+                            <span class="tag">⭐ 4.4</span>
                         </div>
-                        <button class="learn-more" data-attraction="sri-mariamman">Learn More</button>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="peranakan-museum">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="peranakan-museum" title="Show on Map">📍 Show on Map</button>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="attraction-card" data-category="cultural">
+                    <div class="card-image" style="background-image: url('images/buddha-tooth.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="card-content">
+                        <h3>Buddha Tooth Relic Temple</h3>
+                        <p class="location">📍 Chinatown</p>
+                        <p>A magnificent Buddhist temple housing sacred relics and showcasing Tang dynasty architecture.</p>
+                        <div class="card-tags">
+                            <span class="tag">Free</span>
+                            <span class="tag">⭐ 4.7</span>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="buddha-tooth">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="buddha-tooth" title="Show on Map">📍 Show on Map</button>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -213,58 +221,53 @@
             <p class="section-description">Discover Singapore's history, art, and innovation</p>
             <div class="attractions-grid">
                 <article class="attraction-card" data-category="museum">
-                    <div class="card-image" style="background: linear-gradient(135deg, #8B5454, #A66767);"></div>
+                    <div class="card-image" style="background-image: url('images/national-museum.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="card-content">
                         <h3>National Museum of Singapore</h3>
                         <p class="location">📍 Stamford Road</p>
                         <p>Singapore's oldest museum showcasing the nation's history through immersive galleries and multimedia exhibits.</p>
                         <div class="card-tags">
                             <span class="tag">History</span>
-                            <span class="tag">Student Discount</span>
+                            <span class="tag">⭐ 4.5</span>
                         </div>
-                        <button class="learn-more" data-attraction="national-museum">Learn More</button>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="national-museum">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="national-museum" title="Show on Map">📍 Show on Map</button>
+                        </div>
                     </div>
                 </article>
 
                 <article class="attraction-card" data-category="museum">
-                    <div class="card-image" style="background: linear-gradient(135deg, #5B7B5B, #6F9A6F);"></div>
+                    <div class="card-image" style="background-image: url('images/artscience-museum.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="card-content">
                         <h3>ArtScience Museum</h3>
                         <p class="location">📍 Marina Bay Sands</p>
                         <p>Lotus-shaped museum exploring intersection of art, science, culture, and technology through innovative exhibitions.</p>
                         <div class="card-tags">
                             <span class="tag">Art</span>
-                            <span class="tag">Interactive</span>
+                            <span class="tag">⭐ 4.7</span>
                         </div>
-                        <button class="learn-more" data-attraction="artscience">Learn More</button>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="artscience-museum">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="artscience-museum" title="Show on Map">📍 Show on Map</button>
+                        </div>
                     </div>
                 </article>
-
+                
                 <article class="attraction-card" data-category="museum">
-                    <div class="card-image" style="background: linear-gradient(135deg, #9B5454, #B66767);"></div>
+                    <div class="card-image" style="background-image: url('images/national-gallery.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="card-content">
-                        <h3>Asian Civilisations Museum</h3>
-                        <p class="location">📍 Empress Place</p>
-                        <p>Premier museum showcasing pan-Asian cultures through artifacts, textiles, and decorative arts from across Asia.</p>
+                        <h3>National Gallery</h3>
+                        <p class="location">📍 City Hall</p>
+                        <p>World's largest public collection of Southeast Asian art housed in two historic buildings.</p>
                         <div class="card-tags">
-                            <span class="tag">Culture</span>
-                            <span class="tag">Artifacts</span>
+                            <span class="tag">Art</span>
+                            <span class="tag">⭐ 4.7</span>
                         </div>
-                        <button class="learn-more" data-attraction="asian-civilisations">Learn More</button>
-                    </div>
-                </article>
-
-                <article class="attraction-card" data-category="museum">
-                    <div class="card-image" style="background: linear-gradient(135deg, #5B7854, #6F9467);"></div>
-                    <div class="card-content">
-                        <h3>Science Centre Singapore</h3>
-                        <p class="location">📍 Jurong East</p>
-                        <p>Interactive science center with hands-on exhibits, planetarium shows, and STEM learning experiences.</p>
-                        <div class="card-tags">
-                            <span class="tag">Science</span>
-                            <span class="tag">Family Friendly</span>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="national-gallery">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="national-gallery" title="Show on Map">📍 Show on Map</button>
                         </div>
-                        <button class="learn-more" data-attraction="science-centre">Learn More</button>
                     </div>
                 </article>
             </div>
@@ -278,109 +281,172 @@
             <p class="section-description">Local favorites and off-the-beaten-path discoveries</p>
             <div class="attractions-grid">
                 <article class="attraction-card" data-category="hidden">
-                    <div class="card-image" style="background: linear-gradient(135deg, #7B6B5B, #96856F);"></div>
+                    <div class="card-image" style="background-image: url('images/henderson-waves.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="card-content">
-                        <h3>Haji Lane</h3>
-                        <p class="location">📍 Kampong Glam</p>
-                        <p>Narrow alleyway bursting with colorful street art, indie boutiques, quirky cafes, and Instagram-worthy corners.</p>
+                        <h3>Henderson Waves</h3>
+                        <p class="location">📍 Southern Ridges</p>
+                        <p>Singapore's highest pedestrian bridge offering stunning views, wave-like architecture, and scenic forest walks.</p>
                         <div class="card-tags">
-                            <span class="tag">Street Art</span>
-                            <span class="tag">Shopping</span>
+                            <span class="tag">Nature</span>
+                            <span class="tag">Free</span>
                         </div>
-                        <button class="learn-more" data-attraction="haji-lane">Learn More</button>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="henderson-waves">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="henderson-waves" title="Show on Map">📍 Show on Map</button>
+                        </div>
                     </div>
                 </article>
 
                 <article class="attraction-card" data-category="hidden">
-                    <div class="card-image" style="background: linear-gradient(135deg, #5B7B64, #6F9A7D);"></div>
+                    <div class="card-image" style="background-image: url('images/haw-par-villa.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="card-content">
+                        <h3>Haw Par Villa</h3>
+                        <p class="location">📍 Pasir Panjang Road</p>
+                        <p>Unique cultural park featuring over 1,000 statues and dioramas depicting Chinese mythology, folklore, and moral lessons.</p>
+                        <div class="card-tags">
+                            <span class="tag">Free</span>
+                            <span class="tag">Culture</span>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="haw-par-villa">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="haw-par-villa" title="Show on Map">📍 Show on Map</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="attraction-card" data-category="hidden">
+                    <div class="card-image" style="background-image: url('images/pulau-ubin.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="card-content">
                         <h3>Pulau Ubin</h3>
                         <p class="location">📍 Off Changi Point</p>
                         <p>Rustic island escape with cycling trails, mangrove forests, traditional kampong life, and natural biodiversity.</p>
                         <div class="card-tags">
                             <span class="tag">Nature</span>
-                            <span class="tag">Adventure</span>
+                            <span class="tag">⭐ 4.6</span>
                         </div>
-                        <button class="learn-more" data-attraction="pulau-ubin">Learn More</button>
-                    </div>
-                </article>
-
-                <article class="attraction-card" data-category="hidden">
-                    <div class="card-image" style="background: linear-gradient(135deg, #8B5B5B, #A86E6E);"></div>
-                    <div class="card-content">
-                        <h3>Tiong Bahru</h3>
-                        <p class="location">📍 Tiong Bahru Estate</p>
-                        <p>Hip neighborhood with Art Deco architecture, independent bookshops, artisan cafes, and a charming wet market.</p>
-                        <div class="card-tags">
-                            <span class="tag">Hipster</span>
-                            <span class="tag">Cafes</span>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="pulau-ubin">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="pulau-ubin" title="Show on Map">📍 Show on Map</button>
                         </div>
-                        <button class="learn-more" data-attraction="tiong-bahru">Learn More</button>
-                    </div>
-                </article>
-
-                <article class="attraction-card" data-category="hidden">
-                    <div class="card-image" style="background: linear-gradient(135deg, #5B7B5B, #6F9A6F);"></div>
-                    <div class="card-content">
-                        <h3>MacRitchie Reservoir</h3>
-                        <p class="location">📍 Central Catchment</p>
-                        <p>Nature reserve with TreeTop Walk suspension bridge, jungle trails, kayaking, and diverse wildlife spotting.</p>
-                        <div class="card-tags">
-                            <span class="tag">Hiking</span>
-                            <span class="tag">Free</span>
-                        </div>
-                        <button class="learn-more" data-attraction="macritchie">Learn More</button>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Essentials Section -->
-    <section class="essentials-section" id="essentials">
+    <!-- Wildlife Section -->
+    <section class="attractions-section" id="wildlife">
         <div class="container">
-            <h2 class="section-title">Essential Information</h2>
-            <div class="essentials-grid">
-                <div class="essential-card">
-                    <h3>🚇 Transportation</h3>
-                    <ul>
-                        <li><strong>MRT:</strong> Efficient subway system covering island-wide</li>
-                        <li><strong>SimplyGo:</strong> Tap credit/debit card for seamless travel</li>
-                        <li><strong>Student Concession:</strong> Apply for discounted fares</li>
-                        <li><strong>Grab/Gojek:</strong> Ride-sharing apps for convenience</li>
-                    </ul>
-                </div>
-                <div class="essential-card">
-                    <h3>🍜 Affordable Food</h3>
-                    <ul>
-                        <li><strong>Hawker Centers:</strong> $3-6 meals with diverse cuisines</li>
-                        <li><strong>Food Courts:</strong> Air-conditioned budget dining</li>
-                        <li><strong>Kopitiam:</strong> Traditional breakfast spots</li>
-                        <li><strong>Caifan:</strong> Mixed rice - economical and customizable</li>
-                    </ul>
-                </div>
-                <div class="essential-card">
-                    <h3>💡 Tips & Tricks</h3>
-                    <ul>
-                        <li><strong>Peak Hours:</strong> Avoid MRT 8-9am, 6-7pm</li>
-                        <li><strong>Weather:</strong> Bring umbrella (tropical rain)</li>
-                        <li><strong>Chope Culture:</strong> Tissue packet reserves seats</li>
-                        <li><strong>AC Everywhere:</strong> Carry light jacket indoors</li>
-                    </ul>
-                </div>
-                <div class="essential-card">
-                    <h3>📱 Useful Apps</h3>
-                    <ul>
-                        <li><strong>MyTransport:</strong> Real-time bus/MRT info</li>
-                        <li><strong>GrabFood/Deliveroo:</strong> Food delivery</li>
-                        <li><strong>Burpple:</strong> Restaurant deals and reviews</li>
-                        <li><strong>Weather@SG:</strong> Singapore weather updates</li>
-                    </ul>
-                </div>
+            <h2 class="section-title">Wildlife</h2>
+            <p class="section-description">Experience Singapore's amazing wildlife and marine life</p>
+            <div class="attractions-grid">
+                <article class="attraction-card" data-category="wildlife">
+                    <div class="card-image" style="background-image: url('images/night-safari.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="card-content">
+                        <h3>Night Safari</h3>
+                        <p class="location">📍 Mandai Wildlife Reserve</p>
+                        <p>World's first nocturnal wildlife park featuring over 2,500 animals in their natural nighttime habitat.</p>
+                        <div class="card-tags">
+                            <span class="tag">Wildlife</span>
+                            <span class="tag">⭐ 4.2</span>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="night-safari">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="night-safari" title="Show on Map">📍 Show on Map</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="attraction-card" data-category="wildlife">
+                    <div class="card-image" style="background-image: url('images/singapore-zoo.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="card-content">
+                        <h3>Singapore Zoo</h3>
+                        <p class="location">📍 Mandai Wildlife Reserve</p>
+                        <p>Award-winning zoo featuring over 2,800 animals in naturalistic open-concept habitats.</p>
+                        <div class="card-tags">
+                            <span class="tag">Wildlife</span>
+                            <span class="tag">⭐ 4.8</span>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="singapore-zoo">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="singapore-zoo" title="Show on Map">📍 Show on Map</button>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
+    <!-- Sentosa Section -->
+    <section class="attractions-section" id="sentosa">
+        <div class="container">
+            <h2 class="section-title">Sentosa Island</h2>
+            <p class="section-description">Singapore's premier island resort destination with beaches, theme parks, and attractions</p>
+            <div class="attractions-grid">
+                <article class="attraction-card" data-category="Sentosa">
+                    <div class="card-image" style="background-image: url('images/universal-studios.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="card-content">
+                        <h3>Universal Studios Singapore</h3>
+                        <p class="location">📍 Resorts World Sentosa</p>
+                        <p>Southeast Asia's first and only Universal Studios theme park with seven themed zones and thrilling attractions.</p>
+                        <div class="card-tags">
+                            <span class="tag">Theme Park</span>
+                            <span class="tag">⭐ 4.9</span>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="universal-studios">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="universal-studios" title="Show on Map">📍 Show on Map</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="attraction-card" data-category="Sentosa">
+                    <div class="card-image" style="background-image: url('images/sentosa-beaches.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="card-content">
+                        <h3>Sentosa Beaches</h3>
+                        <p class="location">📍 Sentosa Island</p>
+                        <p>Three pristine beaches - Siloso, Palawan, and Tanjong - offering water sports, dining, and relaxation.</p>
+                        <div class="card-tags">
+                            <span class="tag">Free Beach</span>
+                            <span class="tag">⭐ 4.8</span>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="sentosa-beaches">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="sentosa-beaches" title="Show on Map">📍 Show on Map</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="attraction-card" data-category="Sentosa">
+                    <div class="card-image" style="background-image: url('images/sea-aquarium.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="card-content">
+                        <h3>S.E.A. Aquarium</h3>
+                        <p class="location">📍 Resorts World Sentosa</p>
+                        <p>One of the world's largest aquariums featuring over 100,000 marine animals across 1,000 species.</p>
+                        <div class="card-tags">
+                            <span class="tag">Marine Life</span>
+                            <span class="tag">⭐ 4.7</span>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="learn-more" data-attraction="sea-aquarium">Learn More</button>
+                            <button class="show-on-map-card" data-attraction="sea-aquarium" title="Show on Map">📍 Show on Map</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Travel Map Section -->
+    <section class="map-section" id="travel-map">
+        <div class="container">
+            <h2 class="section-title">Your Travel Map</h2>
+            <div class="map-container">
+                <iframe id="travel-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.1796479679!2d103.84425!3d1.3140001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11238a8b9375%3A0x887869cf52abf5c4!2sSingapore!5e0!3m2!1sen!2ssg!4v1673507856000!5m2!1sen!2ssg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
@@ -389,7 +455,6 @@
             <button class="cta-button-secondary" id="planTrip">Plan Your First Trip</button>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -402,9 +467,12 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#landmarks">Landmarks</a></li>
-                        <li><a href="#cultural">Cultural Sites</a></li>
-                        <li><a href="#essentials">Essentials</a></li>
+                        <li><a href="#Iconic">Iconic</a></li>
+                        <li><a href="#cultural">Culture</a></li>
+                        <li><a href="#museums">Museums</a></li>
+                        <li><a href="#wildlife">Wildlife</a></li>
+                        <li><a href="#hidden-gems">Hidden Gems</a></li>
+                        <li><a href="#sentosa">Sentosa</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -436,6 +504,9 @@
             </div>
         </div>
     </div>
+
+<script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js" defer></script>
+<script src="https://files.bpcontent.cloud/2026/01/06/05/20260106050837-FZQZBVYA.js" defer></script>
 
     <script src="js/app.js"></script>
 </body>

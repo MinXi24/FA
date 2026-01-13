@@ -35,25 +35,17 @@ const DOM = {
 // ============================================
 
 const attractionData = {
-    'marina-bay-sands': {
-        title: 'Marina Bay Sands',
-        description: 'An architectural marvel and Singapore\'s most iconic landmark, Marina Bay Sands features three 57-story towers connected by a massive sky terrace.',
-        highlights: [
-            'SkyPark Observation Deck with 360° views',
-            'Infinity Pool (hotel guests only)',
-            'ArtScience Museum',
-            'The Shoppes at Marina Bay Sands',
-            'Spectra Light and Water Show (free, nightly)'
-        ],
-        practical: {
-            hours: 'Daily 10:00 AM - 10:00 PM',
-            admission: 'SkyPark: S$26 adults, S$20 students',
-            transport: 'Bayfront MRT (CE1/DT16)',
-            tips: 'Visit at sunset for best photo opportunities'
-        }
-    },
     'gardens-by-the-bay': {
         title: 'Gardens by the Bay',
+        category: 'Iconic',
+        rating: 4.8,
+        status: 'Paid/Free',
+        price: '$0',
+        hours: '5:00 AM - 2:00 AM',
+        timeSpent: '3 - 4 Hours',
+        mustGo: true,
+        image: 'images/gardens-by-the-bay.jpg',
+        location: { lat: 1.2816, lng: 103.8636 },
         description: 'A futuristic nature park spanning 101 hectares, featuring iconic Supertrees and climate-controlled conservatories.',
         highlights: [
             'Supertree Grove with free Garden Rhapsody light shows',
@@ -62,15 +54,64 @@ const attractionData = {
             'OCBC Skyway walkway between Supertrees',
             'Free outdoor gardens'
         ],
-        practical: {
-            hours: 'Outdoor gardens: 5:00 AM - 2:00 AM, Conservatories: 9:00 AM - 9:00 PM',
-            admission: 'Outdoor: Free, Conservatories: S$28 (online discount available)',
-            transport: 'Bayfront MRT (CE1/DT16) - 10 min walk',
-            tips: 'Garden Rhapsody shows at 7:45 PM & 8:45 PM daily'
-        }
+        researchNote: 'Includes Supertree Grove & Light Show.',
+        tips: 'Garden Rhapsody shows at 7:45 PM & 8:45 PM daily'
+    },
+    'jewel-changi': {
+        title: 'Jewel Changi (Rain Vortex)',
+        category: 'Iconic',
+        rating: 4.9,
+        status: 'Free',
+        price: '~$46 - $58',
+        hours: '24 Hours (Light show: 8 PM)',
+        timeSpent: '1.5 - 2 Hours',
+        mustGo: false,
+        image: 'images/jewel-changi.jpg',
+        location: { lat: 1.3644, lng: 103.9915 },
+        description: 'A stunning architectural marvel featuring the world\'s tallest indoor waterfall and lush indoor gardens.',
+        highlights: [
+            'Rain Vortex - world\'s tallest indoor waterfall',
+            'Canopy Park attractions',
+            'Shiseido Forest Valley',
+            'Shopping and dining',
+            'Light and sound show'
+        ],
+        researchNote: '"Jurassic World" immersive theme in Cloud Forest.',
+        tips: 'Best viewed during light show at 8 PM'
+    },
+    'marina-bay-sands': {
+        title: 'Marina Bay Sands SkyPark',
+        category: 'Iconic',
+        rating: 4.6,
+        status: 'Paid',
+        price: '~$35 - $39',
+        hours: '11:00 AM - 9:00 PM',
+        timeSpent: '1 Hour',
+        mustGo: false,
+        image: 'images/marina-bay-sands.jpg',
+        location: { lat: 1.2834, lng: 103.8607 },
+        description: 'An architectural marvel and Singapore\'s most iconic landmark, Marina Bay Sands features three 57-story towers connected by a massive sky terrace.',
+        highlights: [
+            'SkyPark Observation Deck with 360° views',
+            'Infinity Pool (hotel guests only)',
+            'ArtScience Museum',
+            'The Shoppes at Marina Bay Sands',
+            'Spectra Light and Water Show (free, nightly)'
+        ],
+        researchNote: 'Peak hours (after 5pm) are more expensive.',
+        tips: 'Visit at sunset for best photo opportunities'
     },
     'merlion': {
         title: 'Merlion Park',
+        category: 'Iconic',
+        rating: 4.5,
+        status: 'Free',
+        price: '$0',
+        hours: '24 Hours',
+        timeSpent: '30 - 45 Mins',
+        mustGo: false,
+        image: 'images/merlion.jpg',
+        location: { lat: 1.2868, lng: 103.8545 },
         description: 'Home to Singapore\'s iconic 8.6-meter tall Merlion statue, symbolizing the city\'s origins as a fishing village.',
         highlights: [
             'Iconic photo opportunity',
@@ -79,233 +120,360 @@ const attractionData = {
             'Free admission',
             'Beautiful day and night views'
         ],
-        practical: {
-            hours: 'Open 24/7',
-            admission: 'Free',
-            transport: 'Raffles Place MRT (NS26/EW14) - 10 min walk',
-            tips: 'Best visited during sunrise, sunset, or evening for Marina Bay Sands light show'
-        }
+        researchNote: 'Free viewing from levels 1-5.',
+        tips: 'Best visited during sunrise, sunset, or evening for Marina Bay Sands light show'
     },
-    'sentosa': {
-        title: 'Sentosa Island',
-        description: 'Singapore\'s premier leisure destination offering beaches, attractions, hotels, and entertainment.',
+    'buddha-tooth': {
+        title: 'Buddha Tooth Relic Temple',
+        category: 'Culture',
+        rating: 4.7,
+        status: 'Free',
+        price: '~$8 - $14',
+        hours: '7:00 AM - 5:00 PM',
+        timeSpent: '1 Hour',
+        mustGo: false,
+        image: 'images/buddha-tooth.jpg',
+        location: { lat: 1.2814, lng: 103.8441 },
+        description: 'A magnificent Buddhist temple housing sacred relics and showcasing Tang dynasty architecture.',
         highlights: [
-            'Universal Studios Singapore',
-            'S.E.A. Aquarium',
-            'Beaches: Siloso, Palawan, Tanjong',
-            'Skyline Luge & Skyride',
-            'iFly Singapore (indoor skydiving)'
+            'Sacred Buddha Tooth Relic',
+            'Hundred Dragons Hall',
+            'Buddhist art museum',
+            'Rooftop garden',
+            'Free admission'
         ],
-        practical: {
-            hours: 'Island accessible 24/7, attractions vary',
-            admission: 'Island entry: Free, attractions separately priced',
-            transport: 'Sentosa Express from HarbourFront (CC29/NE1), Cable Car, or walk via Sentosa Boardwalk',
-            tips: 'Buy attraction combo tickets online for savings. Beach access is free!'
-        }
-    },
-    'chinatown': {
-        title: 'Chinatown',
-        description: 'A vibrant cultural district preserving Singapore\'s Chinese heritage through architecture, temples, and cuisine.',
-        highlights: [
-            'Buddha Tooth Relic Temple',
-            'Chinatown Heritage Centre',
-            'Smith Street food street',
-            'Traditional shophouses',
-            'Chinatown Complex hawker centre'
-        ],
-        practical: {
-            hours: 'Most shops: 10:00 AM - 8:00 PM, Temples: 7:00 AM - 7:00 PM',
-            admission: 'Walking around: Free, Museum: S$15',
-            transport: 'Chinatown MRT (NE4/DT19)',
-            tips: 'Visit Buddha Tooth Relic Temple early morning to see monks chanting'
-        }
-    },
-    'little-india': {
-        title: 'Little India',
-        description: 'A colorful ethnic enclave showcasing Indian culture, temples, shops, and authentic cuisine.',
-        highlights: [
-            'Sri Veeramakaliamman Temple',
-            'Tekka Centre (food & shopping)',
-            'Mustafa Centre (24-hour shopping)',
-            'Colorful street art',
-            'Indian spice shops'
-        ],
-        practical: {
-            hours: 'Shops: 9:00 AM - 9:00 PM, Temples: 6:00 AM - 12:00 PM, 4:00 PM - 9:00 PM',
-            admission: 'Free to explore, respectful temple entry',
-            transport: 'Little India MRT (NE7/DT12)',
-            tips: 'Very crowded on Sundays. Try authentic biryani at Tekka Centre!'
-        }
+        researchNote: 'Required for the walking nets/glass bridge.',
+        tips: 'Dress code: Shoulders/knees must be covered.'
     },
     'kampong-glam': {
-        title: 'Kampong Glam',
+        title: 'Kampong Glam (Haji Lane)',
+        category: 'Culture',
+        rating: 4.6,
+        status: 'Free',
+        price: '$0',
+        hours: '11:00 AM - 9:00 PM (Shops)',
+        timeSpent: '2 Hours',
+        mustGo: false,
+        image: 'images/kampong-glam.jpg',
+        location: { lat: 1.3024, lng: 103.8589 },
         description: 'Singapore\'s historic Malay-Muslim quarter featuring Sultan Mosque, hipster cafes, and boutique shops.',
         highlights: [
             'Sultan Mosque (Masjid Sultan)',
             'Haji Lane shopping & cafes',
             'Malay Heritage Centre',
             'Arab Street shopping',
-            'Middle Eastern restaurants'
+            'Colorful street art'
         ],
-        practical: {
-            hours: 'Shops: 11:00 AM - 8:00 PM, Mosque: 10:00 AM - 12:00 PM, 2:00 PM - 4:00 PM (non-prayer times)',
-            admission: 'Free to explore, Malay Heritage Centre: S$8',
-            transport: 'Bugis MRT (EW12/DT14) - 5 min walk',
-            tips: 'Dress modestly when visiting Sultan Mosque. Halal food options abundant!'
-        }
+        researchNote: 'Dress code: Shoulders/knees must be covered.',
+        tips: 'Visit in the late afternoon for best lighting'
     },
-    'sri-mariamman': {
-        title: 'Sri Mariamman Temple',
-        description: 'Singapore\'s oldest Hindu temple, established in 1827, known for its stunning Dravidian architecture.',
+    'chinatown': {
+        title: 'Chinatown',
+        category: 'Culture',
+        rating: 4.5,
+        status: 'Free',
+        price: '$0',
+        hours: '24 Hours (Shops: 10:00 AM - 10:00 PM)',
+        timeSpent: '2 - 3 Hours',
+        mustGo: false,
+        image: 'images/chinatown.jpg',
+        location: { lat: 1.2830, lng: 103.8443 },
+        description: 'Vibrant neighborhood with traditional shophouses, Buddha Tooth Relic Temple, hawker centers, and Chinese heritage.',
         highlights: [
-            'Ornate gopuram (entrance tower)',
-            'Colorful deity sculptures',
-            'Active place of worship',
-            'Located in Chinatown',
-            'Annual Thimithi fire-walking festival'
+            'Buddha Tooth Relic Temple',
+            'Traditional shophouses',
+            'Chinatown Food Street',
+            'Chinese heritage shops',
+            'Night market shopping'
         ],
-        practical: {
-            hours: 'Daily 7:00 AM - 12:00 PM, 6:00 PM - 9:00 PM',
-            admission: 'Free (photography fee: S$3)',
-            transport: 'Chinatown MRT (NE4/DT19) - 3 min walk',
-            tips: 'Remove shoes before entering. Dress modestly (shoulders and knees covered).'
-        }
+        researchNote: 'Heart of Chinese culture with vibrant street markets.',
+        tips: 'Visit in the evening for the bustling night market atmosphere'
+    },
+    'peranakan-museum': {
+        title: 'Peranakan Museum',
+        category: 'Museums',
+        rating: 4.4,
+        status: 'Paid',
+        price: '$0',
+        hours: '10:00 AM - 7:00 PM',
+        timeSpent: '1.5 Hours',
+        mustGo: false,
+        image: 'images/peranakan-museum.jpg',
+        location: { lat: 1.2943, lng: 103.8493 },
+        description: 'Dedicated to Peranakan culture, showcasing the unique heritage of Straits Chinese communities.',
+        highlights: [
+            'Peranakan artifacts and clothing',
+            'Traditional wedding exhibits',
+            'Interactive displays',
+            'Beautiful ceramics collection',
+            'Cultural workshops'
+        ],
+        researchNote: 'Heritage area with free street art tours.',
+        tips: 'Check for special exhibitions and cultural events'
+    },
+    'artscience-museum': {
+        title: 'ArtScience Museum',
+        category: 'Museums',
+        rating: 4.7,
+        status: 'Paid',
+        price: '$0',
+        hours: '10:00 AM - 7:00 PM',
+        timeSpent: '2 - 3 Hours',
+        mustGo: false,
+        image: 'images/artscience-museum.jpg',
+        location: { lat: 1.2862, lng: 103.8591 },
+        description: 'Iconic lotus-shaped museum exploring the intersection of art, science, and technology.',
+        highlights: [
+            'Future World digital art installation',
+            'Rotating exhibitions',
+            'Immersive experiences',
+            'Interactive displays',
+            'Unique architecture'
+        ],
+        researchNote: 'Little India\'s oldest Hindu temple.',
+        tips: 'Book tickets online for discounts'
     },
     'national-museum': {
         title: 'National Museum of Singapore',
-        description: 'Singapore\'s oldest museum (1887) showcasing the nation\'s history through immersive storytelling.',
+        category: 'Museums',
+        rating: 4.5,
+        status: 'Paid',
+        price: '~$10',
+        hours: '10:00 AM - 7:00 PM',
+        timeSpent: '2 Hours',
+        mustGo: false,
+        image: 'images/national-museum.jpg',
+        location: { lat: 1.2966, lng: 103.8486 },
+        description: 'Singapore\'s oldest museum showcasing the nation\'s history and cultural heritage.',
         highlights: [
             'Singapore History Gallery',
-            'Living Galleries (Fashion, Food, Film)',
-            'Interactive multimedia exhibits',
-            'Colonial architecture',
-            'Regular special exhibitions'
+            'Living Galleries',
+            'Glass Rotunda',
+            'Multimedia presentations',
+            'Colonial architecture'
         ],
-        practical: {
-            hours: 'Daily 10:00 AM - 7:00 PM',
-            admission: 'S$15 adults, S$10 students (with valid ID)',
-            transport: 'Bras Basah MRT (CC2) - 5 min walk, Dhoby Ghaut MRT (NS24/NE6/CC1)',
-            tips: 'Free admission 6:00 PM - 7:00 PM daily. Audio guides available.'
-        }
+        researchNote: 'Heritage house; Strictly by booking only.',
+        tips: 'Free admission for Singaporeans and PRs'
     },
-    'artscience': {
-        title: 'ArtScience Museum',
-        description: 'Iconic lotus-shaped museum exploring creative convergence of art, science, technology, and culture.',
+    'national-gallery': {
+        title: 'National Gallery',
+        category: 'Museums',
+        rating: 4.7,
+        status: 'Paid',
+        price: '~$15 - $36',
+        hours: '10:00 AM - 7:00 PM',
+        timeSpent: '2 - 3 Hours',
+        mustGo: false,
+        image: 'images/national-gallery.jpg',
+        location: { lat: 1.2903, lng: 103.8516 },
+        description: 'World\'s largest public collection of Southeast Asian art housed in two historic buildings.',
         highlights: [
-            'FUTURE WORLD digital art installations',
-            'Rotating international exhibitions',
-            'Unique architecture by Moshe Safdie',
-            'Interactive, immersive experiences',
-            'Connected to Marina Bay Sands'
+            'Southeast Asian art collection',
+            'Modern and contemporary exhibitions',
+            'Historic Supreme Court & City Hall buildings',
+            'Rooftop gardens',
+            'Art workshops and tours'
         ],
-        practical: {
-            hours: 'Daily 10:00 AM - 7:00 PM (last entry 6:00 PM)',
-            admission: 'Varies by exhibition, typically S$19-24',
-            transport: 'Bayfront MRT (CE1/DT16)',
-            tips: 'Book online for discounts. FUTURE WORLD is perfect for Instagram!'
-        }
+        researchNote: 'Permanent galleries vs. All-Access (inc. Odyssea).',
+        tips: 'Free for locals; high-value art collection.'
     },
-    'asian-civilisations': {
-        title: 'Asian Civilisations Museum',
-        description: 'Premier museum showcasing pan-Asian cultures and civilizations through 11 galleries.',
+    'sea-aquarium': {
+        title: 'S.E.A. Aquarium',
+        category: 'Wildlife',
+        rating: 4.6,
+        status: 'Paid',
+        price: '~$45+',
+        hours: 'Monday to Friday: 10:00 AM - 7:00 PM',
+        timeSpent: '2 - 4 Hours',
+        mustGo: false,
+        image: 'images/sea-aquarium.jpg',
+        location: { lat: 1.2585, lng: 103.8200 },
+        description: 'One of the world\'s largest aquariums featuring over 100,000 marine animals.',
         highlights: [
-            'Tang Shipwreck collection',
-            'Southeast Asian galleries',
-            'Chinese, Islamic, South Asian artifacts',
-            'Riverside location',
+            'Open Ocean Habitat viewing panel',
+            'Over 1,000 species of marine life',
+            'Shark Seas habitat',
+            'Touch pools',
             'Educational programs'
         ],
-        practical: {
-            hours: 'Mon-Thu, Sat-Sun: 10:00 AM - 7:00 PM, Fri: 10:00 AM - 9:00 PM',
-            admission: 'S$12 adults, S$6 students',
-            transport: 'Raffles Place MRT (NS26/EW14) - 8 min walk',
-            tips: 'Free admission Fridays 7:00 PM - 9:00 PM'
-        }
+        researchNote: 'Now rebranding/expanding as Singapore Oceanarium.',
+        tips: 'Visit during feeding times for the best experience'
     },
-    'science-centre': {
-        title: 'Science Centre Singapore',
-        description: 'Interactive science museum with over 1,000 exhibits promoting STEM learning through hands-on experiences.',
+    'night-safari': {
+        title: 'Night Safari',
+        category: 'Wildlife',
+        rating: 4.2,
+        status: 'Paid',
+        price: '~$20',
+        hours: '7:15 PM - 12:00 AM',
+        timeSpent: '3 Hours',
+        mustGo: false,
+        image: 'images/night-safari.jpg',
+        location: { lat: 1.4043, lng: 103.7898 },
+        description: 'World\'s first nocturnal wildlife park featuring over 2,500 animals.',
         highlights: [
-            'Interactive science exhibits',
-            'Omni-Theatre (IMAX dome)',
-            'Snow City (indoor snow playground)',
-            'KidsSTOP (for children)',
-            'Regular science shows'
+            'Seven themed zones',
+            'Tram ride through habitats',
+            'Walking trails',
+            'Animal shows',
+            'Night feeding sessions'
         ],
-        practical: {
-            hours: 'Tue-Sun: 10:00 AM - 6:00 PM (closed Mondays)',
-            admission: 'S$12 adults, S$8 students, combo tickets available',
-            transport: 'Jurong East MRT (NS1/EW24) - Bus 335 (3 stops)',
-            tips: 'Check Omni-Theatre showtimes in advance. Allow 3-4 hours for visit.'
-        }
+        researchNote: 'Free for locals; high-value art collection.',
+        tips: 'Arrive early to avoid queues; book online for discounts'
+    },
+    'singapore-zoo': {
+        title: 'Singapore Zoo',
+        category: 'Wildlife',
+        rating: 4.8,
+        status: 'Paid',
+        price: '$0',
+        hours: '8:30 AM - 6:00 PM',
+        timeSpent: '4+ Hours',
+        mustGo: false,
+        image: 'images/singapore-zoo.jpg',
+        location: { lat: 1.4043, lng: 103.7903 },
+        description: 'Award-winning zoo featuring over 2,800 animals in naturalistic habitats.',
+        highlights: [
+            'Open-concept enclosures',
+            'Animal shows and feeding sessions',
+            'Rainforest Kidzworld',
+            'Fragile Forest biodome',
+            'Breakfast with orangutans'
+        ],
+        researchNote: 'UNESCO Site; 95% of the park is free.',
+        tips: 'Arrive early to see animals at their most active'
+    },
+    'haw-par-villa': {
+        title: 'Haw Par Villa',
+        category: 'Hidden',
+        rating: 4.0,
+        status: 'Free',
+        price: '~$5',
+        hours: '9:00 AM - 8:00 PM',
+        timeSpent: '1.5 Hours',
+        mustGo: false,
+        image: 'images/haw-par-villa.jpg',
+        location: { lat: 1.2826, lng: 103.7820 },
+        description: 'A quirky cultural park featuring over 1,000 statues depicting Chinese mythology and folklore.',
+        highlights: [
+            'Ten Courts of Hell diorama',
+            'Chinese mythology statues',
+            'Free admission',
+            'Unique photo opportunities',
+            'Cultural storytelling'
+        ],
+        researchNote: 'Located inside the Botanic Gardens.',
+        tips: 'Not suitable for young children due to graphic content'
     },
     'haji-lane': {
         title: 'Haji Lane',
-        description: 'Singapore\'s hippest street featuring vibrant street art, indie boutiques, and Instagram-worthy cafes.',
+        category: 'Hidden',
+        rating: 4.0,
+        status: 'Free',
+        price: '$0',
+        hours: '11:00 AM - 9:00 PM',
+        timeSpent: '1 - 2 Hours',
+        mustGo: false,
+        image: 'images/haji-lane.jpg',
+        location: { lat: 1.3012, lng: 103.8591 },
+        description: 'Narrow alleyway bursting with colorful street art, indie boutiques, quirky cafes, and Instagram-worthy corners.',
         highlights: [
-            'Colorful street murals',
-            'Independent boutiques',
-            'Trendy cafes and bars',
-            'Unique photo opportunities',
-            'Local designer shops'
+            'Vibrant street art and murals',
+            'Boutique shopping',
+            'Trendy cafes and restaurants',
+            'Photography opportunities',
+            'Hipster atmosphere'
         ],
-        practical: {
-            hours: 'Shops: 11:00 AM - 8:00 PM, Cafes: 10:00 AM - 11:00 PM',
-            admission: 'Free to explore',
-            transport: 'Bugis MRT (EW12/DT14) - 7 min walk',
-            tips: 'Best visited late morning or afternoon for photos. Weekend evenings get very crowded.'
-        }
+        researchNote: 'Part of Kampong Glam area with vibrant street culture.',
+        tips: 'Best visited in the afternoon for photos and shopping'
+    },
+    'henderson-waves': {
+        title: 'Henderson Waves',
+        category: 'Hidden',
+        rating: 4.5,
+        status: 'Free',
+        price: '$0',
+        hours: '24 Hours (Best at 7 PM)',
+        timeSpent: '1 Hour',
+        mustGo: false,
+        image: 'images/henderson-waves.jpg',
+        location: { lat: 1.2756, lng: 103.8159 },
+        description: 'Singapore\'s highest pedestrian bridge featuring a stunning wave-like structure.',
+        highlights: [
+            'Unique wave architecture',
+            'Southern Ridges trail',
+            'Night lighting (7 PM - 2 AM)',
+            'Panoramic city views',
+            'Photo opportunities'
+        ],
+        researchNote: 'Closed on Mondays for maintenance.',
+        tips: 'Best visited during sunset or evening'
     },
     'pulau-ubin': {
         title: 'Pulau Ubin',
-        description: 'Rustic offshore island preserving Singapore\'s kampong (village) heritage with natural landscapes.',
+        category: 'Hidden',
+        rating: 4.6,
+        status: 'Free',
+        price: '$0',
+        hours: '6:00 AM - 7:00 PM (Bumboat)',
+        timeSpent: '4 - 6 Hours',
+        mustGo: false,
+        image: 'images/pulau-ubin.jpg',
+        location: { lat: 1.4044, lng: 103.9602 },
+        description: 'A rustic island offering a glimpse of Singapore\'s kampong past with nature trails and wildlife.',
         highlights: [
-            'Cycling trails through jungle',
             'Chek Jawa wetlands',
-            'Traditional kampong houses',
-            'Wildlife spotting (monkeys, wild boars)',
-            'Peaceful escape from city'
+            'Mountain biking trails',
+            'Kampong village experience',
+            'Wildlife spotting',
+            'Bumboat ride adventure'
         ],
-        practical: {
-            hours: 'Bumboats: 6:00 AM - 7:00 PM (depending on demand)',
-            admission: 'Bumboat: S$4 one-way, Island: Free',
-            transport: 'Tanah Merah MRT (EW4), then Bus 2 to Changi Point Ferry Terminal',
-            tips: 'Rent bikes (S$10-20/day). Bring water and sunscreen. No ATMs on island!'
-        }
+        researchNote: 'Includes the scenic Henderson Waves bridge.',
+        tips: 'Bring cash, water, and sunscreen; limited facilities'
     },
-    'tiong-bahru': {
-        title: 'Tiong Bahru',
-        description: 'Singapore\'s oldest public housing estate transformed into a hip neighborhood with heritage charm.',
+    'sentosa-beaches': {
+        title: 'Sentosa Public Beaches',
+        category: 'Sentosa',
+        rating: 4.8,
+        status: 'Free',
+        price: '$0',
+        hours: '24 hours',
+        timeSpent: '2 - 4 Hours',
+        mustGo: false,
+        image: 'images/sentosa-beaches.jpg',
+        location: { lat: 1.2494, lng: 103.8303 },
+        description: 'Three pristine beaches offering water sports, dining, and relaxation.',
         highlights: [
-            'Art Deco architecture',
-            'BooksActually independent bookstore',
-            'Tiong Bahru Market (hawker food)',
-            'Specialty coffee shops',
-            'Quiet residential streets'
+            'Siloso Beach - sports & activities',
+            'Palawan Beach - family-friendly',
+            'Tanjong Beach - quiet & upscale',
+            'Beach bars and restaurants',
+            'Water sports rentals'
         ],
-        practical: {
-            hours: 'Shops: 9:00 AM - 6:00 PM, Cafes: 8:00 AM - 6:00 PM, Market: 6:00 AM - 3:00 PM',
-            admission: 'Free to explore',
-            transport: 'Tiong Bahru MRT (EW17)',
-            tips: 'Visit market early for breakfast. Weekends are busier but more lively.'
-        }
+        researchNote: 'Siloso, Palawan, and Tanjong beaches.',
+        tips: 'Free beach access; weekdays less crowded'
     },
-    'macritchie': {
-        title: 'MacRitchie Reservoir',
-        description: 'Singapore\'s oldest reservoir surrounded by lush rainforest, offering nature trails and TreeTop Walk.',
+    'universal-studios': {
+        title: 'Universal Studios Singapore (USS)',
+        category: 'Sentosa',
+        rating: 4.9,
+        status: 'Paid',
+        price: '~$140+',
+        hours: '10:00 AM to 8:00 PM',
+        timeSpent: '6 - 8 Hours',
+        mustGo: false,
+        image: 'images/universal-studios.jpg',
+        location: { lat: 1.2540, lng: 103.8238 },
+        description: 'Southeast Asia\'s first and only Universal Studios theme park with themed zones and attractions.',
         highlights: [
-            'TreeTop Walk (suspension bridge)',
-            'Multiple hiking trails (2-10 km)',
-            'Kayaking on reservoir',
-            'Wildlife spotting (monkeys, monitor lizards)',
-            'Peaceful nature escape'
+            'Seven themed zones',
+            'Thrilling rides and shows',
+            'Character meet-and-greets',
+            'Hollywood Boulevard',
+            'Battlestar Galactica rollercoaster'
         ],
-        practical: {
-            hours: 'Daily 7:00 AM - 7:00 PM',
-            admission: 'Free',
-            transport: 'Caldecott MRT (CC17/TE9), then Bus 132 or 167. Or Marymount MRT (CC16) - 15 min walk',
-            tips: 'Wear proper hiking shoes. Bring insect repellent and water. TreeTop Walk closes at 5PM.'
-        }
+        researchNote: 'Prices vary by date; check for "Fast Pass" costs.',
+        tips: 'Buy tickets online for discounts; arrive early'
     }
 };
 
@@ -382,6 +550,12 @@ function setupEventListeners() {
             }
         });
     }
+    
+    // Show on Map buttons on cards
+    const showOnMapCardButtons = document.querySelectorAll('.show-on-map-card');
+    showOnMapCardButtons.forEach(button => {
+        button.addEventListener('click', handleShowOnMapFromCard);
+    });
     
     // Keyboard accessibility for modal
     document.addEventListener('keydown', (e) => {
@@ -521,22 +695,61 @@ function handleLearnMore(e) {
 }
 
 function openModal(data) {
-    // Build modal content
+    // Build modal content with full image and all details
     const modalContent = `
-        <h2 style="color: var(--primary-red); margin-bottom: 1rem;">${data.title}</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-secondary);">${data.description}</p>
+        <div style="position: relative; width: 100%; height: 550px; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem;">
+            <img src="${data.image}" alt="${data.title}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="display: none; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary-red), var(--primary-green)); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                ${data.title}
+            </div>
+        </div>
         
-        <h3 style="color: var(--primary-green); margin-top: 1.5rem; margin-bottom: 0.8rem;">✨ Highlights</h3>
-        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+        <h2 style="color: var(--primary-red); margin-bottom: 0.5rem;">${data.title}</h2>
+        <div style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+            <span style="background: var(--accent-yellow); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">⭐ ${data.rating}</span>
+            <span style="background: ${data.status === 'Free' ? 'var(--primary-green)' : 'var(--accent-red)'}; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">${data.status}</span>
+            ${data.mustGo ? '<span style="background: var(--primary-red); color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">✓ Must Go!</span>' : ''}
+        </div>
+        
+        <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.8;">${data.description}</p>
+        
+        ${data.location ? `
+        <button id="showOnMapBtn" data-lat="${data.location.lat}" data-lng="${data.location.lng}" data-title="${data.title}" style="background: linear-gradient(135deg, var(--primary-green), var(--accent-teal)); color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; margin-bottom: 1.5rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);">
+            📍 Show on Map
+        </button>
+        ` : ''}
+        
+        <div style="background: var(--off-white); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+            <h3 style="color: var(--primary-green); margin-top: 0; margin-bottom: 1rem; font-size: 1.2rem;">📋 Essential Information</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div>
+                    <p style="margin-bottom: 0.5rem;"><strong style="color: var(--primary-red);">💰 Price:</strong></p>
+                    <p style="margin: 0; color: var(--text-secondary);">${data.price}</p>
+                </div>
+                <div>
+                    <p style="margin-bottom: 0.5rem;"><strong style="color: var(--primary-red);">🕒 Hours:</strong></p>
+                    <p style="margin: 0; color: var(--text-secondary);">${data.hours}</p>
+                </div>
+                <div>
+                    <p style="margin-bottom: 0.5rem;"><strong style="color: var(--primary-red);">⏱️ Time Needed:</strong></p>
+                    <p style="margin: 0; color: var(--text-secondary);">${data.timeSpent}</p>
+                </div>
+            </div>
+        </div>
+        
+        <h3 style="color: var(--primary-green); margin-top: 1.5rem; margin-bottom: 0.8rem; font-size: 1.1rem;">✨ Highlights</h3>
+        <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.8;">
             ${data.highlights.map(item => `<li style="margin-bottom: 0.5rem; color: var(--text-secondary);">${item}</li>`).join('')}
         </ul>
         
-        <h3 style="color: var(--primary-green); margin-top: 1.5rem; margin-bottom: 0.8rem;">📋 Practical Information</h3>
-        <div style="background: var(--off-white); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
-            <p style="margin-bottom: 0.8rem;"><strong style="color: var(--primary-red);">Hours:</strong> ${data.practical.hours}</p>
-            <p style="margin-bottom: 0.8rem;"><strong style="color: var(--primary-red);">Admission:</strong> ${data.practical.admission}</p>
-            <p style="margin-bottom: 0.8rem;"><strong style="color: var(--primary-red);">Transport:</strong> ${data.practical.transport}</p>
-            <p style="margin-bottom: 0;"><strong style="color: var(--primary-red);">Tips:</strong> ${data.practical.tips}</p>
+        <div style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1)); padding: 1.2rem; border-radius: 12px; border-left: 4px solid var(--primary-red); margin-bottom: 1rem;">
+            <p style="margin-bottom: 0.8rem;"><strong style="color: var(--primary-red);">📝 Research Note:</strong></p>
+            <p style="margin: 0; color: var(--text-secondary); font-style: italic;">${data.researchNote}</p>
+        </div>
+        
+        <div style="background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 230, 109, 0.1)); padding: 1.2rem; border-radius: 12px; border-left: 4px solid var(--primary-green);">
+            <p style="margin-bottom: 0.8rem;"><strong style="color: var(--primary-green);">💡 Pro Tips:</strong></p>
+            <p style="margin: 0; color: var(--text-secondary);">${data.tips}</p>
         </div>
     `;
     
@@ -546,12 +759,103 @@ function openModal(data) {
     
     // Prevent body scroll when modal is open
     document.body.style.overflow = 'hidden';
+    
+    // Add event listener to Show on Map button if it exists
+    const showOnMapBtn = document.getElementById('showOnMapBtn');
+    if (showOnMapBtn) {
+        showOnMapBtn.addEventListener('click', handleShowOnMap);
+        // Add hover effect
+        showOnMapBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 6px 20px rgba(78, 205, 196, 0.4)';
+        });
+        showOnMapBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 4px 12px rgba(78, 205, 196, 0.3)';
+        });
+    }
 }
 
 function closeModal() {
     DOM.modal.classList.remove('active');
     AppState.modalOpen = false;
     document.body.style.overflow = '';
+}
+
+// ============================================
+// Map Navigation
+// ============================================
+
+function handleShowOnMapFromCard(e) {
+    const button = e.currentTarget;
+    const attractionId = button.getAttribute('data-attraction');
+    const data = attractionData[attractionId];
+    
+    if (data && data.location) {
+        // Scroll to the map section
+        const mapSection = document.getElementById('travel-map');
+        if (mapSection) {
+            mapSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Update the map iframe after scrolling
+            setTimeout(() => {
+                updateMapLocation(data.location.lat, data.location.lng, data.title);
+            }, 800); // Wait for scroll to complete
+        }
+    } else {
+        console.warn(`No location data found for attraction: ${attractionId}`);
+    }
+}
+
+function handleShowOnMap(e) {
+    const button = e.target;
+    const lat = button.getAttribute('data-lat');
+    const lng = button.getAttribute('data-lng');
+    const title = button.getAttribute('data-title');
+    
+    // Close the modal
+    closeModal();
+    
+    // Scroll to the map section
+    const mapSection = document.getElementById('travel-map');
+    if (mapSection) {
+        mapSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Update the map iframe after scrolling
+        setTimeout(() => {
+            updateMapLocation(lat, lng, title);
+        }, 800); // Wait for scroll to complete
+    }
+}
+
+function updateMapLocation(lat, lng, title) {
+    const mapIframe = document.getElementById('travel-map-iframe');
+    if (mapIframe) {
+        // Create a new embed URL with the specific location
+        const embedUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(title)},Singapore&zoom=15&center=${lat},${lng}`;
+        
+        // Alternative: Use standard embed format
+        const standardEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.0!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMTYnNTguOCJOIDEwM8KwNTEnNDguNiJF!5e0!3m2!1sen!2ssg!4v1673507856000!5m2!1sen!2ssg`;
+        
+        // Use query parameter method (works without API key)
+        const queryEmbedUrl = `https://maps.google.com/maps?q=${lat},${lng}&hl=en&z=15&output=embed`;
+        
+        // Update iframe src
+        mapIframe.src = queryEmbedUrl;
+        
+        // Add a visual indicator that map is updating
+        const mapContainer = mapIframe.parentElement;
+        mapContainer.style.position = 'relative';
+        
+        // Show loading state briefly
+        const originalBorder = mapContainer.style.border;
+        mapContainer.style.border = '3px solid var(--primary-green)';
+        mapContainer.style.transition = 'border 0.3s ease';
+        
+        setTimeout(() => {
+            mapContainer.style.border = originalBorder;
+        }, 2000);
+    }
 }
 
 // ============================================
@@ -562,8 +866,8 @@ function handleCTAClick(e) {
     const buttonId = this.id;
     
     if (buttonId === 'getStarted') {
-        // Scroll to landmarks section
-        document.getElementById('landmarks').scrollIntoView({ behavior: 'smooth' });
+        // Scroll to Iconic landmarks section
+        document.getElementById('Iconic').scrollIntoView({ behavior: 'smooth' });
     } else if (buttonId === 'planTrip') {
         // Show interactive trip planner (future feature)
         showTripPlanner();
@@ -697,10 +1001,133 @@ if ('serviceWorker' in navigator) {
 // ============================================
 
 if (typeof module !== 'undefined' && module.exports) {
+// ============================================
+// Botpress Chatbot Integration
+// ============================================
+
+// Function to open Botpress chat
+function openChatbot() {
+    window.botpressWebChat.sendEvent({ type: 'show' });
+}
+
+// Connect your existing HTML buttons to the chatbot
+document.getElementById('getStarted').addEventListener('click', openChatbot);
+document.getElementById('planTrip').addEventListener('click', openChatbot);
+
+// Optional: Also connect the "Learn More" buttons on attraction cards
+document.querySelectorAll('.learn-more').forEach(button => {
+    button.addEventListener('click', () => {
+        const attraction = button.getAttribute('data-attraction');
+        openChatbot();
+        // This sends a hidden message to the bot so it starts talking about that specific place!
+        window.botpressWebChat.sendPayload({
+            type: 'text',
+            text: `Tell me about ${attraction} lah`
+        });
+    });
+});
+
+// ============================================
+// Auto-Scroll Magic: Bot mentions → Website scrolls!
+// ============================================
+
+// Mapping of keywords to section IDs
+const sectionKeywords = {
+    'landmarks': ['marina bay', 'merlion', 'sentosa', 'landmark', 'icon'],
+    'cultural': ['chinatown', 'little india', 'temple', 'mosque', 'cultural', 'heritage'],
+    'museums': ['museum', 'gallery', 'art', 'science', 'history'],
+    'hidden-gems': ['hidden gem', 'secret', 'local spot', 'off the beaten'],
+    'essentials': ['transport', 'mrt', 'food', 'hawker', 'essential', 'getting around']
+};
+
+// Listen to bot messages and auto-scroll to relevant sections
+window.addEventListener('message', (event) => {
+    // Check if message is from Botpress
+    if (event.data && event.data.name === 'webchatMessage') {
+        const message = event.data.data;
+        
+        // Only process bot messages (not user messages)
+        if (message && message.direction === 'incoming' && message.payload && message.payload.text) {
+            const botText = message.payload.text.toLowerCase();
+            
+            // Check which section the bot is talking about
+            for (const [sectionId, keywords] of Object.entries(sectionKeywords)) {
+                if (keywords.some(keyword => botText.includes(keyword))) {
+                    // Found a match! Scroll to that section
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        setTimeout(() => {
+                            section.scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'start' 
+                            });
+                        }, 500); // Small delay so user sees the bot response first
+                    }
+                    break; // Stop after first match
+                }
+            }
+        }
+    }
+});
+
+// 💡 Alternative for Tabs (if you later convert sections to tabs):
+// function showSection(sectionId) {
+//     // Hide all sections
+//     document.querySelectorAll('.section-tab').forEach(tab => {
+//         tab.style.display = 'none';
+//     });
+//     // Show the target section
+//     const targetSection = document.getElementById(sectionId);
+//     if (targetSection) {
+//         targetSection.style.display = 'block';
+//     }
+// }
+
+// ============================================
+// Precise Scroll Control: Bot sends SCROLL commands
+// ============================================
+
+// Listen for specific scroll commands from the bot (e.g., 'SCROLL_Iconic', 'SCROLL_landmarks')
+window.botpressWebChat.onEvent((event) => {
+    // Check if this is a message event
+    if (event.type === 'message' && event.value.payload && event.value.payload.text) {
+        const messageText = event.value.payload.text;
+        
+        // Check if the message starts with 'SCROLL_'
+        if (messageText.startsWith('SCROLL_')) {
+            // Extract the section ID (e.g., 'SCROLL_Iconic' → 'Iconic')
+            const sectionId = messageText.replace('SCROLL_', '');
+            
+            // Find the section by ID from your HTML
+            const section = document.getElementById(sectionId);
+            
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                console.log(`Scrolling to ${sectionId}!`);
+            } else {
+                console.warn(`Section with ID "${sectionId}" not found`);
+            }
+        }
+    }
+}, ['MESSAGE.RECEIVED']);
+
+// 💡 Bot Setup Instructions:
+// In your Botpress bot, send messages like:
+// - "SCROLL_landmarks" → scrolls to landmarks section
+// - "SCROLL_cultural" → scrolls to cultural section
+// - "SCROLL_museums" → scrolls to museums section
+// - "SCROLL_hidden-gems" → scrolls to hidden gems section
+// - "SCROLL_essentials" → scrolls to essentials section
+
+// ============================================
+// Module Exports (for testing)
+// ============================================
+
+if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         AppState,
         attractionData,
         throttle,
         debounce
     };
-}
+}}
