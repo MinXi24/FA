@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelMate - Your smart local buddy for discovering affordable, delicious, and student-friendly food options in Singapore">
+    <meta name="keywords" content="Singapore food, hawker centres, student dining, exchange students, affordable food">
+    <meta name="author" content="TravelMate">
+    <title>TravelMate - Discover Singapore's Best Student-Friendly Food</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/food.css">
+</head>
+<body>
+     <!-- Back Navigation -->
+    <div class="back-navigation">
+        <a href="index.html" class="back-button">
+            <span class="back-arrow">←</span> Back to Home
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>TravelMate</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#explore" class="nav-link">Explore</a></li>
+                    <li><a href="#features" class="nav-link">Locations</a></li>
+                    <li><a href="#map" class="nav-link">Map</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Your Smart Local Buddy in <span class="highlight">Singapore</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Discover affordable, delicious, and student-friendly food options with ease. 
+                    Navigate hawker centres, local dishes, and multicultural cuisines like a pro!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#explore" class="btn btn-primary">
+                        <i class="fas fa-compass"></i> Start Exploring
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why TravelMate?</h2>
+                <p class="section-subtitle">Making your Singapore food journey stress-free and delicious</p>
+            </div>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Navigate with Confidence</h3>
+                    <p>Unfamiliar with hawker centres? We've got you covered with detailed guides, maps, and insider tips to help you explore Singapore's diverse food scene.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Budget-Friendly Options</h3>
+                    <p>Student budget? No problem! Discover affordable dining options with transparent pricing, so you can eat well without breaking the bank.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3>Multicultural Cuisines</h3>
+                    <p>Explore Chinese, Malay, Indian, and fusion dishes. Learn about local favorites and find food that suits your taste and dietary needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section class="explore" id="explore">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explore Food Options</h2>
+                <p class="section-subtitle">Filter by cuisine, price, or location to find your perfect meal</p>
+            </div>
+            
+            <!-- Search and Filter -->
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search for dishes, hawker centres, or cuisines...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i> All
+                    </button>
+                    <button class="filter-btn" data-filter="chinese">
+                        <i class="fas fa-dragon"></i> Chinese
+                    </button>
+                    <button class="filter-btn" data-filter="malay">
+                        <i class="fas fa-mosque"></i> Malay
+                    </button>
+                    <button class="filter-btn" data-filter="indian">
+                        <i class="fas fa-om"></i> Indian
+                    </button>
+                    <button class="filter-btn" data-filter="fusion">
+                        <i class="fas fa-blender"></i> Fusion
+                    </button>
+                </div>
+                <div class="price-filter">
+                    <label>Price Range:</label>
+                    <button class="price-btn active" data-price="all">All</button>
+                    <button class="price-btn" data-price="budget">$ (Under $5)</button>
+                    <button class="price-btn" data-price="moderate">$$ ($5-$10)</button>
+                    <button class="price-btn" data-price="splurge">$$$ ($10+)</button>
+                </div>
+            </div>
+
+            <!-- Food Cards Grid -->
+            <div class="food-grid" id="foodGrid">
+                <!-- Food cards will be dynamically inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Food by Location Section -->
+    <section class="locations" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Food by MRT Location</h2>
+                <p class="section-subtitle">Find delicious food near your MRT station</p>
+            </div>
+            
+            <!-- MRT Line Tabs -->
+            <div class="mrt-tabs">
+                <button class="mrt-tab active" data-line="purple">
+                    <i class="fas fa-train"></i> North-East Line
+                </button>
+                <button class="mrt-tab" data-line="red">
+                    <i class="fas fa-train"></i> North-South Line
+                </button>
+                <button class="mrt-tab" data-line="green">
+                    <i class="fas fa-train"></i> East-West Line
+                </button>
+                <button class="mrt-tab" data-line="yellow">
+                    <i class="fas fa-train"></i> Circle Line
+                </button>
+                <button class="mrt-tab" data-line="blue">
+                    <i class="fas fa-train"></i> Downtown Line
+                </button>
+                <button class="mrt-tab" data-line="brown">
+                    <i class="fas fa-train"></i> Thomson-East Coast Line
+                </button>
+            </div>
+            
+            <!-- Purple Line (North-East Line) -->
+            <div class="mrt-content active" id="purple-line">
+                <div class="location-cards">
+                    <div class="location-card" style="border-left: 4px solid #9D5B8B;" data-location="hougang">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Hougang</h3>
+                            <span class="station-badge purple">NE14</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Hougang 1 Prawn Noodle</strong>
+                                <p>Famous for har mee (prawn noodles) - $4.50</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Kovan Market</strong>
+                                <p>Wide variety of hawker food - Budget friendly</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #9D5B8B;" data-location="sengkang">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Sengkang</h3>
+                            <span class="station-badge purple">NE16</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Compass One Shopping Mall</strong>
+                                <p>Food court with Chinese, Malay & Indian options - $3-6</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Kopitiam Square</strong>
+                                <p>Local coffee shop with economic rice - $3.50</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #9D5B8B;" data-location="serangoon">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Serangoon</h3>
+                            <div class="station-badges">
+                                <span class="station-badge purple">NE12</span>
+                                <span class="station-badge yellow">CC13</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Chomp Chomp Food Centre</strong>
+                                <p>BBQ stingray, satay, carrot cake - $4-8</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>NEX Shopping Mall</strong>
+                                <p>Multiple food courts and restaurants - $5-10</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #9D5B8B;" data-location="little-india">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Little India</h3>
+                            <div class="station-badges">
+                                <span class="station-badge purple">NE7</span>
+                                <span class="station-badge blue">DT12</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Tekka Centre</strong>
+                                <p>Authentic Indian food, biryani, rojak - $3-6</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Muthu's Curry</strong>
+                                <p>Fish head curry specialist - $10-15</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #9D5B8B;" data-location="dhoby-ghaut">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Dhoby Ghaut</h3>
+                            <div class="station-badges">
+                                <span class="station-badge red">NS24</span>
+                                <span class="station-badge purple">NE6</span>
+                                <span class="station-badge yellow">CC1</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Plaza Singapura Food Court</strong>
+                                <p>Multiple food courts, all cuisines - $4-8</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Rochor Original Beancurd</strong>
+                                <p>Famous tau huay and soy milk - $2-3</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #9D5B8B;" data-location="chinatown">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Chinatown</h3>
+                            <div class="station-badges">
+                                <span class="station-badge purple">NE4</span>
+                                <span class="station-badge blue">DT19</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Chinatown Complex</strong>
+                                <p>Michelin-starred hawker stalls - $2-5</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Maxwell Food Centre</strong>
+                                <p>Tian Tian chicken rice, congee - $3-6</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Red Line (North-South Line) -->
+            <div class="mrt-content" id="red-line">
+                <div class="location-cards">
+                    <div class="location-card" style="border-left: 4px solid #E42528;" data-location="woodlands">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Woodlands</h3>
+                            <span class="station-badge red">NS9</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Woodlands Mart</strong>
+                                <p>Prawn noodles, chicken rice - $3.50-5</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>888 Plaza Food Court</strong>
+                                <p>Malaysian and local dishes - Budget friendly</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #E42528;" data-location="yishun">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Yishun</h3>
+                            <span class="station-badge red">NS13</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Chong Pang Market</strong>
+                                <p>Nasi lemak, fried carrot cake - $2.50-4</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Northpoint City</strong>
+                                <p>Food Republic with diverse options - $4-8</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #E42528;" data-location="ang-mo-kio">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Ang Mo Kio</h3>
+                            <span class="station-badge red">NS16</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>AMK Hub Food Court</strong>
+                                <p>Variety of local cuisines - $3.50-6</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Cheng San Market</strong>
+                                <p>Traditional hawker fare, famous lor mee - $3-5</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #E42528;" data-location="dhoby-ghaut">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Dhoby Ghaut</h3>
+                            <div class="station-badges">
+                                <span class="station-badge red">NS24</span>
+                                <span class="station-badge purple">NE6</span>
+                                <span class="station-badge yellow">CC1</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Plaza Singapura Food Court</strong>
+                                <p>Multiple food courts, all cuisines - $4-8</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Rochor Original Beancurd</strong>
+                                <p>Famous tau huay and soy milk - $2-3</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #E42528;" data-location="orchard">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Orchard</h3>
+                            <div class="station-badges">
+                                <span class="station-badge red">NS22</span>
+                                <span class="station-badge brown">TE14</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>ION Orchard Food Hall</strong>
+                                <p>Premium dining options - $8-15</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Lucky Plaza Food Court</strong>
+                                <p>Filipino & Asian cuisines - $4-7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #E42528;" data-location="marina-bay">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Marina Bay</h3>
+                            <div class="station-badges">
+                                <span class="station-badge red">NS27</span>
+                                <span class="station-badge yellow">CE2</span>
+                                <span class="station-badge brown">TE20</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Marina Bay Sands Food Court</strong>
+                                <p>Rasapura Masters food court - $6-12</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Marina Bay Financial Centre</strong>
+                                <p>Office worker lunch spots - $5-10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Green Line (East-West Line) -->
+            <div class="mrt-content" id="green-line">
+                <div class="location-cards">
+                    <div class="location-card" style="border-left: 4px solid #009645;" data-location="pasir-ris">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Pasir Ris</h3>
+                            <span class="station-badge green">EW1</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Pasir Ris Hawker Centre</strong>
+                                <p>Seafood, BBQ, local favorites - $3.50-6</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>White Sands Food Court</strong>
+                                <p>Clean food court with AC - $4-7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #009645;" data-location="paya-lebar">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Paya Lebar</h3>
+                            <div class="station-badges">
+                                <span class="station-badge yellow">CC9</span>
+                                <span class="station-badge green">EW8</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Paya Lebar Square Food Court</strong>
+                                <p>Modern food court with diverse options - $4-7</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Geylang Lor 9 Fresh Frog Porridge</strong>
+                                <p>Famous for frog porridge and seafood - $8-12</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #009645;" data-location="tiong-bahru">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Tiong Bahru</h3>
+                            <span class="station-badge green">EW17</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Tiong Bahru Market</strong>
+                                <p>Famous chwee kueh, rojak, pau - $2-5</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Tiong Bahru Bakery</strong>
+                                <p>Artisan bread and pastries - $4-8</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #009645;" data-location="jurong-east">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Jurong East</h3>
+                            <span class="station-badge green">EW24</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Jurong Point Food Junction</strong>
+                                <p>Large food court with 30+ stalls - $3.50-6</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Yuhua Market</strong>
+                                <p>Traditional hawker center, local favorites - $3-5</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #009645;" data-location="bugis">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Bugis</h3>
+                            <div class="station-badges">
+                                <span class="station-badge green">EW12</span>
+                                <span class="station-badge blue">DT14</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Bugis Street Food Court</strong>
+                                <p>Tourist & local fusion food - $4-8</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Albert Centre</strong>
+                                <p>Famous chicken rice, fishball noodles - $3-6</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Yellow Line (Circle Line) -->
+            <div class="mrt-content" id="yellow-line">
+                <div class="location-cards">
+                    <div class="location-card" style="border-left: 4px solid #FA9E0D;">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Paya Lebar</h3>
+                            <div class="station-badges">
+                                <span class="station-badge yellow">CC9</span>
+                                <span class="station-badge green">EW8</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Paya Lebar Square Food Court</strong>
+                                <p>Modern food court with diverse options - $4-7</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Geylang Lor 9 Fresh Frog Porridge</strong>
+                                <p>Famous for frog porridge and seafood - $8-12</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #FA9E0D;" data-location="holland-village">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Holland Village</h3>
+                            <span class="station-badge yellow">CC21</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Holland Village Food Centre</strong>
+                                <p>Local hawker favorites, prawn mee - $3.50-6</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Wee Nam Kee Chicken Rice</strong>
+                                <p>Premium chicken rice - $6-10</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #FA9E0D;">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Dhoby Ghaut</h3>
+                            <div class="station-badges">
+                                <span class="station-badge red">NS24</span>
+                                <span class="station-badge purple">NE6</span>
+                                <span class="station-badge yellow">CC1</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Plaza Singapura Food Court</strong>
+                                <p>Multiple food courts, all cuisines - $4-8</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Rochor Original Beancurd</strong>
+                                <p>Famous tau huay and soy milk - $2-3</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #FA9E0D;" data-location="serangoon">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Serangoon</h3>
+                            <div class="station-badges">
+                                <span class="station-badge purple">NE12</span>
+                                <span class="station-badge yellow">CC13</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Chomp Chomp Food Centre</strong>
+                                <p>BBQ stingray, satay, carrot cake - $4-8</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>NEX Shopping Mall</strong>
+                                <p>Multiple food courts and restaurants - $5-10</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #FA9E0D;" data-location="dhoby-ghaut">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Dhoby Ghaut</h3>
+                            <div class="station-badges">
+                                <span class="station-badge red">NS24</span>
+                                <span class="station-badge purple">NE6</span>
+                                <span class="station-badge yellow">CC1</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Plaza Singapura Food Court</strong>
+                                <p>Multiple food courts, all cuisines - $4-8</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Rochor Original Beancurd</strong>
+                                <p>Famous tau huay and soy milk - $2-3</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #FA9E0D;" data-location="marina-bay">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Marina Bay</h3>
+                            <div class="station-badges">
+                                <span class="station-badge red">NS27</span>
+                                <span class="station-badge yellow">CE2</span>
+                                <span class="station-badge brown">TE20</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Marina Bay Sands Food Court</strong>
+                                <p>Rasapura Masters food court - $6-12</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Marina Bay Financial Centre</strong>
+                                <p>Office worker lunch spots - $5-10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blue Line (Downtown Line) -->
+            <div class="mrt-content" id="blue-line">
+                <div class="location-cards">
+                    <div class="location-card" style="border-left: 4px solid #005EC4;" data-location="little-india">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Little India</h3>
+                            <div class="station-badges">
+                                <span class="station-badge purple">NE7</span>
+                                <span class="station-badge blue">DT12</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Tekka Centre</strong>
+                                <p>Authentic Indian food, biryani, rojak - $3-6</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Muthu's Curry</strong>
+                                <p>Fish head curry specialist - $10-15</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #005EC4;" data-location="bugis">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Bugis</h3>
+                            <div class="station-badges">
+                                <span class="station-badge green">EW12</span>
+                                <span class="station-badge blue">DT14</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Bugis+ Food Court</strong>
+                                <p>Modern food court, Korean & Japanese - $5-9</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Albert Centre Market</strong>
+                                <p>Traditional hawker food - $3-6</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #005EC4;" data-location="chinatown">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Chinatown</h3>
+                            <div class="station-badges">
+                                <span class="station-badge purple">NE4</span>
+                                <span class="station-badge blue">DT19</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Chinatown Complex</strong>
+                                <p>Michelin-starred hawker stalls - $2-5</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Maxwell Food Centre</strong>
+                                <p>Tian Tian chicken rice, congee - $3-6</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #005EC4;" data-location="beauty-world">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Beauty World</h3>
+                            <span class="station-badge blue">DT5</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Beauty World Centre Food Court</strong>
+                                <p>Local hawker favorites - $3-5</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Beauty World Market</strong>
+                                <p>Traditional kopitiam food - $2.50-4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Brown Line (Thomson-East Coast Line) -->
+            <div class="mrt-content" id="brown-line">
+                <div class="location-cards">
+                    <div class="location-card" style="border-left: 4px solid #9D5B25;" data-location="springleaf">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Springleaf</h3>
+                            <span class="station-badge brown">TE4</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Springleaf Prata Place</strong>
+                                <p>24-hour prata and murtabak - $2-6</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Sin Ming Roti Prata</strong>
+                                <p>Late night supper spot - $2.50-5</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #9D5B25;" data-location="orchard">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Orchard</h3>
+                            <div class="station-badges">
+                                <span class="station-badge red">NS22</span>
+                                <span class="station-badge brown">TE14</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>ION Orchard Food Hall</strong>
+                                <p>Premium dining options - $8-15</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Lucky Plaza Food Court</strong>
+                                <p>Filipino & Asian cuisines - $4-7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #9D5B25;" data-location="shenton-way">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Shenton Way</h3>
+                            <span class="station-badge brown">TE20</span>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Lau Pa Sat</strong>
+                                <p>Historic hawker centre, satay street - $4-8</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Telok Ayer Market</strong>
+                                <p>CBD lunch crowd favorites - $4-7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card" style="border-left: 4px solid #9D5B25;" data-location="marina-bay">
+                        <div class="location-header">
+                            <h3><i class="fas fa-map-pin"></i> Marina Bay</h3>
+                            <div class="station-badges">
+                                <span class="station-badge red">NS27</span>
+                                <span class="station-badge yellow">CE2</span>
+                                <span class="station-badge brown">TE20</span>
+                            </div>
+                        </div>
+                        <div class="food-recommendations">
+                            <div class="rec-item">
+                                <strong>Marina Bay Sands Food Court</strong>
+                                <p>Rasapura Masters food court - $6-12</p>
+                            </div>
+                            <div class="rec-item">
+                                <strong>Marina Bay Financial Centre</strong>
+                                <p>Office worker lunch spots - $5-10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Find Food Spots on the Map</h2>
+                <p class="section-subtitle">Explore hawker centres and popular food locations across Singapore</p>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255281.19036247442!2d103.67943764999999!3d1.357107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da11238a8b9375%3A0x887869cf52abf5c4!2sSingapore!5e0!3m2!1sen!2ssg!4v1705152000000!5m2!1sen!2ssg"
+                    width="100%" 
+                    height="600" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                
+                <!-- Alternative: Direct embedded map with markers -->
+                <div class="map-info">
+                    <h3>Featured Food Locations:</h3>
+                    <div class="location-grid">
+                        <div class="map-location-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Maxwell Food Centre</strong>
+                            <p>1 Kadayanallur St, Singapore 069184</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Maxwell+Food+Centre+Singapore" target="_blank" class="map-link">
+                                <i class="fas fa-external-link-alt"></i> View on Google Maps
+                            </a>
+                        </div>
+                        <div class="map-location-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Lau Pa Sat</strong>
+                            <p>18 Raffles Quay, Singapore 048582</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Lau+Pa+Sat+Singapore" target="_blank" class="map-link">
+                                <i class="fas fa-external-link-alt"></i> View on Google Maps
+                            </a>
+                        </div>
+                        <div class="map-location-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Tekka Centre</strong>
+                            <p>665 Buffalo Rd, Singapore 210665</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Tekka+Centre+Singapore" target="_blank" class="map-link">
+                                <i class="fas fa-external-link-alt"></i> View on Google Maps
+                            </a>
+                        </div>
+                        <div class="map-location-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Chinatown Complex</strong>
+                            <p>335 Smith St, Singapore 050335</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Chinatown+Complex+Food+Centre+Singapore" target="_blank" class="map-link">
+                                <i class="fas fa-external-link-alt"></i> View on Google Maps
+                            </a>
+                        </div>
+                        <div class="map-location-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Chomp Chomp Food Centre</strong>
+                            <p>20 Kensington Park Rd, Singapore 557269</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Chomp+Chomp+Food+Centre+Singapore" target="_blank" class="map-link">
+                                <i class="fas fa-external-link-alt"></i> View on Google Maps
+                            </a>
+                        </div>
+                        <div class="map-location-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Tiong Bahru Market</strong>
+                            <p>30 Seng Poh Rd, Singapore 168898</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Tiong+Bahru+Market+Singapore" target="_blank" class="map-link">
+                                <i class="fas fa-external-link-alt"></i> View on Google Maps
+                            </a>
+                        </div>
+                        <div class="map-location-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Old Airport Road</strong>
+                            <p>51 Old Airport Rd, Singapore 390051</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Old+Airport+Road+Food+Centre+Singapore" target="_blank" class="map-link">
+                                <i class="fas fa-external-link-alt"></i> View on Google Maps
+                            </a>
+                        </div>
+                        <div class="map-location-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Newton Food Centre</strong>
+                            <p>500 Clemenceau Ave N, Singapore 229495</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Newton+Food+Centre+Singapore" target="_blank" class="map-link">
+                                <i class="fas fa-external-link-alt"></i> View on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Discover Singapore's Food Scene?</h2>
+                <p>Join thousands of exchange students who are eating well and exploring with confidence!</p>
+                <a href="#explore" class="btn btn-primary btn-large">
+                    <i class="fas fa-rocket"></i> Get Started Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Have questions? We're here to help!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@travelmate.sg</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+65 1234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>Republic Polytechnic, Singapore</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <h4>Telegram Bot</h4>
+                            <p><a href="https://t.me/Kityy_99_BOT" target="_blank" rel="noopener noreferrer">@Kityy_99_BOT</a></p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-utensils"></i> TravelMate</h4>
+                    <p>Your smart local buddy for discovering Singapore's best food options.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#explore">Explore</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Food Guides</a></li>
+                        <li><a href="#">Hawker Centres</a></li>
+                        <li><a href="#">Student Tips</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Stay Connected</h4>
+                    <p>Get the latest food recommendations and updates!</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter your email">
+                        <button><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelMate. Made with <i class="fas fa-heart"></i> for exchange students in Singapore.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Food Detail Modal -->
+    <div class="modal" id="foodModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Detail Modal -->
+    <div class="modal" id="locationModal">
+        <div class="modal-overlay" id="locationModalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="locationModalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="locationModalBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js" defer></script>
+<script src="https://files.bpcontent.cloud/2026/01/06/05/20260106053058-1UMLHSA8.js" defer></script>
+    <!-- Main JavaScript -->
+    <script src="js/food.js"></script>
+</body>
+</html>
