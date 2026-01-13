@@ -423,6 +423,35 @@
             color: #666;
         }
 
+        .key-features {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .key-features-label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 0.95rem;
+        }
+
+        .features-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .feature-tag {
+            background: #B40000;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+
         .distance {
             color: #486220;
             font-weight: bold;
@@ -692,6 +721,59 @@
                             <input type="checkbox" class="region-filter" value="Tiong Bahru"> Tiong Bahru
                         </label>
                     </div>
+
+                    <!-- Key Features Filter -->
+                    <div class="filter-category">
+                        <h4>✨ Key Features</h4>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Swimming Pool"> Swimming Pool
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Gym"> Gym
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Air Conditioner"> Air Conditioner
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Near Subway"> Near Subway
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Near Bus Station"> Near Bus Station
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Near Shopping Center"> Near Shopping Center
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Near Supermarket"> Near Supermarket
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Washing Machine"> Washing Machine
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Free Parking"> Free Parking
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="24 Hour Security"> 24 Hour Security
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Balcony"> Balcony
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Elevator"> Elevator
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Kitchen Cleaning"> Kitchen Cleaning
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Free Laundry"> Free Laundry
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Free Regular Cleaning"> Free Regular Cleaning
+                        </label>
+                        <label class="filter-checkbox-label">
+                            <input type="checkbox" class="feature-filter" value="Near Park"> Near Park
+                        </label>
+                    </div>
                 </div>
 
                 <div class="filter-panel-footer">
@@ -721,7 +803,8 @@
                 priceUnit: '/month',
                 latitude: 1.4368,
                 longitude: 103.8378,
-                contact: 'contact@uhomes.com | +65 9123 4567'
+                contact: 'contact@uhomes.com | +65 9123 4567',
+                keyFeatures: ['Swimming Pool', 'Near Shopping Center', 'Near Subway', 'Air Conditioner']
             },
             {
                 type: 'Student Housing',
@@ -732,7 +815,8 @@
                 priceUnit: '/month',
                 latitude: 1.3867,
                 longitude: 103.7450,
-                contact: 'contact@uhomes.com | +65 9123 4568'
+                contact: 'contact@uhomes.com | +65 9123 4568',
+                keyFeatures: ['Near Subway', 'Near Bus Station', 'Near Park', 'Near Shopping Center', 'Gym', 'Swimming Pool', 'Air Conditioner']
             },
             {
                 type: 'Student Housing',
@@ -743,7 +827,8 @@
                 priceUnit: '/month',
                 latitude: 1.3758,
                 longitude: 103.7755,
-                contact: 'contact@uhomes.com | +65 9123 4569'
+                contact: 'contact@uhomes.com | +65 9123 4569',
+                keyFeatures: ['Air Conditioner']
             },
             {
                 type: 'Student Housing',
@@ -754,7 +839,8 @@
                 priceUnit: '/month',
                 latitude: 1.3445,
                 longitude: 103.7650,
-                contact: 'contact@uhomes.com | +65 9123 4570'
+                contact: 'contact@uhomes.com | +65 9123 4570',
+                keyFeatures: ['Near Subway', 'Swimming Pool', 'Gym']
             },
             {
                 type: 'Student Housing',
@@ -765,7 +851,8 @@
                 priceUnit: '/month',
                 latitude: 1.3520,
                 longitude: 103.8370,
-                contact: 'contact@uhomes.com | +65 9123 4571'
+                contact: 'contact@uhomes.com | +65 9123 4571',
+                keyFeatures: ['Near Park', 'Near Subway', 'Near Bus Station', 'Near Supermarket', 'Gym', 'Air Conditioner', 'Swimming Pool']
             },
             {
                 type: 'Student Housing',
@@ -776,7 +863,8 @@
                 priceUnit: '/month',
                 latitude: 1.3345,
                 longitude: 103.7424,
-                contact: 'contact@uhomes.com | +65 9123 4572'
+                contact: 'contact@uhomes.com | +65 9123 4572',
+                keyFeatures: ['Kitchen Cleaning', 'Free Parking', 'Near School Bus', 'Washing Machine', 'Free Regular Cleaning']
             },
             {
                 type: 'Student Housing',
@@ -787,7 +875,8 @@
                 priceUnit: '/month',
                 latitude: 1.4045,
                 longitude: 103.8255,
-                contact: 'contact@uhomes.com | +65 9123 4573'
+                contact: 'contact@uhomes.com | +65 9123 4573',
+                keyFeatures: ['Near Subway', 'Near Bus Station', 'Air Conditioner', 'Gym', 'Swimming Pool']
             },
             {
                 type: 'Student Housing',
@@ -798,7 +887,8 @@
                 priceUnit: '/month',
                 latitude: 1.3048,
                 longitude: 103.8993,
-                contact: 'contact@uhomes.com | +65 9123 4574'
+                contact: 'contact@uhomes.com | +65 9123 4574',
+                keyFeatures: ['Free Laundry', 'Near Bus Station', 'Near Supermarket', 'Near Park', '24 Hour Security', 'Near Subway', 'Balcony']
             },
             {
                 type: 'Student Housing',
@@ -809,7 +899,8 @@
                 priceUnit: '/month',
                 latitude: 1.3455,
                 longitude: 103.9545,
-                contact: 'contact@uhomes.com | +65 9123 4575'
+                contact: 'contact@uhomes.com | +65 9123 4575',
+                keyFeatures: ['Near Subway', 'Near Shopping Center', 'Gym', 'Swimming Pool', 'Washing Machine', 'Air Conditioner', 'Elevator']
             },
             {
                 type: 'Student Housing',
@@ -820,7 +911,8 @@
                 priceUnit: '/month',
                 latitude: 1.3310,
                 longitude: 103.8679,
-                contact: 'contact@uhomes.com | +65 9123 4576'
+                contact: 'contact@uhomes.com | +65 9123 4576',
+                keyFeatures: ['Near Subway', 'Near Supermarket', 'Near Shopping Center', 'Gym', 'Washing Machine', 'Air Conditioner', 'Swimming Pool']
             },
             {
                 type: 'Student Housing',
@@ -831,7 +923,8 @@
                 priceUnit: '/month',
                 latitude: 1.3055,
                 longitude: 103.8912,
-                contact: 'contact@uhomes.com | +65 9123 4577'
+                contact: 'contact@uhomes.com | +65 9123 4577',
+                keyFeatures: ['Near Subway', 'Near Supermarket', 'Near Shopping Center', 'Gym', 'Washing Machine', 'Air Conditioner', 'Swimming Pool']
             },
             {
                 type: 'Student Housing',
@@ -842,7 +935,8 @@
                 priceUnit: '/month',
                 latitude: 1.3791,
                 longitude: 103.9791,
-                contact: 'contact@uhomes.com | +65 9123 4578'
+                contact: 'contact@uhomes.com | +65 9123 4578',
+                keyFeatures: ['Near Supermarket', 'Near Subway', 'Near Shopping Center', 'Gym', 'Washing Machine', 'Swimming Pool', 'Air Conditioner']
             },
             {
                 type: 'Student Housing',
@@ -853,7 +947,8 @@
                 priceUnit: '/month',
                 latitude: 1.3297,
                 longitude: 103.8905,
-                contact: 'contact@uhomes.com | +65 9123 4579'
+                contact: 'contact@uhomes.com | +65 9123 4579',
+                keyFeatures: ['Near Subway', 'Elevator', 'Air Conditioner']
             },
             {
                 type: 'Student Housing',
@@ -864,7 +959,8 @@
                 priceUnit: '/month',
                 latitude: 1.3168,
                 longitude: 103.8748,
-                contact: 'contact@uhomes.com | +65 9123 4580'
+                contact: 'contact@uhomes.com | +65 9123 4580',
+                keyFeatures: ['Near Subway', 'Near Supermarket', 'Gym', 'Washing Machine', 'Swimming Pool', 'Air Conditioner']
             },
             {
                 type: 'Student Housing',
@@ -875,7 +971,8 @@
                 priceUnit: '/month',
                 latitude: 1.2878,
                 longitude: 103.8169,
-                contact: 'contact@uhomes.com | +65 9123 4581'
+                contact: 'contact@uhomes.com | +65 9123 4581',
+                keyFeatures: ['Near Bus Station', 'Near Subway', 'Swimming Pool']
             },
             {
                 type: 'Student Housing',
@@ -886,7 +983,8 @@
                 priceUnit: '/month',
                 latitude: 1.2960,
                 longitude: 103.8317,
-                contact: 'contact@uhomes.com | +65 9123 4582'
+                contact: 'contact@uhomes.com | +65 9123 4582',
+                keyFeatures: ['Gym', 'Swimming Pool', 'Near Subway', 'Near Bus Station', '24 Hour Security']
             },
             {
                 type: 'Student Housing',
@@ -897,7 +995,8 @@
                 priceUnit: '/month',
                 latitude: 1.3150,
                 longitude: 103.7643,
-                contact: 'contact@uhomes.com | +65 9123 4583'
+                contact: 'contact@uhomes.com | +65 9123 4583',
+                keyFeatures: ['Near Subway', 'Air Conditioner']
             },
             {
                 type: 'Student Housing',
@@ -908,7 +1007,8 @@
                 priceUnit: '/month',
                 latitude: 1.3572,
                 longitude: 103.8683,
-                contact: 'contact@uhomes.com | +65 9123 4584'
+                contact: 'contact@uhomes.com | +65 9123 4584',
+                keyFeatures: ['Swimming Pool', 'Near Bus Station', 'Air Conditioner', 'Gym', 'Near Subway']
             },
             {
                 type: 'Student Housing',
@@ -919,7 +1019,8 @@
                 priceUnit: '/month',
                 latitude: 1.3409,
                 longitude: 103.7633,
-                contact: 'contact@uhomes.com | +65 9123 4585'
+                contact: 'contact@uhomes.com | +65 9123 4585',
+                keyFeatures: ['Near Bus Station', 'Near Park', 'Near Subway', 'Near Shopping Centre', 'Washing Machine', 'Gym', 'Swimming Pool', 'Air Conditioner']
             },
             {
                 type: 'Student Housing',
@@ -930,7 +1031,8 @@
                 priceUnit: '/month',
                 latitude: 1.3554,
                 longitude: 103.7258,
-                contact: 'contact@uhomes.com | +65 9123 4586'
+                contact: 'contact@uhomes.com | +65 9123 4586',
+                keyFeatures: ['Near Subway', 'Swimming Pool', 'Air Conditioner', 'Gym']
             },
             // Budget Hotels (7 properties)
             {
@@ -942,7 +1044,8 @@
                 priceUnit: '/night',
                 latitude: 1.3022,
                 longitude: 103.8343,
-                contact: '+65 6708 8880 | reservations.singapore@hoteljen.com'
+                contact: '+65 6708 8880 | reservations.singapore@hoteljen.com',
+                keyFeatures: ['Near Subway', 'Swimming Pool', 'Air Conditioner', 'Gym']
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -953,7 +1056,8 @@
                 priceUnit: '/night',
                 latitude: 1.3341,
                 longitude: 103.7429,
-                contact: '+65 6577 8881 | reservations.singapore@hoteljen.com'
+                contact: '+65 6577 8881 | reservations.singapore@hoteljen.com',
+                keyFeatures: ['Near Shopping Center', 'Near Supermarket', 'Balcony', 'Swimming Pool', 'Air Conditioner']
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -964,7 +1068,8 @@
                 priceUnit: '/night',
                 latitude: 1.3145,
                 longitude: 103.8386,
-                contact: '+65 6577 8882 | reservations.singapore@hoteljen.com'
+                contact: '+65 6577 8882 | reservations.singapore@hoteljen.com',
+                keyFeatures: ['Near Subway', 'Elevator', 'Gym']
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -975,7 +1080,8 @@
                 priceUnit: '/night',
                 latitude: 1.2878,
                 longitude: 103.8090,
-                contact: '+65 6577 8883 | reservations.singapore@hoteljen.com'
+                contact: '+65 6577 8883 | reservations.singapore@hoteljen.com',
+                keyFeatures: ['Near Subway', 'Near Bus Station', 'Near Shopping Center', 'Gym', 'Air Conditioner']
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -986,7 +1092,8 @@
                 priceUnit: '/night',
                 latitude: 1.2836,
                 longitude: 103.8436,
-                contact: '+65 6577 8884 | reservations.singapore@hoteljen.com'
+                contact: '+65 6577 8884 | reservations.singapore@hoteljen.com',
+                keyFeatures: ['Near Park', 'Near Supermarket', 'Washing Machine', 'Swimming Pool']
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -997,7 +1104,8 @@
                 priceUnit: '/night',
                 latitude: 1.3236,
                 longitude: 103.8436,
-                contact: '+65 6577 8885 | reservations.singapore@hoteljen.com'
+                contact: '+65 6577 8885 | reservations.singapore@hoteljen.com',
+                keyFeatures: ['Near Bus Station', 'Near Subway', 'Swimming Pool', 'Air Conditioner']
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -1008,7 +1116,8 @@
                 priceUnit: '/night',
                 latitude: 1.3750,
                 longitude: 103.8650,
-                contact: '+65 6577 8886 | reservations.singapore@hoteljen.com'
+                contact: '+65 6577 8886 | reservations.singapore@hoteljen.com',
+                keyFeatures: ['Near Subway', 'Near Shopping Centre', 'Gym', 'Swimming Pool', 'Washing Machine']
             },
             // Short-Term Rentals (9 properties)
             {
@@ -1020,7 +1129,8 @@
                 priceUnit: '/month',
                 latitude: 1.3956,
                 longitude: 103.8150,
-                contact: 'bookings@cove.sg | +65 9234 4860'
+                contact: 'bookings@cove.sg | +65 9234 4860',
+                keyFeatures: ['Near Subway', 'Near Supermarket', 'Gym', 'Swimming Pool', 'Air Conditioner']
             },
             {
                 type: 'Short-Term Rental',
@@ -1031,7 +1141,8 @@
                 priceUnit: '/month',
                 latitude: 1.3345,
                 longitude: 103.8933,
-                contact: 'bookings@cove.sg | +65 9234 4861'
+                contact: 'bookings@cove.sg | +65 9234 4861',
+                keyFeatures: ['Near Subway', 'Near Shopping Centre', 'Near Bus Station', 'Elevator']
             },
             {
                 type: 'Short-Term Rental',
@@ -1042,7 +1153,8 @@
                 priceUnit: '/month',
                 latitude: 1.3486,
                 longitude: 103.8947,
-                contact: 'bookings@cove.sg | +65 9234 4862'
+                contact: 'bookings@cove.sg | +65 9234 4862',
+                keyFeatures: ['Near Subway', 'Near Supermarket', 'Gym', 'Swimming Pool', 'Balcony']
             },
             {
                 type: 'Short-Term Rental',
@@ -1053,7 +1165,8 @@
                 priceUnit: '/month',
                 latitude: 1.2885,
                 longitude: 103.8269,
-                contact: 'bookings@cove.sg | +65 9234 4863'
+                contact: 'bookings@cove.sg | +65 9234 4863',
+                keyFeatures: ['Near Subway', 'Air Conditioner', 'Free Parking', 'Kitchen Cleaning']
             },
             {
                 type: 'Short-Term Rental',
@@ -1064,7 +1177,8 @@
                 priceUnit: '/month',
                 latitude: 1.3369,
                 longitude: 103.8684,
-                contact: 'bookings@cove.sg | +65 9234 4865'
+                contact: 'bookings@cove.sg | +65 9234 4865',
+                keyFeatures: ['Near Subway', 'Near Bus Station', 'Near Park', 'Gym', 'Swimming Pool']
             },
             {
                 type: 'Short-Term Rental',
@@ -1075,7 +1189,8 @@
                 priceUnit: '/month',
                 latitude: 1.3693,
                 longitude: 103.8453,
-                contact: 'bookings@cove.sg | +65 9234 4866'
+                contact: 'bookings@cove.sg | +65 9234 4866',
+                keyFeatures: ['Near Subway', 'Near Shopping Centre', 'Washing Machine', '24 Hour Security']
             },
             {
                 type: 'Short-Term Rental',
@@ -1086,7 +1201,8 @@
                 priceUnit: '/month',
                 latitude: 1.3750,
                 longitude: 103.8620,
-                contact: 'bookings@cove.sg | +65 9234 4867'
+                contact: 'bookings@cove.sg | +65 9234 4867',
+                keyFeatures: ['Near Subway', 'Near School Bus', 'Free Parking', 'Kitchen Cleaning']
             },
             {
                 type: 'Short-Term Rental',
@@ -1097,7 +1213,8 @@
                 priceUnit: '/month',
                 latitude: 1.3290,
                 longitude: 103.8900,
-                contact: 'bookings@cove.sg | +65 9234 4868'
+                contact: 'bookings@cove.sg | +65 9234 4868',
+                keyFeatures: ['Near Shopping Centre', 'Near Park', 'Swimming Pool', 'Air Conditioner']
             },
             {
                 type: 'Short-Term Rental',
@@ -1108,7 +1225,8 @@
                 priceUnit: '/month',
                 latitude: 1.2878,
                 longitude: 103.8240,
-                contact: 'bookings@cove.sg | +65 9234 4869'
+                contact: 'bookings@cove.sg | +65 9234 4869',
+                keyFeatures: ['Near Bus Station', 'Near Supermarket', 'Free Regular Cleaning', 'Washing Machine', 'Gym']
             }
         ];
 
@@ -1212,6 +1330,7 @@
             const selectedPrices = Array.from(document.querySelectorAll('.price-filter:checked')).map(cb => cb.value);
             const selectedDistances = Array.from(document.querySelectorAll('.distance-filter:checked')).map(cb => cb.value);
             const selectedRegions = Array.from(document.querySelectorAll('.region-filter:checked')).map(cb => cb.value);
+            const selectedFeatures = Array.from(document.querySelectorAll('.feature-filter:checked')).map(cb => cb.value);
 
             // Helper function to check if price falls within selected range
             function matchesPrice(price, ranges) {
@@ -1236,6 +1355,14 @@
                 });
             }
 
+            // Helper function to check if accommodation has all selected features
+            function matchesFeatures(accFeatures, selectedFeaturesArray) {
+                if (selectedFeaturesArray.length === 0) return true;
+                return selectedFeaturesArray.every(feature => 
+                    accFeatures && accFeatures.includes(feature)
+                );
+            }
+
             // Filter accommodations based on ALL selected criteria
             let filtered = allAccommodations.filter(acc => {
                 // Check type filter (if any selected, must match)
@@ -1250,6 +1377,11 @@
 
                 // Check region filter (if any selected, must match)
                 if (selectedRegions.length > 0 && !selectedRegions.includes(acc.region)) {
+                    return false;
+                }
+
+                // Check features filter (if any selected, must have ALL selected features)
+                if (selectedFeatures.length > 0 && !matchesFeatures(acc.keyFeatures, selectedFeatures)) {
                     return false;
                 }
 
@@ -1287,6 +1419,7 @@
             document.querySelectorAll('.price-filter').forEach(cb => cb.checked = false);
             document.querySelectorAll('.distance-filter').forEach(cb => cb.checked = false);
             document.querySelectorAll('.region-filter').forEach(cb => cb.checked = false);
+            document.querySelectorAll('.feature-filter').forEach(cb => cb.checked = false);
         }
 
         // Display results
@@ -1338,6 +1471,15 @@
                             <span class="detail-value"><a href="${bookingLink}" target="_blank" style="color: #B40000; text-decoration: underline; cursor: pointer;">Book Now</a></span>
                         </div>` : ''}
                     </div>
+
+                    ${acc.keyFeatures && acc.keyFeatures.length > 0 ? `
+                    <div class="key-features">
+                        <span class="key-features-label">Key Features:</span>
+                        <div class="features-tags">
+                            ${acc.keyFeatures.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
                     
                     <button class="directions-btn" onclick="openDirections(${acc.latitude}, ${acc.longitude}, '${acc.name}')">
                         🗺️ Get Directions
