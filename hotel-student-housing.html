@@ -268,11 +268,17 @@
     <!-- Chatbot Icon Button -->
     <button id="chatbotBtn" class="chatbot-btn" title="Chat with AI Assistant">💬</button>
 
-    <!-- Chatbot Modal -->
-    <div id="chatbotModal" class="chatbot-modal">
-        <div class="chatbot-modal-content">
-            <button id="closeChatbot" class="chatbot-close">&times;</button>
-            <iframe id="chatbotIframe" src="https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/11/17/06/20251117063831-2TFLV737.json" style="width: 100%; height: 100%; border: none; border-radius: 8px;"></iframe>
+    <!-- Chatbot Floating Window -->
+    <div id="chatbotWindow" class="chatbot-window">
+        <div id="chatbotHeader" class="chatbot-header">
+            <span class="chatbot-title">AI Assistant</span>
+            <div class="chatbot-controls">
+                <button id="maximizeChatbot" class="chatbot-control-btn" title="Maximize">⛶</button>
+                <button id="closeChatbot" class="chatbot-control-btn" title="Close">✕</button>
+            </div>
+        </div>
+        <div class="chatbot-content">
+            <iframe id="chatbotIframe" src="https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/11/17/06/20251117063831-2TFLV737.json" style="width: 100%; height: 100%; border: none;"></iframe>
         </div>
     </div>
 
@@ -307,61 +313,103 @@
             transform: scale(0.95);
         }
 
-        .chatbot-modal {
+        .chatbot-window {
             display: none;
             position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.3s ease;
-        }
-
-        .chatbot-modal.show {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .chatbot-modal-content {
+            bottom: 100px;
+            right: 30px;
+            width: 450px;
+            height: 650px;
             background-color: white;
             border-radius: 12px;
-            width: 90%;
-            max-width: 500px;
-            height: 80vh;
-            max-height: 700px;
-            position: relative;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            flex-direction: column;
             animation: slideUp 0.3s ease;
         }
 
-        .chatbot-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
+        .chatbot-window.show {
+            display: flex;
+        }
+
+        .chatbot-window.maximized {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+            bottom: auto;
+            right: auto;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, #B40000 0%, #8B0000 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: move;
+            user-select: none;
+        }
+
+        .chatbot-window.maximized .chatbot-header {
+            border-radius: 0;
+        }
+
+        .chatbot-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .chatbot-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chatbot-control-btn {
             background: none;
             border: none;
-            font-size: 28px;
+            color: white;
+            font-size: 18px;
             cursor: pointer;
-            color: #666;
-            z-index: 1001;
-            transition: color 0.2s ease;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
         }
 
-        .chatbot-close:hover {
-            color: #000;
+        .chatbot-control-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .chatbot-content {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .chatbot-window.maximized .chatbot-content {
+            border-radius: 0;
         }
 
         @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from { 
+                transform: translateY(50px) translateX(0);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
         }
 
         @media (max-width: 768px) {
@@ -373,30 +421,72 @@
                 right: 20px;
             }
 
-            .chatbot-modal-content {
-                width: 95%;
-                height: 90vh;
+            .chatbot-window {
+                width: 100%;
+                height: 100vh;
+                bottom: auto;
+                right: auto;
+                left: 0;
+                top: 0;
+                border-radius: 0;
             }
         }
     </style>
 
     <script>
         const chatbotBtn = document.getElementById('chatbotBtn');
-        const chatbotModal = document.getElementById('chatbotModal');
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        const chatbotHeader = document.getElementById('chatbotHeader');
+        const maximizeChatbot = document.getElementById('maximizeChatbot');
         const closeChatbot = document.getElementById('closeChatbot');
 
+        let isDragging = false;
+        let startX, startY, startLeft, startTop;
+        let isMaximized = false;
+
+        // Open chatbot on button click
         chatbotBtn.addEventListener('click', function() {
-            chatbotModal.classList.add('show');
+            chatbotWindow.classList.add('show');
         });
 
+        // Close chatbot
         closeChatbot.addEventListener('click', function() {
-            chatbotModal.classList.remove('show');
+            chatbotWindow.classList.remove('show');
         });
 
-        chatbotModal.addEventListener('click', function(event) {
-            if (event.target === chatbotModal) {
-                chatbotModal.classList.remove('show');
-            }
+        // Maximize/Minimize chatbot - Opens in new window
+        maximizeChatbot.addEventListener('click', function() {
+            window.open('https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/11/17/06/20251117063831-2TFLV737.json', 'ChatbotWindow', 'width=800,height=800');
+        });
+
+        // Dragging functionality
+        chatbotHeader.addEventListener('mousedown', function(e) {
+            if (isMaximized) return;
+            if (e.target === maximizeChatbot || e.target === closeChatbot) return;
+            
+            isDragging = true;
+            startX = e.clientX;
+            startY = e.clientY;
+            startLeft = chatbotWindow.offsetLeft;
+            startTop = chatbotWindow.offsetTop;
+            chatbotHeader.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            
+            const deltaX = e.clientX - startX;
+            const deltaY = e.clientY - startY;
+            
+            chatbotWindow.style.left = (startLeft + deltaX) + 'px';
+            chatbotWindow.style.top = (startTop + deltaY) + 'px';
+            chatbotWindow.style.bottom = 'auto';
+            chatbotWindow.style.right = 'auto';
+        });
+
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+            chatbotHeader.style.cursor = 'move';
         });
     </script>
 </body>
