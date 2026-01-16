@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelMate - Your comprehensive guide for foreign exchange students at Republic Polytechnic to navigate Singapore's transport, food, leisure, and attractions.">
+    <meta name="keywords" content="Singapore, exchange students, Republic Polytechnic, travel guide, transport, food, attractions">
+    <title>TravelMate - Singapore Guide for Exchange Students</title>
+    <link rel="stylesheet" href="css/styles_attraction.css">
+    <link rel="stylesheet" href="css/faq_attraction.css">
+</head>
+<body>
+    <!-- Main Consolidation Page -->
+    <div class="consolidation-wrapper">
+        <!-- Header -->
+        <header class="consolidation-header">
+            <div class="container">
+                <h1 class="brand-title">TravelMate</h1>
+                <p class="brand-subtitle">Your Complete Singapore Guide for Exchange Students</p>
+                <p class="brand-description">Navigate transport, discover food, explore attractions, and enjoy leisure activities — all in one place</p>
+            </div>
+        </header>
+
+        <!-- Cards Grid -->
+        <section class="cards-section">
+            <div class="container">
+                <div class="cards-grid">
+                    
+                    <!-- Attractions Card -->
+                    <div class="preview-card">
+                        <div class="card-icon">🏛️</div>
+                        <h2 class="card-title">Attractions</h2>
+                        <p class="card-description">Discover Singapore's iconic landmarks, cultural sites, museums, wildlife parks, and hidden gems</p>
+                        <div class="feature-tags">
+                            <span class="tag">Iconic Landmarks</span>
+                            <span class="tag">Museums</span>
+                            <span class="tag">Culture</span>
+                            <span class="tag">Wildlife</span>
+                        </div>
+                        <a href="attractions.html" class="visit-button">Visit Attractions</a>
+                    </div>
+
+                    <!-- Transport Card -->
+                    <div class="preview-card">
+                        <div class="card-icon">🚇</div>
+                        <h2 class="card-title">Transport</h2>
+                        <p class="card-description">Master Singapore's MRT, buses, and alternative routes with student-friendly navigation tips</p>
+                        <div class="feature-tags">
+                            <span class="tag">MRT Guide</span>
+                            <span class="tag">Bus Routes</span>
+                            <span class="tag">Student Fares</span>
+                            <span class="tag">Tips & Tricks</span>
+                        </div>
+                        <a href="transport.html" class="visit-button">Visit Transport</a>
+                    </div>
+
+                    <!-- Food Card -->
+                    <div class="preview-card">
+                        <div class="card-icon">🍜</div>
+                        <h2 class="card-title">Food</h2>
+                        <p class="card-description">Find affordable hawker centers, student-friendly cafes, and authentic local cuisine on a budget</p>
+                        <div class="feature-tags">
+                            <span class="tag">Hawker Centers</span>
+                            <span class="tag">Budget Eats</span>
+                            <span class="tag">Cafes</span>
+                            <span class="tag">Local Favorites</span>
+                        </div>
+                        <a href="food.html" class="visit-button">Visit Food</a>
+                    </div>
+
+                    <!-- Leisure Card -->
+                    <div class="preview-card">
+                        <div class="card-icon">🎯</div>
+                        <h2 class="card-title">Leisure</h2>
+                        <p class="card-description">Explore parks, shopping districts, entertainment venues, and social activities for students</p>
+                        <div class="feature-tags">
+                            <span class="tag">Parks & Nature</span>
+                            <span class="tag">Shopping</span>
+                            <span class="tag">Entertainment</span>
+                            <span class="tag">Nightlife</span>
+                        </div>
+                        <a href="leisure.html" class="visit-button">Visit Leisure</a>
+                    </div>
+
+                    <!-- Hotel Card -->
+                    <div class="preview-card">
+                        <div class="card-icon">🏨</div>
+                        <h2 class="card-title">Hotel</h2>
+                        <p class="card-description">Find budget-friendly accommodations, student housing, and short-term rentals perfect for exchange students</p>
+                        <div class="feature-tags">
+                            <span class="tag">Budget Hotels</span>
+                            <span class="tag">Student Housing</span>
+                            <span class="tag">Short-Term Stays</span>
+                            <span class="tag">Location Finder</span>
+                        </div>
+                        <a href="hotel-index.html" class="visit-button">Visit Hotel</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="consolidation-footer">
+            <div class="container">
+                <p>&copy; 2026 TravelMate - Singapore Guide for Republic Polytechnic Exchange Students</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Minimal JavaScript for Card Interactions -->
+    <script>
+        // Add hover effect enhancements
+        document.querySelectorAll('.preview-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-12px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>

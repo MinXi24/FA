@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelMate - Your Singapore Guide for Exchange Students</title>
+    <link rel="stylesheet" href="leisure-css/styles.css">
+</head>
+<body>
+    <!-- Floating Chat Icon Button -->
+    <button id="chatIconBtn" class="chat-icon-btn" onclick="toggleChatWidget()" title="Open AI Chat Assistant">
+        <span class="chat-icon">💬</span>
+    </button>
+
+    <!-- Chat Modal -->
+    <div id="chatModal" class="chat-modal">
+        <div class="chat-modal-content">
+            <button class="chat-modal-close" onclick="toggleChatWidget()">✕</button>
+            <iframe src="https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2026/01/12/04/20260112043815-JSGWJ2YJ.json" 
+                    style="width: 100%; height: 100%; border: none; border-radius: 8px;"></iframe>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>✈️ TravelMate</h1> 
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#leisure" class="nav-link">Leisure</a></li>
+                <li><a href="#chat" class="nav-link">AI Chat</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Singapore, Exchange Student!</h1>
+            <p>Your personalized guide to transport, food, leisure, and daily life</p>
+            <button class="cta-button" onclick="document.getElementById('leisure').scrollIntoView({behavior: 'smooth'})">
+                Explore Leisure & Entertainment
+            </button>
+        </div>
+    </section>
+
+    <!-- Leisure & Entertainment Section (Main Focus) -->
+    <section id="leisure" class="leisure-section">
+        <div class="container">
+            <h2>🎮 Leisure & Entertainment</h2>
+            <p class="section-intro">Discover affordable, accessible activities perfect for student life in Singapore.</p>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="parks">Parks & Nature</button>
+                <button class="filter-btn" data-filter="shopping">Shopping Malls</button>
+                <button class="filter-btn" data-filter="entertainment">Entertainment</button>
+                <button class="filter-btn" data-filter="free-budget">Free & Budget</button>
+            </div>
+
+            <!-- Leisure Cards Grid -->
+            <div class="leisure-grid" id="leisureGrid">
+                <!-- Cards populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Attraction Detail Modal -->
+    <div id="attractionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                <!-- Details populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Transportation Section (Placeholder) -->
+    <!-- REMOVED -->
+
+    <!-- Food & Dining Section (Placeholder) -->
+    <!-- REMOVED -->
+
+    <!-- Daily Life Section (Placeholder) -->
+    <!-- REMOVED -->
+
+    <!-- Chat Section -->
+    <section id="chat" class="chat-section">
+        <div class="container">
+            <h2>💬 AI Chat Assistant</h2>
+            <p>Get instant personalized recommendations for your needs.</p>
+            <p style="color: #999; font-size: 12px; margin-bottom: 1rem;">Powered by Botpress AI</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TravelMate - Helping Foreign Exchange Students Thrive in Singapore</p>
+            <p>Module: C240 FA | Republic Polytechnic</p>
+        </div>
+    </footer>
+
+    <!-- Scripts - Load in correct order -->
+    <script src="leisure-js/data.js"></script>
+    <script src="leisure-js/leisure.js"></script>
+    <script src="leisure-js/main.js"></script>
+    <script src="leisure-js/botpress-config.js"></script>
+</body>
+</html>
