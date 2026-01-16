@@ -13,43 +13,16 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: white;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
-            margin: 0;
-            padding: 0;
+            padding: 20px;
         }
 
         .navbar {
             background: white;
             padding: 1rem 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 0;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #B40000 0%, #8B0000 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
             margin-bottom: 2rem;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .hero-content h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin: 0 0 1rem 0;
-            color: white;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.95);
-            margin: 0;
         }
 
         .nav-container {
@@ -62,33 +35,9 @@
         }
 
         .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .logo-content {
-            font-size: 1.8rem;
+            color: #000;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: #B40000;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .logo-tagline {
-            font-size: 0.65rem;
-            font-style: italic;
-            color: #888;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
         }
 
         .nav-links {
@@ -114,7 +63,6 @@
             border-radius: 12px;
             padding: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
         }
 
         h1 {
@@ -548,108 +496,6 @@
             border: none;
         }
 
-        /* ===== CHATBOT ICON STYLING (Location Finder Override) ===== */
-        .chatbot-icon-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #B40000 0%, #8B0000 100%);
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            box-shadow: 0 4px 20px rgba(180, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            z-index: 999;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            animation: chatbot-entrance 0.6s ease-out backwards;
-        }
-
-        @keyframes chatbot-entrance {
-            0% {
-                opacity: 0;
-                transform: scale(0.5) translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-
-        .chatbot-icon-btn:hover {
-            background: linear-gradient(135deg, #8B0000 0%, #700000 100%);
-            box-shadow: 0 8px 40px rgba(180, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 20px rgba(180, 0, 0, 0.4);
-            transform: scale(1.15) translateY(-3px);
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-
-        .chatbot-icon-btn:active {
-            transform: scale(0.95) translateY(-1px);
-        }
-
-        .chatbot-svg-icon {
-            width: 45px;
-            height: 45px;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-        }
-
-        .chatbot-icon-btn.breathing {
-            animation: breathing 3s ease-in-out infinite;
-        }
-
-        @keyframes breathing {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.7;
-            }
-        }
-
-        .chatbot-tooltip {
-            position: absolute;
-            bottom: 95px;
-            right: -10px;
-            background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
-            color: white;
-            padding: 10px 14px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 500;
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            pointer-events: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            transform: translateY(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .chatbot-tooltip::before {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            right: 15px;
-            width: 10px;
-            height: 10px;
-            background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
-            border-radius: 1px;
-            transform: rotate(45deg);
-        }
-
-        .chatbot-icon-btn:hover .chatbot-tooltip {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
         @media (max-width: 768px) {
             .location-input-section {
                 grid-template-columns: 1fr;
@@ -662,25 +508,6 @@
             .nav-links {
                 gap: 1rem;
                 font-size: 0.9rem;
-            }
-
-            .chatbot-icon-btn {
-                width: 60px;
-                height: 60px;
-                bottom: 20px;
-                right: 20px;
-                font-size: 32px;
-                border-width: 2px;
-            }
-
-            .chatbot-icon-btn:hover {
-                transform: scale(1.12) translateY(-2px);
-            }
-
-            .chatbot-tooltip {
-                bottom: 80px;
-                font-size: 12px;
-                padding: 8px 12px;
             }
         }
     </style>
@@ -699,22 +526,16 @@
                 <li><a href="hotel-index.html">Home</a></li>
                 <li><a href="hotel-student-housing.html">Student Housing</a></li>
                 <li><a href="hotel-budget-hotels.html">Budget Hotels</a></li>
-                <li><a href="hotel-short-term-stays.html">Short-Term Rentals (Cove)</a></li>
-                <li><a href="hotel-location-finder.html">🗺️ Location Finder</a></li>
+                <li><a href="hotel-short-term-stays.html">Short-Term Rentals</a></li>
                 <li><a href="hotel-index.html#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>🗺️ Find Accommodation Near You</h1>
-            <p>Discover student housing, budget hotels, and short-term rentals near your preferred location in Singapore</p>
-        </div>
-    </section>
-
     <div class="container">
+        <h1>🗺️ Find Accommodation Near You</h1>
+        <p class="intro-text">Discover student housing, budget hotels, and short-term rentals near your preferred location in Singapore</p>
+
         <!-- Location Input Section -->
         <div class="location-input-section">
             <!-- Current Location -->
@@ -989,8 +810,7 @@
                 longitude: 103.8378,
                 contact: 'contact@uhomes.com | +65 9123 4567',
                 keyFeatures: ['Swimming Pool', 'Near Shopping Center', 'Near Subway', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/ubWjeykDgBZSUhhU7',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1653067?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/ubWjeykDgBZSUhhU7'
             },
             {
                 type: 'Student Housing',
@@ -1003,8 +823,7 @@
                 longitude: 103.7450,
                 contact: 'contact@uhomes.com | +65 9123 4568',
                 keyFeatures: ['Near Subway', 'Near Bus Station', 'Near Park', 'Near Shopping Center', 'Gym', 'Swimming Pool', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/Azs9JyPw259zNbzf9',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656612?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/Azs9JyPw259zNbzf9'
             },
             {
                 type: 'Student Housing',
@@ -1017,8 +836,7 @@
                 longitude: 103.7755,
                 contact: 'contact@uhomes.com | +65 9123 4569',
                 keyFeatures: ['Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/2gMxMKck9cGndkar6',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1681964?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/2gMxMKck9cGndkar6'
             },
             {
                 type: 'Student Housing',
@@ -1031,8 +849,7 @@
                 longitude: 103.7650,
                 contact: 'contact@uhomes.com | +65 9123 4570',
                 keyFeatures: ['Near Subway', 'Swimming Pool', 'Gym'],
-                googleMapsLink: 'https://maps.app.goo.gl/JB3W24sDvGT8tiib9',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1666984?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/JB3W24sDvGT8tiib9'
             },
             {
                 type: 'Student Housing',
@@ -1045,8 +862,7 @@
                 longitude: 103.8370,
                 contact: 'contact@uhomes.com | +65 9123 4571',
                 keyFeatures: ['Near Park', 'Near Subway', 'Near Bus Station', 'Near Supermarket', 'Gym', 'Air Conditioner', 'Swimming Pool'],
-                googleMapsLink: 'https://maps.app.goo.gl/NPnschaiH5LzH3Ma8',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1711475?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/NPnschaiH5LzH3Ma8'
             },
             {
                 type: 'Student Housing',
@@ -1059,8 +875,7 @@
                 longitude: 103.7424,
                 contact: 'contact@uhomes.com | +65 9123 4572',
                 keyFeatures: ['Kitchen Cleaning', 'Free Parking', 'Near School Bus', 'Washing Machine', 'Free Regular Cleaning'],
-                googleMapsLink: 'https://maps.app.goo.gl/rbQ2ktum74E6KmvA8',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1625206?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/rbQ2ktum74E6KmvA8'
             },
             {
                 type: 'Student Housing',
@@ -1073,8 +888,7 @@
                 longitude: 103.8255,
                 contact: 'contact@uhomes.com | +65 9123 4573',
                 keyFeatures: ['Near Subway', 'Near Bus Station', 'Air Conditioner', 'Gym', 'Swimming Pool'],
-                googleMapsLink: 'https://maps.app.goo.gl/WHg5vfnZMm14giaZ8',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1689131?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/WHg5vfnZMm14giaZ8'
             },
             {
                 type: 'Student Housing',
@@ -1087,8 +901,7 @@
                 longitude: 103.8993,
                 contact: 'contact@uhomes.com | +65 9123 4574',
                 keyFeatures: ['Free Laundry', 'Near Bus Station', 'Near Supermarket', 'Near Park', '24 Hour Security', 'Near Subway', 'Balcony'],
-                googleMapsLink: 'https://maps.app.goo.gl/jPkGiHfLmDqHpV4B6',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1580278?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/jPkGiHfLmDqHpV4B6'
             },
             {
                 type: 'Student Housing',
@@ -1101,8 +914,7 @@
                 longitude: 103.9545,
                 contact: 'contact@uhomes.com | +65 9123 4575',
                 keyFeatures: ['Near Subway', 'Near Shopping Center', 'Gym', 'Swimming Pool', 'Washing Machine', 'Air Conditioner', 'Elevator'],
-                googleMapsLink: 'https://maps.app.goo.gl/PLTo7ViESRgPHnp77',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656025?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/PLTo7ViESRgPHnp77'
             },
             {
                 type: 'Student Housing',
@@ -1115,8 +927,7 @@
                 longitude: 103.8679,
                 contact: 'contact@uhomes.com | +65 9123 4576',
                 keyFeatures: ['Near Subway', 'Near Supermarket', 'Near Shopping Center', 'Gym', 'Washing Machine', 'Air Conditioner', 'Swimming Pool'],
-                googleMapsLink: 'https://maps.app.goo.gl/pUaz9hSRrNKa7QCj8',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656006?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/pUaz9hSRrNKa7QCj8'
             },
             {
                 type: 'Student Housing',
@@ -1129,8 +940,7 @@
                 longitude: 103.8912,
                 contact: 'contact@uhomes.com | +65 9123 4577',
                 keyFeatures: ['Near Subway', 'Near Supermarket', 'Near Shopping Center', 'Gym', 'Washing Machine', 'Air Conditioner', 'Swimming Pool'],
-                googleMapsLink: 'https://maps.app.goo.gl/prQHyBd5w57no5wb9',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1634383?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/prQHyBd5w57no5wb9'
             },
             {
                 type: 'Student Housing',
@@ -1143,8 +953,7 @@
                 longitude: 103.9791,
                 contact: 'contact@uhomes.com | +65 9123 4578',
                 keyFeatures: ['Near Supermarket', 'Near Subway', 'Near Shopping Center', 'Gym', 'Washing Machine', 'Swimming Pool', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/5thMaTAZPGmTNTpP9',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656700?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/5thMaTAZPGmTNTpP9'
             },
             {
                 type: 'Student Housing',
@@ -1157,8 +966,7 @@
                 longitude: 103.8905,
                 contact: 'contact@uhomes.com | +65 9123 4579',
                 keyFeatures: ['Near Subway', 'Elevator', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/qwLa2JWU2WoFYn9c8',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1639654?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/qwLa2JWU2WoFYn9c8'
             },
             {
                 type: 'Student Housing',
@@ -1171,8 +979,7 @@
                 longitude: 103.8748,
                 contact: 'contact@uhomes.com | +65 9123 4580',
                 keyFeatures: ['Near Subway', 'Near Supermarket', 'Gym', 'Washing Machine', 'Swimming Pool', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/tiaPFXq6FjBm4u6o6',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656471?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/tiaPFXq6FjBm4u6o6'
             },
             {
                 type: 'Student Housing',
@@ -1185,8 +992,7 @@
                 longitude: 103.8169,
                 contact: 'contact@uhomes.com | +65 9123 4581',
                 keyFeatures: ['Near Bus Station', 'Near Subway', 'Swimming Pool'],
-                googleMapsLink: 'https://maps.app.goo.gl/C1mUfCimQiGKhb8N8',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1688803?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/C1mUfCimQiGKhb8N8'
             },
             {
                 type: 'Student Housing',
@@ -1199,8 +1005,7 @@
                 longitude: 103.8317,
                 contact: 'contact@uhomes.com | +65 9123 4582',
                 keyFeatures: ['Gym', 'Swimming Pool', 'Near Subway', 'Near Bus Station', '24 Hour Security'],
-                googleMapsLink: 'https://maps.app.goo.gl/XweY8Bt8vgxRpLyr8',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1680479?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/XweY8Bt8vgxRpLyr8'
             },
             {
                 type: 'Student Housing',
@@ -1213,8 +1018,7 @@
                 longitude: 103.7643,
                 contact: 'contact@uhomes.com | +65 9123 4583',
                 keyFeatures: ['Near Subway', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/Dd7pPo8mTiydvhVbA',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1623145?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/Dd7pPo8mTiydvhVbA'
             },
             {
                 type: 'Student Housing',
@@ -1227,8 +1031,7 @@
                 longitude: 103.8683,
                 contact: 'contact@uhomes.com | +65 9123 4584',
                 keyFeatures: ['Swimming Pool', 'Near Bus Station', 'Air Conditioner', 'Gym', 'Near Subway'],
-                googleMapsLink: 'https://maps.app.goo.gl/hPYJNmgzxYKuKvtx8',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1644712?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/hPYJNmgzxYKuKvtx8'
             },
             {
                 type: 'Student Housing',
@@ -1241,8 +1044,7 @@
                 longitude: 103.7633,
                 contact: 'contact@uhomes.com | +65 9123 4585',
                 keyFeatures: ['Near Bus Station', 'Near Park', 'Near Subway', 'Near Shopping Centre', 'Washing Machine', 'Gym', 'Swimming Pool', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/TJyXL96uBHXeziQu6',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656458?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/TJyXL96uBHXeziQu6'
             },
             {
                 type: 'Student Housing',
@@ -1255,8 +1057,7 @@
                 longitude: 103.7258,
                 contact: 'contact@uhomes.com | +65 9123 4586',
                 keyFeatures: ['Near Subway', 'Swimming Pool', 'Air Conditioner', 'Gym'],
-                googleMapsLink: 'https://maps.app.goo.gl/qqKy1qxdcYk4wA9M9',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1624372?schoolunique=republic-polytechnic-rp'
+                googleMapsLink: 'https://maps.app.goo.gl/qqKy1qxdcYk4wA9M9'
             },
             // Budget Hotels (7 properties)
             {
@@ -1270,8 +1071,7 @@
                 longitude: 103.8343,
                 contact: '+65 6708 8880 | reservations.singapore@hoteljen.com',
                 keyFeatures: ['Near Subway', 'Swimming Pool', 'Air Conditioner', 'Gym'],
-                googleMapsLink: 'https://maps.app.goo.gl/v4ccfiG6pBxP4wif8',
-                bookingUrl: 'https://www.trip.com/hotels/detail/?cityEnName=Singapore&cityId=73&hotelId=1466284&checkIn=2026-01-04&checkOut=2026-01-05&adult=1&children=0&crn=1&ages=&curr=USD&barcurr=USD&hoteluniquekey=H4sIAAAAAAAA_-N6w8zFJMEo9ZSZY2vb_YlsQowGBo9ELf53MDqePQMEyVMcPA9_1YjpL5rhEMAzg3HN_siNjNcXF9hyWRc47GBkOsG4m3EB08oPV21OsbByNMlKsFxi-cQUXa2UnVqpZGWio1SSWZKTqmSlFJxaVJaZnKqQnJFYlJ6qpKOUklqcDBQHshJz80vzSoBsQws9MzOgQElihWeKkpW5jlJyYk5yaU5iSWpIZQHQFDMdpcxi55KizIKg1NzMkpJUoKq0xJziVJB4UGoxUCYZLKjkBzSmCCqQmZ8H0W6IIhaWmFOaCnEB0EK3VKgdxrU6mK4PcwzB6WQTC4STTQbEyYa1sY9YmKJjP7Ew_GJhaGJl6GJlmMTKxvFiHaMEyy5WriBfQwvvYN0oXUMpRUMDAwMjU1Mjc12DRMtEk0RjU10TSwNLc2NdQ3NTIwtzC41J067u3mFsJHuKUcrQ3Mzc1MDI2MTc0thCL9Ey2SLIrdzTwtsx0oMxiM3CwtLVzSTKhos52N1F8Lim1aTT-0UdpJhDg10Ub_-sy9rzRdpBCyRnCJMLZACDD_aRMPkk1tQ83YiIjAaRAsYuRm4BRg_GCMYKxgZGxlWM7FzMBkaGAkwbGJl3MP6HAcZXjCAbAGgkYxe5AgAA&edmHotelData=&masterhotelid_tracelogid=100025527-0a9a4a35-490973-1752878&detailFilters=17%7C1%7E17%7E1*80%7C0%7C1%7E80%7E0*29%7C1%7E29%7E1%7C1&hotelType=normal&display=exavg&subStamp=1394&isCT=true&isFlexible=F&locale=en-XX'
+                googleMapsLink: 'https://maps.app.goo.gl/v4ccfiG6pBxP4wif8'
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -1284,8 +1084,7 @@
                 longitude: 103.7429,
                 contact: '+65 6577 8881 | reservations.singapore@hoteljen.com',
                 keyFeatures: ['Near Shopping Center', 'Near Supermarket', 'Balcony', 'Swimming Pool', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/it6L3AoY3sv4Fq1T9',
-                bookingUrl: 'https://www.trip.com/hotels/detail/?cityEnName=Singapore&cityId=73&hotelId=2018458&checkIn=2026-01-04&checkOut=2026-01-05&adult=1&children=0&crn=1&ages=&curr=USD&barcurr=USD&hoteluniquekey=H4sIAAAAAAAA_-NqYeFikmCU-svMcfToif1sQoxGGnv5DGwsPgk6Hv6qEdMf0OPgGbRDrvX1zwkOATyFDGAQ4DCDcdbM6o2Mra8Dd8j1pjnsYGQ6wdjEuIBpy-ku-1MsrBxTRSRYLrF8YoquVspOrVSyMtFRKsksyUlVslIKTi0qy0xOVUjOSCxKT1XSUUpJLU4GigNZibn5pXklQLahkZ6lOVCgJLHCM0XJylxHKTkxJ7k0J7EkNaSyAGiKmY5SZrFzSVFmQVBqbmZJSSpQVVpiTnEqSDwotRgokwwWVPIDGlMEFcjMz4NoN0QRC0vMKU2FuABooVsq1A7jWh1M14c5huB0soUJwskmA-Jkw9rYRyxM0bEvWPbyfWJh-AWMiR52CZYmVoYuVoZJrKwcOyslWHax8kSGeHv7h-sa6kbpGl5gXcgopWhoYGBgZGpqZK5rkGiZaGZiYqlrYmlgaW6sa2huZmFobq7R0Xht9w5jI9lTjFJAIXNTAyNjE3NLYwu9RMtkiyC3ck8Lb8dID8YgNhdzZ1cDgygbLuZgdxfB45pWk07vF3WQYg4NdlG8_bMua88XaQctkJwhTC4Qkqw-2EfC5JNYU_N0IyIyGkQKGLsYuQUYPRgjGCsYGxgZVzGyczEbGBkKMG1gZNnB-B8GGF8xgmwAAK-OYF3RAgAA&edmHotelData=&masterhotelid_tracelogid=100025527-0a9a6449-490973-1768177&detailFilters=17%7C1%7E17%7E1*80%7C0%7C1%7E80%7E0*29%7C1%7E29%7E1%7C1&hotelType=normal&display=exavg&subStamp=629&isCT=true&isFlexible=F&locale=en-XX'
+                googleMapsLink: 'https://maps.app.goo.gl/it6L3AoY3sv4Fq1T9'
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -1298,8 +1097,7 @@
                 longitude: 103.8386,
                 contact: '+65 6577 8882 | reservations.singapore@hoteljen.com',
                 keyFeatures: ['Near Subway', 'Elevator', 'Gym'],
-                googleMapsLink: 'https://maps.app.goo.gl/ZcYaie99wRgpedNo7',
-                bookingUrl: 'https://www.trip.com/hotels/detail/?cityEnName=Singapore&cityId=73&hotelId=991875&checkIn=2026-01-04&checkOut=2026-01-05&adult=1&children=0&crn=1&ages=&curr=USD&barcurr=USD&hoteluniquekey=H4sIAAAAAAAA_-N6w8zFJMEo9ZSZ48m0T39ZhRiNDDgtPgk67pBrfR1oO9XBE8won-kQwDODsfmozUZGBhB4UeCwg5HpBOMhxgVM634-ZT7FwsoxV06C5RPLJ6boaqXs1EolKxMdpZLMkpxUJSulMMcQJR2llNTiZCAHyErMzS_NKwGyDS31jEyBAiWJFZ4pYC3JiTnJpTmJJakhlQVArWY6SpnFziVFmQVBqbmZJSWpQFVpiTnFqSDxoNRioEwyWFDJD2hMEVQgMz8Pot0QRSwsMac0FeICoIVuqVA7DGt1MJ0cnFpUlpmcqpCckViUnorT9SYmCNebD4jrjWtjH7EwRcd-YmH4xcLQxMrQxcowiZWNo3cbowTLLlaeQC9vX0c_XUPdKF1DKUVDAwMDI1NTLXNUi0TEwzSDbQNbE0sDQ30jUxNDC1MDTX2PPi_64dxkaypxilDM3NzE0NjIxNzC2NLfQSLZMtgtzKPS28HSM9GIPYDC0dHd2co2y4mIPdXQSPa1pNOr1f1EGKOTTYRfH2z7qsPV-kHbRAcoYwuUBwwmL4YB8Jk09iTc3TjYjIaBApYOxi5BZg9GCMYKxgbGBkXMXIzsVsYGQowLSBkXEH438YYHzFCLIBAPb9ytjOAgAA&edmHotelData=&masterhotelid_tracelogid=100025527-0a9aacf4-490973-2378747&detailFilters=17%7C1%7E17%7E1*80%7C0%7C1%7E80%7E0*29%7C1%7E29%7E1%7C1&hotelType=normal&display=exavg&subStamp=816&isCT=true&isFlexible=F&locale=en-XX'
+                googleMapsLink: 'https://maps.app.goo.gl/ZcYaie99wRgpedNo7'
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -1312,8 +1110,7 @@
                 longitude: 103.8090,
                 contact: '+65 6577 8883 | reservations.singapore@hoteljen.com',
                 keyFeatures: ['Near Subway', 'Near Bus Station', 'Near Shopping Center', 'Gym', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/AN1sLFesGRfFgoQz9',
-                bookingUrl: 'https://www.trip.com/hotels/detail/?cityEnName=Singapore&cityId=73&hotelId=995019&checkIn=2026-01-04&checkOut=2026-01-05&adult=1&children=0&crn=1&ages=&curr=USD&barcurr=USD&hoteluniquekey=H4sIAAAAAAAA_-NqYuFikmCU-s3M0Xf91jQ2IUYDi4lCjg-rRNa5R3c7eAKph1XpExwCeAoZQECgyqGRsdCW6_rihHKHGYyn79psZJRvfR2441yqww5GphOMtQuYfvVMtjzFwsqxX1iC5RPLJ6boaqXs1EolKxMdpZLMkpxUJSulMMcQJR2llNTiZCAHyErMzS_NKwGyDS31jEyBAiWJFZ4pYC3JiTnJpTmJJakhlQVArWY6SpnFziVFmQVBqbmZJSWpQFVaYk5xakg8aDUYqBMMlhQyQ9oTBFUIDM_DyIdkMUsbDEnNJUiAuAFrqlQu0wrtXBdH2YYwhOJ5sYIpxsMiBONqyNfcTCFB37iYXhFzAWdulJsDSxMnSxMkxiZeXYUSrBsouVK8jMNzDcW9dD1_AC605GKUVDAwMDI1NTI3Ndg0TLREMDo2RdE0sDS3MTXUNjYwtLM0ON_hvz9u4wNpI9xShlaG5mbmpgZGxibmlsoZdomWwR5FbuaeHtGOnBGMTmZOhkYW4SZcPFHOzuInhc02rS6f2iDlLMocEuird_1mXt-SLtoAWSM4TJBYJTFsMH-0iYfBJrap5uRERGg0gBYxcjtwCjB2MEYwVjAyPjKkZ2LmYDIyMBpg2MXDsY_8MA4ytGkA0AX1x-rLkCAAA&edmHotelData=&masterhotelid_tracelogid=100025527-0a9a102c-490974-1338961&detailFilters=17%7C1%7E17%7E1*80%7C0%7C1%7E80%7E0*29%7C1%7E29%7E1%7C1&hotelType=normal&display=exavg&subStamp=714&isCT=true&isFlexible=F&locale=en-XX'
+                googleMapsLink: 'https://maps.app.goo.gl/AN1sLFesGRfFgoQz9'
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -1326,8 +1123,7 @@
                 longitude: 103.8436,
                 contact: '+65 6577 8884 | reservations.singapore@hoteljen.com',
                 keyFeatures: ['Near Park', 'Near Supermarket', 'Washing Machine', 'Swimming Pool'],
-                googleMapsLink: 'https://maps.app.goo.gl/xe7X4NqvQpHvPsrv8',
-                bookingUrl: 'https://www.trip.com/hotels/detail/?cityEnName=Singapore&cityId=73&hotelId=118889184&checkIn=2026-01-04&checkOut=2026-01-05&adult=1&children=0&crn=1&ages=&curr=USD&barcurr=USD&hoteluniquekey=H4sIAAAAAAAA_-P6w8zFJMEo9ZWZY1dX2x1WIUYDi9+CjkE75FpfZzc6eL4JBLKetjgE8BQygMCHYodGxuuLC2y5rhc6zGB8sPWGxUbGs2dAINphByPTCcaABUwvgKKnWFg55jNKMF1i-cAUXa2UnVqpZGWio1SSWZKTqmSlFOYYoqSjlJJanAzkAFmJufmleSVAtrmepSGQX5JY4ZkC1pGcmJNcmpNYkhpSWQDUaaajlFnsXFKUWRCUmptZUpIKVJWWmFOcChIPSi0GyiSDBZX8gMYUQQUy8_Mg2g1RxMISc0pTIQ4AWuiWCrXDsFYH08XBqUVlmcmpCskZiUXpqTgdb4lwvPmAON64NvYRC1N07CcWhl_AODigLMHSxMrQxcowiZWN452XBMsuVjZ_E-MAE88LrLVSioYGBgZGpqZG5roGiZaJlilmhromlgaW5ia6RkbGlhaWFhoTD5zcu8PYSPYUo5ShuZm5qYGRsYm5pbGFXqJlskWQW7mnhbdjpAdjEJu5oYupmVuUDRdzsLuL4HFNq0mn94s6SDGHBrso3v5Zl7Xni7SDFkjOECYXyABJVPaRMPkk1tQ83YiIjAaRAsYuRm4BRg_GCMYKxgZGxlWMDBsYeXcw_ocBxleMIKMBlZFK38ICAAA&edmHotelData=&masterhotelid_tracelogid=100025527-0a9a9d61-490974-2239898&detailFilters=17%7C1%7E17%7E1*80%7C0%7C1%7E80%7E0*29%7C1%7E29%7E1%7C1&hotelType=normal&display=exavg&subStamp=629&isCT=true&isFlexible=F&locale=en-XX'
+                googleMapsLink: 'https://maps.app.goo.gl/xe7X4NqvQpHvPsrv8'
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -1340,8 +1136,7 @@
                 longitude: 103.8436,
                 contact: '+65 6577 8885 | reservations.singapore@hoteljen.com',
                 keyFeatures: ['Near Bus Station', 'Near Subway', 'Swimming Pool', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/nC3ksqM2YvNvMGPC7',
-                bookingUrl: 'https://www.trip.com/hotels/detail/?hotelId=687556&tid=H0018_10320668148_10320668147'
+                googleMapsLink: 'https://maps.app.goo.gl/nC3ksqM2YvNvMGPC7'
             },
             {
                 type: 'Hotel/Budget Hotel',
@@ -1354,8 +1149,7 @@
                 longitude: 103.8650,
                 contact: '+65 6577 8886 | reservations.singapore@hoteljen.com',
                 keyFeatures: ['Near Subway', 'Near Shopping Centre', 'Gym', 'Swimming Pool', 'Washing Machine'],
-                googleMapsLink: 'https://maps.app.goo.gl/eAMcYwiY5zmXQ5ib6',
-                bookingUrl: 'https://www.trip.com/hotels/detail/?hotelId=687484&tid=H0018_10320668148_10320668147'
+                googleMapsLink: 'https://maps.app.goo.gl/eAMcYwiY5zmXQ5ib6'
             },
             // Short-Term Rentals (9 properties)
             {
@@ -1369,8 +1163,7 @@
                 longitude: 103.8150,
                 contact: 'bookings@cove.sg | +65 9234 4860',
                 keyFeatures: ['Near Subway', 'Near Supermarket', 'Gym', 'Swimming Pool', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/oxJrn6ay3jh5fyc8A',
-                bookingUrl: 'https://cove.sg/listings/2317-cove-193-standard-room-27-casuarina-road'
+                googleMapsLink: 'https://maps.app.goo.gl/oxJrn6ay3jh5fyc8A'
             },
             {
                 type: 'Short-Term Rental',
@@ -1383,8 +1176,7 @@
                 longitude: 103.8933,
                 contact: 'bookings@cove.sg | +65 9234 4861',
                 keyFeatures: ['Near Subway', 'Near Shopping Centre', 'Near Bus Station', 'Elevator'],
-                googleMapsLink: 'https://maps.app.goo.gl/KWte7DHux8THds3N9',
-                bookingUrl: 'https://cove.sg/listings/1772-cove-320-standard-room-esta-ruby'
+                googleMapsLink: 'https://maps.app.goo.gl/KWte7DHux8THds3N9'
             },
             {
                 type: 'Short-Term Rental',
@@ -1397,8 +1189,7 @@
                 longitude: 103.8947,
                 contact: 'bookings@cove.sg | +65 9234 4862',
                 keyFeatures: ['Near Subway', 'Near Supermarket', 'Gym', 'Swimming Pool', 'Balcony'],
-                googleMapsLink: 'https://maps.app.goo.gl/MCkB49FABnyPfcyU8',
-                bookingUrl: 'https://cove.sg/listings/1139-cove-271-standard-room-22a-jalan-selamat'
+                googleMapsLink: 'https://maps.app.goo.gl/MCkB49FABnyPfcyU8'
             },
             {
                 type: 'Short-Term Rental',
@@ -1411,8 +1202,7 @@
                 longitude: 103.8269,
                 contact: 'bookings@cove.sg | +65 9234 4863',
                 keyFeatures: ['Near Subway', 'Air Conditioner', 'Free Parking', 'Kitchen Cleaning'],
-                googleMapsLink: 'https://maps.app.goo.gl/TKgzkJmyjoekNwYW9',
-                bookingUrl: 'https://cove.sg/listings/3198-cove-491-pocket-room-emerald-park'
+                googleMapsLink: 'https://maps.app.goo.gl/TKgzkJmyjoekNwYW9'
             },
             {
                 type: 'Short-Term Rental',
@@ -1425,8 +1215,7 @@
                 longitude: 103.8684,
                 contact: 'bookings@cove.sg | +65 9234 4865',
                 keyFeatures: ['Near Subway', 'Near Bus Station', 'Near Park', 'Gym', 'Swimming Pool'],
-                googleMapsLink: 'https://maps.app.goo.gl/we67NyfnTpHHU7TH8',
-                bookingUrl: 'https://cove.sg/listings/2488-cove-144-standard-room-19a-tai-thong-crescent'
+                googleMapsLink: 'https://maps.app.goo.gl/we67NyfnTpHHU7TH8'
             },
             {
                 type: 'Short-Term Rental',
@@ -1439,8 +1228,7 @@
                 longitude: 103.8453,
                 contact: 'bookings@cove.sg | +65 9234 4866',
                 keyFeatures: ['Near Subway', 'Near Shopping Centre', 'Washing Machine', '24 Hour Security'],
-                googleMapsLink: 'https://maps.app.goo.gl/Mvv14dBA9YQSHqfL7',
-                bookingUrl: 'https://cove.sg/listings/1076-cove-238-standard-room-nuovo'
+                googleMapsLink: 'https://maps.app.goo.gl/Mvv14dBA9YQSHqfL7'
             },
             {
                 type: 'Short-Term Rental',
@@ -1453,8 +1241,7 @@
                 longitude: 103.8620,
                 contact: 'bookings@cove.sg | +65 9234 4867',
                 keyFeatures: ['Near Subway', 'Near School Bus', 'Free Parking', 'Kitchen Cleaning'],
-                googleMapsLink: 'https://maps.app.goo.gl/Fj7QfLBeLaWbqTRc8',
-                bookingUrl: 'https://cove.sg/listings/1653-cove-195-standard-room-18a-valley-road'
+                googleMapsLink: 'https://maps.app.goo.gl/Fj7QfLBeLaWbqTRc8'
             },
             {
                 type: 'Short-Term Rental',
@@ -1467,8 +1254,7 @@
                 longitude: 103.8900,
                 contact: 'bookings@cove.sg | +65 9234 4868',
                 keyFeatures: ['Near Shopping Centre', 'Near Park', 'Swimming Pool', 'Air Conditioner'],
-                googleMapsLink: 'https://maps.app.goo.gl/BJwbbqXMLFwVFtvRA',
-                bookingUrl: 'https://cove.sg/listings/2910-cove-433-pocket-room-cassia-view'
+                googleMapsLink: 'https://maps.app.goo.gl/BJwbbqXMLFwVFtvRA'
             },
             {
                 type: 'Short-Term Rental',
@@ -1481,8 +1267,7 @@
                 longitude: 103.8240,
                 contact: 'bookings@cove.sg | +65 9234 4869',
                 keyFeatures: ['Near Bus Station', 'Near Supermarket', 'Free Regular Cleaning', 'Washing Machine', 'Gym'],
-                googleMapsLink: 'https://maps.app.goo.gl/bLa3CDTEmA3C4F7H9',
-                bookingUrl: 'https://cove.sg/listings/1380-cove-89-standard-room-havelock-road'
+                googleMapsLink: 'https://maps.app.goo.gl/bLa3CDTEmA3C4F7H9'
             }
         ];
 
@@ -1692,8 +1477,15 @@
             }
 
             resultsList.innerHTML = accommodations.map(acc => {
-                // Use the bookingUrl from the accommodation object if available
-                let bookingLink = acc.bookingUrl || '';
+                // Determine booking link based on accommodation type
+                let bookingLink = '';
+                if (acc.type === 'Student Housing') {
+                    bookingLink = 'http://127.0.0.1:5500/booking.html';
+                } else if (acc.type === 'Hotel/Budget Hotel') {
+                    bookingLink = 'http://127.0.0.1:5500/budget-hotels-booking.html';
+                } else if (acc.type === 'Short-Term Rental') {
+                    bookingLink = 'http://127.0.0.1:5500/short-term-rentals-booking.html';
+                }
 
                 return `
                 <div class="accommodation-card">
@@ -1768,6 +1560,140 @@
             });
         });
     </script>
-    <script src="hotel-styles.js"></script>
+
+    <!-- Chatbot Icon Button -->
+    <button id="chatbotBtn" class="chatbot-btn" title="Chat with AI Assistant">💬</button>
+
+    <!-- Chatbot Modal -->
+    <div id="chatbotModal" class="chatbot-modal">
+        <div class="chatbot-modal-content">
+            <button id="closeChatbot" class="chatbot-close">&times;</button>
+            <iframe id="chatbotIframe" src="https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/11/17/06/20251117063831-2TFLV737.json" style="width: 100%; height: 100%; border: none; border-radius: 8px;"></iframe>
+        </div>
+    </div>
+
+    <style>
+        .chatbot-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #B40000;
+            color: white;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(180, 0, 0, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-btn:hover {
+            background-color: #8B0000;
+            box-shadow: 0 6px 16px rgba(180, 0, 0, 0.4);
+            transform: scale(1.1);
+        }
+
+        .chatbot-btn:active {
+            transform: scale(0.95);
+        }
+
+        .chatbot-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .chatbot-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-modal-content {
+            background-color: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            height: 80vh;
+            max-height: 700px;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.3s ease;
+        }
+
+        .chatbot-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #666;
+            z-index: 1001;
+            transition: color 0.2s ease;
+        }
+
+        .chatbot-close:hover {
+            color: #000;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .chatbot-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .chatbot-modal-content {
+                width: 95%;
+                height: 90vh;
+            }
+        }
+    </style>
+
+    <script>
+        const chatbotBtn = document.getElementById('chatbotBtn');
+        const chatbotModal = document.getElementById('chatbotModal');
+        const closeChatbot = document.getElementById('closeChatbot');
+
+        chatbotBtn.addEventListener('click', function() {
+            window.open('https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/11/17/06/20251117063831-2TFLV737.json', 'ChatbotWindow', 'width=800,height=800');
+        });
+
+        closeChatbot.addEventListener('click', function() {
+            chatbotModal.classList.remove('show');
+        });
+
+        chatbotModal.addEventListener('click', function(event) {
+            if (event.target === chatbotModal) {
+                chatbotModal.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>

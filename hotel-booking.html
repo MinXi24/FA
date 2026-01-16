@@ -4,64 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Housing Booking - TravelMate Singapore</title>
-    <link rel="stylesheet" href="hotel-styles.css">
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-content">
-                    <svg class="logo-icon" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#B40000;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#8B0000;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="60" cy="45" r="35" fill="url(#logoGradient)" />
-                        <text x="60" y="50" font-size="50" text-anchor="middle" dominant-baseline="middle">✈️</text>
-                    </svg><span>TravelMate</span>
-                </div>
-                <div class="logo-tagline">Your Student Staycation Partner</div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="hotel-index.html">Home</a></li>
-                <li><a href="hotel-student-housing.html">Student Housing</a></li>
-                <li><a href="hotel-budget-hotels.html">Budget Hotels</a></li>
-                <li><a href="hotel-short-term-stays.html">Short-Term Rentals (Cove)</a></li>
-                <li><a href="hotel-location-finder.html">🗺️ Location Finder</a></li>
-                <li><a href="hotel-index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="student-housing-hero">
-        <div class="hero-content">
-            <h1>Book Student Housing in Singapore</h1>
-            <p>Find and reserve your perfect student accommodation</p>
-        </div>
-    </section>
-
     <style>
-        .student-housing-hero {
-            background: linear-gradient(135deg, #B40000 0%, #8B0000 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .student-housing-hero .hero-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .student-housing-hero .hero-content p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -72,6 +15,36 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f5f5f5;
             color: #333;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #B40000 0%, #8B0000 100%);
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
         }
 
         .container {
@@ -537,8 +510,28 @@
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-content">
+                    <svg class="logo-icon" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#B40000;stop-opacity:1" /><stop offset="100%" style="stop-color:#8B0000;stop-opacity:1" /></linearGradient></defs><circle cx="60" cy="45" r="35" fill="url(#logoGradient)" /><text x="60" y="50" font-size="50" text-anchor="middle" dominant-baseline="middle">✈️</text></svg><span>TravelMate</span>
+                </div>
+                <div class="logo-tagline">Your Student Staycation Partner</div>
+            </div>
+            <ul class="nav-links">
+            <li><a href="hotel-index.html">Home</a></li>
+            <li><a href="hotel-student-housing.html">Properties</a></li>
+            <li><a href="hotel-location-finder.html">🗺️ Location Finder</a></li>
+            <li><a href="hotel-index.html#contact">Contact</a></li>
+        </ul>
+        </div>
+    </nav>
+
     <!-- Main Content -->
     <div class="container">
+        <h1 style="text-align: center; margin-bottom: 2rem; color: #B40000;">Student Housing Bookings</h1>
+        
         <!-- Filter Section -->
         <div class="filter-section" style="margin-top: 2rem; margin-bottom: 2rem;">
             <button class="filter-toggle-btn" onclick="toggleFilterPanel()">🔍 Filter Student Housing</button>
@@ -653,7 +646,24 @@
                         </label>
                     </div>
 
-
+                    <div class="filter-category">
+                        <h4>🎁 Special Offers</h4>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="offer-filter" value="Rent Rebate" onchange="applyFilters()"> 💰 Rent Rebate
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="offer-filter" value="free cleaning" onchange="applyFilters()"> 🧹 Free Cleaning Services
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="offer-filter" value="shopping voucher" onchange="applyFilters()"> 🛍️ Shopping Voucher
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="offer-filter" value="transport card" onchange="applyFilters()"> 🚌 Transport Card Top-up
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="offer-filter" value="dining credit" onchange="applyFilters()"> 🍽️ Dining Credit
+                        </label>
+                    </div>
                 </div>
                 <div class="filter-panel-footer">
                     <button onclick="resetFilters()" class="btn-reset-filters">Reset Filters</button>
@@ -885,7 +895,6 @@
                 features: ['🚇 Near Subway', '🏊 Swimming Pool', '🏋️ Gym'],
                 offer: 'One-time SG$320 Rent Rebate',
                 contact: 'contact@uhomes.com | +65 9123 4567',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1653067?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1395/01JDA3EA13JC5EFCWN8XX6JESP_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1391/01JDA3ECNFBFKB4P56C90VSWC2_z.webp', label: 'Common Room 1' },
@@ -899,7 +908,6 @@
                 features: ['🚌 Near Bus Station', '🛍️ Near Shopping Center', '❄️ Air Conditioner', '🚇 Near Subway'],
                 offer: 'One-time SG$320 Rent Rebate',
                 contact: 'contact@uhomes.com | +65 9123 4568',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656612?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1389/01JFSY3EGSD8E2M8NAZPBP66V1_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1381/01JH0HGV9HBJ080VZQTMWBNR8G_z.webp', label: 'Common Room 1' }
@@ -912,7 +920,6 @@
                 features: ['🚇 Near Subway', '🛍️ Near Shopping Center', '🏋️ Gym', '🧺 Washing Machine', '🏊 Swimming Pool'],
                 offer: '2 free cleaning services',
                 contact: 'contact@uhomes.com | +65 9123 4569',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1681964?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1395/01K0CBCEYF7HM8D6DFR4J5FYRG_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1397/01K22DQKBV49PJM35FCX1M6TQA_z.webp', label: 'Common Room 1' },
@@ -930,7 +937,6 @@
                 features: ['🚇 Near Subway', '🏊 Swimming Pool', '🏋️ Gym'],
                 offer: 'One-time free SGD$60 shopping voucher',
                 contact: 'contact@uhomes.com | +65 9123 4570',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1666984?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1389/01JMA3H1B6NEX38BRHVA6YZY43_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1391/01K3RG04Q3GXBFRMHRGJFPATAJ_z.webp', label: 'Common Room 1' }
@@ -943,7 +949,6 @@
                 features: ['🌳 Near Park', '🚇 Near Subway', '🚌 Near Bus Station', '🏪 Near Supermarket', '🏋️ Gym', '❄️ Air Conditioner', '🏊 Swimming Pool'],
                 offer: 'One-time SG$320 Rent Rebate',
                 contact: 'contact@uhomes.com | +65 9123 4571',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1711475?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1385/01K8TWY29NCFRKX9JF70TDB673_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1385/01K92EAQPB08DDJP43DW36TXSM_z.webp', label: 'Common Room 1' },
@@ -957,7 +962,6 @@
                 features: ['🧹 Kitchen Cleaning', '🅿️ Free Parking', '🚌 Near School Bus', '🧺 Washing Machine', '🧹 Free Regular Cleaning'],
                 offer: '2 free cleaning services',
                 contact: 'contact@uhomes.com | +65 9123 4572',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1625206?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1385/01JZ0J9FXKN5515Z9Y1C7BXEER_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1397/01J7KR53GG5GKGG1QN82YKW80T_z.webp', label: 'Common Room 1' },
@@ -979,7 +983,6 @@
                 features: ['🚇 Near Subway', '🚌 Near Bus Station', '❄️ Air Conditioner', '🏋️ Gym', '🏊 Swimming Pool'],
                 offer: 'One-time SG$320 Rent Rebate',
                 contact: 'contact@uhomes.com | +65 9123 4573',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1689131?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1399/01KBFP6G0FWRS6Y6C7RBN2QPQC_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1397/01K59DVWNN1Z5DRG4JXSA7TR8E_z.webp', label: 'Common Room 1' },
@@ -993,7 +996,6 @@
                 features: ['🧺 Free Laundry', '🚌 Near Bus Station', '🏪 Near Supermarket', '🌳 Near Park', '🔒 24 Hour Security', '🚇 Near Subway', '🪟 Balcony'],
                 offer: '2 free cleaning services + One-time free SGD$60 shopping voucher',
                 contact: 'contact@uhomes.com | +65 9123 4574',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1580278?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1387/01J7PBB8GHV096CJT9S4S8W2M6_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1397/01HWGBYK7VQGJJPHE7094VX7V6_z.webp', label: 'Common Room 1' },
@@ -1010,7 +1012,6 @@
                 features: ['🚇 Near Subway', '🛍️ Near Shopping Center', '🏋️ Gym', '🏊 Swimming Pool', '🧺 Washing Machine', '❄️ Air Conditioner', '🛗 Elevator'],
                 offer: 'One-time free SGD$60 shopping voucher',
                 contact: 'contact@uhomes.com | +65 9123 4575',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656025?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1381/01JFFMJH9EBF4RSF3W6BXE7SR2_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1391/01JFFM2YQBHQ67EC82J5Y3WY65_z.webp', label: 'Common Room 1' },
@@ -1031,7 +1032,6 @@
                 features: ['🚇 Near Subway', '🏪 Near Supermarket', '🛍️ Near Shopping Center', '🏋️ Gym', '🧺 Washing Machine', '❄️ Air Conditioner', '🏊 Swimming Pool'],
                 offer: '2 free cleaning services',
                 contact: 'contact@uhomes.com | +65 9123 4576',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656006?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1385/01JNRF1Z719R4GKVSRK0CPF09G_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1385/01JFFKZFC18BPM2NKB6VC6G3M9_z.webp', label: 'Master Room 1' },
@@ -1046,7 +1046,6 @@
                 features: ['🚇 Near Subway', '🏪 Near Supermarket', '🛍️ Near Shopping Center', '🏋️ Gym', '🧺 Washing Machine', '❄️ Air Conditioner', '🏊 Swimming Pool'],
                 offer: 'One-time SG$80 transport card top-up',
                 contact: 'contact@uhomes.com | +65 9123 4577',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1634383?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1397/01J7P30A17CFFAZBB08DCXMYJS_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1381/01J7KDRQMGBFBG82FCM1VQJZT8_z.webp', label: 'Common Room 1' },
@@ -1062,7 +1061,6 @@
                 features: ['🏪 Near Supermarket', '🚇 Near Subway', '🛍️ Near Shopping Center', '🏋️ Gym', '🧺 Washing Machine', '🏊 Swimming Pool', '❄️ Air Conditioner'],
                 offer: 'One-time SG$100 dining credit',
                 contact: 'contact@uhomes.com | +65 9123 4578',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656700?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1399/01JFWG88FCPJHKHV6NV45TGT43_z.webp', label: 'Common Room' }
                 ]
@@ -1074,7 +1072,6 @@
                 features: ['🚇 Near Subway', '🛗 Elevator', '❄️ Air Conditioner'],
                 offer: 'One-time SG$80 transport card top-up',
                 contact: 'contact@uhomes.com | +65 9123 4579',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1639654?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1387/01J7PA4PAZ5N3JDF794PFZC4ZD_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1393/01J7KRBRJRG921W8FGRM89K9QK_z.webp', label: 'Common Room' },
@@ -1089,7 +1086,6 @@
                 features: ['🚇 Near Subway', '🏪 Near Supermarket', '🏋️ Gym', '🧺 Washing Machine', '🏊 Swimming Pool', '❄️ Air Conditioner'],
                 offer: 'One-time SG$100 dining credit + 2 free cleaning services',
                 contact: 'contact@uhomes.com | +65 9123 4580',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656471?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1391/01JFSXS9VYZCKZHJ7HS86PWRVK_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1381/01JFSY4PV4JX25K9EQJDCR93Q6_z.webp', label: 'Common Room 1' },
@@ -1103,7 +1099,6 @@
                 features: ['🚌 Near Bus Station', '🚇 Near Subway', '🏊 Swimming Pool'],
                 offer: 'One-time SG$100 dining credit',
                 contact: 'contact@uhomes.com | +65 9123 4581',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1688803?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1387/01K4WHSJGZGTTBFMB63PK63HSG_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1387/01K4WHRDB9F91RH1TXSJ1N6MK2_z.webp', label: 'Common Room 1' },
@@ -1118,7 +1113,6 @@
                 features: ['🏋️ Gym', '🏊 Swimming Pool', '🚇 Near Subway', '🚌 Near Bus Station', '🔒 24 Hour Security'],
                 offer: 'One-time SG$320 Rent Rebate',
                 contact: 'contact@uhomes.com | +65 9123 4582',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1680479?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1385/01JZAW6F0MKAC2T304YDF7N5C3_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1399/01JZ8A8N6R3R1GHET2BVSGNPVD_z.webp', label: 'Common Room 1' }
@@ -1131,7 +1125,6 @@
                 features: ['🚇 Near Subway', '❄️ Air Conditioner'],
                 offer: 'One-time SG$320 Rent Rebate',
                 contact: 'contact@uhomes.com | +65 9123 4583',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1623145?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1391/01J7P58KEY6NCDYP839E93P54Q_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1383/01JHQPTPTNZ04PNFKRQVMHMYPJ_z.webp', label: 'Common Room' },
@@ -1145,7 +1138,6 @@
                 features: ['🏊 Swimming Pool', '🚌 Near Bus Station', '❄️ Air Conditioner', '🏋️ Gym', '🚇 Near Subway'],
                 offer: '2 free cleaning services',
                 contact: 'contact@uhomes.com | +65 9123 4584',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1644712?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1391/01JA5NHHBQPZSGFHQRW0PE5KBC_z.webp', label: 'Common Room' }
                 ]
@@ -1157,7 +1149,6 @@
                 features: ['🚌 Near Bus Station', '🌳 Near Park', '🚇 Near Subway', '🛍️ Near Shopping Centre', '🧺 Washing Machine', '🏋️ Gym', '🏊 Swimming Pool', '❄️ Air Conditioner'],
                 offer: 'One-time SG$320 Rent Rebate',
                 contact: 'contact@uhomes.com | +65 9123 4585',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1656458?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1391/01KB07ST33M4WV5WMD1X55ZF6Z_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1397/01KB080KV7R1RFZKNH0CXST6JX_z.webp', label: 'Common Room' },
@@ -1172,7 +1163,6 @@
                 features: ['🚇 Near Subway', '🏊 Swimming Pool', '❄️ Air Conditioner', '🏋️ Gym'],
                 offer: 'One-time free SGD$60 shopping voucher',
                 contact: 'contact@uhomes.com | +65 9123 4586',
-                bookingUrl: 'https://en.uhomes.com/sg/singapore/detail-apartments-1624372?schoolunique=republic-polytechnic-rp',
                 photos: [
                     { url: 'https://media.uhzcdn.com/image/1395/01K68AC7GMFMJMYGXY6ZY5G5X2_z.webp', label: 'Master Room' },
                     { url: 'https://media.uhzcdn.com/image/1389/01J7KMJZBYC8JW7A1N5RP4YT6B_z.webp', label: 'Master Room 1' },
@@ -1206,6 +1196,7 @@
             const priceFilters = Array.from(document.querySelectorAll('.price-filter:checked')).map(cb => cb.value);
             const locationFilters = Array.from(document.querySelectorAll('.location-filter:checked')).map(cb => cb.value);
             const featureFilters = Array.from(document.querySelectorAll('.feature-filter:checked')).map(cb => cb.value);
+            const offerFilters = Array.from(document.querySelectorAll('.offer-filter:checked')).map(cb => cb.value);
 
             const cards = document.querySelectorAll('.property-card');
             
@@ -1218,6 +1209,7 @@
                 let priceMatch = priceFilters.length === 0;
                 let locationMatch = locationFilters.length === 0;
                 let featureMatch = featureFilters.length === 0;
+                let offerMatch = offerFilters.length === 0;
 
                 // Price range matching
                 if (priceFilters.length > 0) {
@@ -1234,8 +1226,13 @@
                     featureMatch = featureFilters.every(filter => features.includes(filter));
                 }
 
+                // Offer matching - ANY selected offer must be present
+                if (offerFilters.length > 0) {
+                    offerMatch = offerFilters.some(filter => offer.toLowerCase().includes(filter.toLowerCase()));
+                }
+
                 // Show card only if all conditions are met
-                card.style.display = (priceMatch && locationMatch && featureMatch) ? '' : 'none';
+                card.style.display = (priceMatch && locationMatch && featureMatch && offerMatch) ? '' : 'none';
             });
         }
 
@@ -1244,6 +1241,7 @@
             document.querySelectorAll('.price-filter').forEach(cb => cb.checked = false);
             document.querySelectorAll('.location-filter').forEach(cb => cb.checked = false);
             document.querySelectorAll('.feature-filter').forEach(cb => cb.checked = false);
+            document.querySelectorAll('.offer-filter').forEach(cb => cb.checked = false);
             
             const cards = document.querySelectorAll('.property-card');
             cards.forEach(card => {
@@ -1281,16 +1279,60 @@
                             ${prop.features.slice(0, 3).map(f => `<span class="feature-badge">${f}</span>`).join('')}
                         </div>
                         
-                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">
-                            <strong>Features:</strong><br>
-                            ${prop.features.join('<br>')}
-                        </p>
+                        <div class="tabs">
+                            <button class="tab-button active" onclick="switchTab(${idx}, 'details')">Details</button>
+                            <button class="tab-button" onclick="switchTab(${idx}, 'offer')">Offer(s)</button>
+                            <button class="tab-button" onclick="switchTab(${idx}, 'photos')">Photos</button>
+                        </div>
+                        
+                        <div class="tab-content active" id="details-${idx}">
+                            <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">
+                                <strong>Features:</strong><br>
+                                ${prop.features.join('<br>')}
+                            </p>
+                            <p style="font-size: 0.85rem; color: #666;">
+                                <strong>Contact:</strong><br>${prop.contact}
+                            </p>
+                        </div>
 
-                        <button class="book-now-btn" onclick="window.open('${prop.bookingUrl}', '_blank')">Click to explore</button>
+                        <div class="tab-content" id="offer-${idx}">
+                            <div class="offer-section">
+                                <div class="offer-label">✨ Special Offer</div>
+                                <div class="offer-text">${prop.offer}</div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="photos-${idx}">
+                            <div class="photos-grid">
+                                ${prop.photos.map(photo => `
+                                    <div class="photo-item">
+                                        <img src="${photo.url}" alt="${photo.label}" onclick="viewPhoto('${photo.url}')">
+                                        <div class="photo-label">${photo.label}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <button class="book-now-btn" onclick="openBookingModal(${idx})">Book Now</button>
                     </div>
                 </div>
                 `;
             }).join('');
+        }
+
+        function switchTab(propIdx, tabName) {
+            // Hide all tabs for this property
+            document.getElementById(`details-${propIdx}`).classList.remove('active');
+            document.getElementById(`offer-${propIdx}`).classList.remove('active');
+            document.getElementById(`photos-${propIdx}`).classList.remove('active');
+
+            // Remove active from all buttons
+            const buttons = document.querySelectorAll(`[onclick*="switchTab(${propIdx}"]`);
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Show selected tab
+            document.getElementById(`${tabName}-${propIdx}`).classList.add('active');
+            event.target.classList.add('active');
         }
 
         function openBookingModal(propIdx) {
@@ -1426,6 +1468,231 @@
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', initializeProperties);
     </script>
-    <script src="hotel-styles.js"></script>
+
+    <!-- Chatbot Icon Button -->
+    <button id="chatbotBtn" class="chatbot-btn" title="Chat with AI Assistant">💬</button>
+
+    <!-- Chatbot Floating Window -->
+    <div id="chatbotWindow" class="chatbot-window">
+        <div id="chatbotHeader" class="chatbot-header">
+            <span class="chatbot-title">AI Assistant</span>
+            <div class="chatbot-controls">
+                <button id="maximizeChatbot" class="chatbot-control-btn" title="Maximize">⛶</button>
+                <button id="closeChatbot" class="chatbot-control-btn" title="Close">✕</button>
+            </div>
+        </div>
+        <div class="chatbot-content">
+            <iframe id="chatbotIframe" src="https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/11/17/06/20251117063831-2TFLV737.json" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+    </div>
+
+    <style>
+        .chatbot-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #B40000;
+            color: white;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(180, 0, 0, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-btn:hover {
+            background-color: #8B0000;
+            box-shadow: 0 6px 16px rgba(180, 0, 0, 0.4);
+            transform: scale(1.1);
+        }
+
+        .chatbot-btn:active {
+            transform: scale(0.95);
+        }
+
+        .chatbot-window {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 450px;
+            height: 650px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            flex-direction: column;
+            animation: slideUp 0.3s ease;
+        }
+
+        .chatbot-window.show {
+            display: flex;
+        }
+
+        .chatbot-window.maximized {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+            bottom: auto;
+            right: auto;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, #B40000 0%, #8B0000 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: move;
+            user-select: none;
+        }
+
+        .chatbot-window.maximized .chatbot-header {
+            border-radius: 0;
+        }
+
+        .chatbot-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .chatbot-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chatbot-control-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .chatbot-control-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatbot-content {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .chatbot-window.maximized .chatbot-content {
+            border-radius: 0;
+        }
+
+        @keyframes slideUp {
+            from { 
+                transform: translateY(50px) translateX(0);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chatbot-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .chatbot-window {
+                width: 100%;
+                height: 100vh;
+                bottom: auto;
+                right: auto;
+                left: 0;
+                top: 0;
+                border-radius: 0;
+            }
+        }
+    </style>
+
+    <script>
+        const chatbotBtn = document.getElementById('chatbotBtn');
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        const chatbotHeader = document.getElementById('chatbotHeader');
+        const maximizeChatbot = document.getElementById('maximizeChatbot');
+        const closeChatbot = document.getElementById('closeChatbot');
+
+        let isDragging = false;
+        let startX, startY, startLeft, startTop;
+        let isMaximized = false;
+
+        // Open chatbot on button click
+        chatbotBtn.addEventListener('click', function() {
+            chatbotWindow.classList.add('show');
+        });
+
+        // Close chatbot
+        closeChatbot.addEventListener('click', function() {
+            chatbotWindow.classList.remove('show');
+        });
+
+        // Maximize/Minimize chatbot - Opens in new window
+        maximizeChatbot.addEventListener('click', function() {
+            window.open('https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/11/17/06/20251117063831-2TFLV737.json', 'ChatbotWindow', 'width=800,height=800');
+        });
+
+        // Dragging functionality
+        chatbotHeader.addEventListener('mousedown', function(e) {
+            if (isMaximized) return;
+            if (e.target === maximizeChatbot || e.target === closeChatbot) return;
+            
+            isDragging = true;
+            startX = e.clientX;
+            startY = e.clientY;
+            startLeft = chatbotWindow.offsetLeft;
+            startTop = chatbotWindow.offsetTop;
+            chatbotHeader.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            
+            const deltaX = e.clientX - startX;
+            const deltaY = e.clientY - startY;
+            
+            chatbotWindow.style.left = (startLeft + deltaX) + 'px';
+            chatbotWindow.style.top = (startTop + deltaY) + 'px';
+            chatbotWindow.style.bottom = 'auto';
+            chatbotWindow.style.right = 'auto';
+        });
+
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+            chatbotHeader.style.cursor = 'move';
+        });
+    </script>
+    </script>
 </body>
 </html>

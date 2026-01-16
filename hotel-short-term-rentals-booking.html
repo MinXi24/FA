@@ -12,16 +12,7 @@
         <div class="nav-container">
             <div class="logo">
                 <div class="logo-content">
-                    <svg class="logo-icon" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#B40000;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#8B0000;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="60" cy="45" r="35" fill="url(#logoGradient)" />
-                        <text x="60" y="50" font-size="50" text-anchor="middle" dominant-baseline="middle">✈️</text>
-                    </svg><span>TravelMate</span>
+                    <svg class="logo-icon" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#B40000;stop-opacity:1" /><stop offset="100%" style="stop-color:#8B0000;stop-opacity:1" /></linearGradient></defs><circle cx="60" cy="45" r="35" fill="url(#logoGradient)" /><text x="60" y="50" font-size="50" text-anchor="middle" dominant-baseline="middle">✈️</text></svg><span>TravelMate</span>
                 </div>
                 <div class="logo-tagline">Your Student Staycation Partner</div>
             </div>
@@ -154,9 +145,11 @@
                     <h3>Standard Room Cove 193 @ 27 Casuarina Road</h3>
                     <span class="location-tag">📍 Mayflower</span>
                 </div>
-                <img src="https://media.coveliving.io/81809/conversions/C193-27-Casuarina-Road-Mayflower-MRT-Red-2-large.jpg" alt="Standard Room Cove 193" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin: 1rem 0;">
                 <div class="hotel-booking-tabs">
                     <button class="hotel-tab-btn active" onclick="switchCoveTab(this, 'details-cove1')">Details</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'photos-cove1')">Photos</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'offers-cove1')">Offer(s)</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'floorplan-cove1')">Floor Plan/Virtual Tour (VR)</button>
                 </div>
                 <div class="hotel-booking-details active" id="details-cove1">
                     <p class="hotel-address">27 Casuarina Road, Singapore, 579415</p>
@@ -168,7 +161,21 @@
                         <span class="amenity-badge">🏊 Swimming Pool</span>
                         <span class="amenity-badge">❄️ Air Conditioner</span>
                     </div>
-                    <a href="https://cove.sg/listings/2317-cove-193-standard-room-27-casuarina-road" class="book-now-btn" target="_blank">CLICK TO EXPLORE</a>
+                    <div class="contact-info">
+                        <p><strong>📧 Email:</strong> bookings@cove.sg</p>
+                        <p><strong>📱 Phone:</strong> +65 9234 4860</p>
+                    </div>
+                    <button class="book-now-btn" onclick="openCoveBookingModal(850, 'Standard Room Cove 193')">BOOK NOW</button>
+                </div>
+                <div class="hotel-booking-photos" id="photos-cove1">
+                    <div class="hotel-photos-grid" id="photo-grid-cove1"></div>
+                </div>
+                <div class="hotel-booking-offers" id="offers-cove1">
+                    <h4>Special Offers Available:</h4>
+                    <p>💰 <strong>$280 Rent Rebate</strong> - Enjoy a $280 discount on your rent when you book this month!</p>
+                </div>
+                <div class="hotel-booking-floorplan" id="floorplan-cove1">
+                    <div class="floorplan-container"></div>
                 </div>
             </div>
 
@@ -178,9 +185,11 @@
                     <h3>Standard Room Cove 320 @ Esta Ruby</h3>
                     <span class="location-tag">📍 Paya Lebar</span>
                 </div>
-                <img src="https://media.coveliving.io/43684/conversions/C320-Esta-Ruby--03-04-Paya-Lebar-MRT-Yellow-Room-1-large.jpg" alt="Standard Room Cove 320" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin: 1rem 0;">
                 <div class="hotel-booking-tabs">
                     <button class="hotel-tab-btn active" onclick="switchCoveTab(this, 'details-cove2')">Details</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'photos-cove2')">Photos</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'offers-cove2')">Offer(s)</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'floorplan-cove2')">Floor Plan/Virtual Tour (VR)</button>
                 </div>
                 <div class="hotel-booking-details active" id="details-cove2">
                     <p class="hotel-address">500 Guillemard Rd, Singapore, 399839</p>
@@ -191,7 +200,21 @@
                         <span class="amenity-badge">🚌 Near Bus Station</span>
                         <span class="amenity-badge">🛗 Elevator</span>
                     </div>
-                    <a href="https://cove.sg/listings/1772-cove-320-standard-room-esta-ruby" class="book-now-btn" target="_blank">CLICK TO EXPLORE</a>
+                    <div class="contact-info">
+                        <p><strong>📧 Email:</strong> bookings@cove.sg</p>
+                        <p><strong>📱 Phone:</strong> +65 9234 4861</p>
+                    </div>
+                    <button class="book-now-btn" onclick="openCoveBookingModal(1150, 'Standard Room Cove 320')">BOOK NOW</button>
+                </div>
+                <div class="hotel-booking-photos" id="photos-cove2">
+                    <div class="hotel-photos-grid" id="photo-grid-cove2"></div>
+                </div>
+                <div class="hotel-booking-offers" id="offers-cove2">
+                    <h4>Special Offers Available:</h4>
+                    <p>💰 <strong>$280 Rent Rebate</strong> - Enjoy a $280 discount on your rent when you book this month!</p>
+                </div>
+                <div class="hotel-booking-floorplan" id="floorplan-cove2">
+                    <div class="floorplan-container"></div>
                 </div>
             </div>
 
@@ -201,9 +224,11 @@
                     <h3>Standard Room within a Landed House (Cove 271)</h3>
                     <span class="location-tag">📍 Kembangan</span>
                 </div>
-                <img src="https://media.coveliving.io/22355/conversions/C271---22A-Jalan-Selamat---Kembangan-MRT---Black-Room-1-large.jpg" alt="Standard Room Cove 271" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin: 1rem 0;">
                 <div class="hotel-booking-tabs">
                     <button class="hotel-tab-btn active" onclick="switchCoveTab(this, 'details-cove3')">Details</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'photos-cove3')">Photos</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'offers-cove3')">Offer(s)</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'floorplan-cove3')">Floor Plan/Virtual Tour (VR)</button>
                 </div>
                 <div class="hotel-booking-details active" id="details-cove3">
                     <p class="hotel-address">22A Jalan Selamat, Singapore, 418545</p>
@@ -215,7 +240,21 @@
                         <span class="amenity-badge">🏊 Swimming Pool</span>
                         <span class="amenity-badge">🏡 Balcony</span>
                     </div>
-                    <a href="https://cove.sg/listings/1139-cove-271-standard-room-22a-jalan-selamat" class="book-now-btn" target="_blank">CLICK TO EXPLORE</a>
+                    <div class="contact-info">
+                        <p><strong>📧 Email:</strong> bookings@cove.sg</p>
+                        <p><strong>📱 Phone:</strong> +65 9234 4862</p>
+                    </div>
+                    <button class="book-now-btn" onclick="openCoveBookingModal(1250, 'Standard Room Cove 271')">BOOK NOW</button>
+                </div>
+                <div class="hotel-booking-photos" id="photos-cove3">
+                    <div class="hotel-photos-grid" id="photo-grid-cove3"></div>
+                </div>
+                <div class="hotel-booking-offers" id="offers-cove3">
+                    <h4>Special Offers Available:</h4>
+                    <p>💰 <strong>$280 Rent Rebate</strong> - Enjoy a $280 discount on your rent when you book this month!</p>
+                </div>
+                <div class="hotel-booking-floorplan" id="floorplan-cove3">
+                    <div class="floorplan-container"></div>
                 </div>
             </div>
 
@@ -225,9 +264,11 @@
                     <h3>Pocket Room Cove 491 @ Emerald Park</h3>
                     <span class="location-tag">📍 Havelock</span>
                 </div>
-                <img src="https://media.coveliving.io/94184/conversions/pictures-Piccola-2-large.jpg" alt="Pocket Room Cove 491" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin: 1rem 0;">
                 <div class="hotel-booking-tabs">
                     <button class="hotel-tab-btn active" onclick="switchCoveTab(this, 'details-cove4')">Details</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'photos-cove4')">Photos</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'offers-cove4')">Offer(s)</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'floorplan-cove4')">Floor Plan/Virtual Tour (VR)</button>
                 </div>
                 <div class="hotel-booking-details active" id="details-cove4">
                     <p class="hotel-address">Emerald Park, #02-08, 2 Indus Road, Singapore, 169586</p>
@@ -238,7 +279,21 @@
                         <span class="amenity-badge">🅿️ Free Parking</span>
                         <span class="amenity-badge">🧹 Kitchen Cleaning</span>
                     </div>
-                    <a href="https://cove.sg/listings/3198-cove-491-pocket-room-emerald-park" class="book-now-btn" target="_blank">CLICK TO EXPLORE</a>
+                    <div class="contact-info">
+                        <p><strong>📧 Email:</strong> bookings@cove.sg</p>
+                        <p><strong>📱 Phone:</strong> +65 9234 4863</p>
+                    </div>
+                    <button class="book-now-btn" onclick="openCoveBookingModal(1200, 'Pocket Room Cove 491')">BOOK NOW</button>
+                </div>
+                <div class="hotel-booking-photos" id="photos-cove4">
+                    <div class="hotel-photos-grid" id="photo-grid-cove4"></div>
+                </div>
+                <div class="hotel-booking-offers" id="offers-cove4">
+                    <h4>Special Offers Available:</h4>
+                    <p>🧹 <strong>1 Free Cleaning Session</strong> - Get one complimentary cleaning session when you book this month!</p>
+                </div>
+                <div class="hotel-booking-floorplan" id="floorplan-cove4">
+                    <div class="floorplan-container"></div>
                 </div>
             </div>
 
@@ -248,9 +303,11 @@
                     <h3>Standard Room Cove 144 @ 19A Tai Thong Crescent</h3>
                     <span class="location-tag">📍 Potong Pasir</span>
                 </div>
-                <img src="https://media.coveliving.io/90944/conversions/C144-19A-Tai-Thong-Crescent-Potong-Pasir-MRT-Purple-1-large.jpg" alt="Standard Room Cove 144" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin: 1rem 0;">
                 <div class="hotel-booking-tabs">
                     <button class="hotel-tab-btn active" onclick="switchCoveTab(this, 'details-cove5')">Details</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'photos-cove5')">Photos</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'offers-cove5')">Offer(s)</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'floorplan-cove5')">Floor Plan/Virtual Tour (VR)</button>
                 </div>
                 <div class="hotel-booking-details active" id="details-cove5">
                     <p class="hotel-address">19A Tai Thong Crescent, Singapore, 347853</p>
@@ -262,7 +319,21 @@
                         <span class="amenity-badge">💪 Gym</span>
                         <span class="amenity-badge">🏊 Swimming Pool</span>
                     </div>
-                    <a href="https://cove.sg/listings/2488-cove-144-standard-room-19a-tai-thong-crescent" class="book-now-btn" target="_blank">CLICK TO EXPLORE</a>
+                    <div class="contact-info">
+                        <p><strong>📧 Email:</strong> bookings@cove.sg</p>
+                        <p><strong>📱 Phone:</strong> +65 9234 4865</p>
+                    </div>
+                    <button class="book-now-btn" onclick="openCoveBookingModal(1200, 'Standard Room Cove 144')">BOOK NOW</button>
+                </div>
+                <div class="hotel-booking-photos" id="photos-cove5">
+                    <div class="hotel-photos-grid" id="photo-grid-cove5"></div>
+                </div>
+                <div class="hotel-booking-offers" id="offers-cove5">
+                    <h4>Special Offers Available:</h4>
+                    <p>🚌 <strong>$40 Transport Card Top-up</strong> - Get $40 credit for your transport card when you book this month!</p>
+                </div>
+                <div class="hotel-booking-floorplan" id="floorplan-cove5">
+                    <div class="floorplan-container"></div>
                 </div>
             </div>
 
@@ -272,9 +343,11 @@
                     <h3>Standard Room Cove 238 @ Nuovo</h3>
                     <span class="location-tag">📍 Ang Mo Kio</span>
                 </div>
-                <img src="https://media.coveliving.io/24899/conversions/C238---Nuovo-Unit---Yio-Chu-Kang-Mrt---Yellow-Room-2-large.jpg" alt="Standard Room Cove 238" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin: 1rem 0;">
                 <div class="hotel-booking-tabs">
                     <button class="hotel-tab-btn active" onclick="switchCoveTab(this, 'details-cove6')">Details</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'photos-cove6')">Photos</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'offers-cove6')">Offer(s)</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'floorplan-cove6')">Floor Plan/Virtual Tour (VR)</button>
                 </div>
                 <div class="hotel-booking-details active" id="details-cove6">
                     <p class="hotel-address">23 Ang Mo Kio Avenue 9, Singapore, 569787</p>
@@ -285,7 +358,21 @@
                         <span class="amenity-badge">🧺 Washing Machine</span>
                         <span class="amenity-badge">🔒 24-Hour Security</span>
                     </div>
-                    <a href="https://cove.sg/listings/1076-cove-238-standard-room-nuovo" class="book-now-btn" target="_blank">CLICK TO EXPLORE</a>
+                    <div class="contact-info">
+                        <p><strong>📧 Email:</strong> bookings@cove.sg</p>
+                        <p><strong>📱 Phone:</strong> +65 9234 4866</p>
+                    </div>
+                    <button class="book-now-btn" onclick="openCoveBookingModal(1200, 'Standard Room Cove 238')">BOOK NOW</button>
+                </div>
+                <div class="hotel-booking-photos" id="photos-cove6">
+                    <div class="hotel-photos-grid" id="photo-grid-cove6"></div>
+                </div>
+                <div class="hotel-booking-offers" id="offers-cove6">
+                    <h4>Special Offers Available:</h4>
+                    <p>🍽️ <strong>$60 Dining Credit</strong> - Enjoy $60 credit for dining at partner restaurants when you book this month!</p>
+                </div>
+                <div class="hotel-booking-floorplan" id="floorplan-cove6">
+                    <div class="floorplan-container"></div>
                 </div>
             </div>
 
@@ -295,9 +382,11 @@
                     <h3>Standard Room Cove 195 @ 18A Valley Road</h3>
                     <span class="location-tag">📍 Kovan</span>
                 </div>
-                <img src="https://media.coveliving.io/81642/conversions/C195-18A-Valley-Road-Kovan-MRT-Red-1-large.jpg" alt="Standard Room Cove 195" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin: 1rem 0;">
                 <div class="hotel-booking-tabs">
                     <button class="hotel-tab-btn active" onclick="switchCoveTab(this, 'details-cove7')">Details</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'photos-cove7')">Photos</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'offers-cove7')">Offer(s)</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'floorplan-cove7')">Floor Plan/Virtual Tour (VR)</button>
                 </div>
                 <div class="hotel-booking-details active" id="details-cove7">
                     <p class="hotel-address">18A Valley Road, Singapore, 534475</p>
@@ -308,7 +397,21 @@
                         <span class="amenity-badge">🅿️ Free Parking</span>
                         <span class="amenity-badge">🧹 Kitchen Cleaning</span>
                     </div>
-                    <a href="https://cove.sg/listings/1653-cove-195-standard-room-18a-valley-road" class="book-now-btn" target="_blank">CLICK TO EXPLORE</a>
+                    <div class="contact-info">
+                        <p><strong>📧 Email:</strong> bookings@cove.sg</p>
+                        <p><strong>📱 Phone:</strong> +65 9234 4867</p>
+                    </div>
+                    <button class="book-now-btn" onclick="openCoveBookingModal(950, 'Standard Room Cove 195')">BOOK NOW</button>
+                </div>
+                <div class="hotel-booking-photos" id="photos-cove7">
+                    <div class="hotel-photos-grid" id="photo-grid-cove7"></div>
+                </div>
+                <div class="hotel-booking-offers" id="offers-cove7">
+                    <h4>Special Offers Available:</h4>
+                    <p>🧹 <strong>1 Free Cleaning Session</strong> - Get one complimentary cleaning session when you book this month!</p>
+                </div>
+                <div class="hotel-booking-floorplan" id="floorplan-cove7">
+                    <div class="floorplan-container"></div>
                 </div>
             </div>
 
@@ -318,9 +421,11 @@
                     <h3>Pocket Room Cove 433 @ Cassia View</h3>
                     <span class="location-tag">📍 Dakota</span>
                 </div>
-                <img src="https://media.coveliving.io/93548/conversions/pictures-fb9713ef-0617-4d04-8d45-5f5e4ee01aeaPiccola-large.jpg" alt="Pocket Room Cove 433" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin: 1rem 0;">
                 <div class="hotel-booking-tabs">
                     <button class="hotel-tab-btn active" onclick="switchCoveTab(this, 'details-cove8')">Details</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'photos-cove8')">Photos</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'offers-cove8')">Offer(s)</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'floorplan-cove8')">Floor Plan/Virtual Tour (VR)</button>
                 </div>
                 <div class="hotel-booking-details active" id="details-cove8">
                     <p class="hotel-address">Cassia View, #16-02, 320 Guillemard Rd, Singapore, 399746</p>
@@ -331,7 +436,21 @@
                         <span class="amenity-badge">🏊 Swimming Pool</span>
                         <span class="amenity-badge">❄️ Air Conditioner</span>
                     </div>
-                    <a href="https://cove.sg/listings/2910-cove-433-pocket-room-cassia-view" class="book-now-btn" target="_blank">CLICK TO EXPLORE</a>
+                    <div class="contact-info">
+                        <p><strong>📧 Email:</strong> bookings@cove.sg</p>
+                        <p><strong>📱 Phone:</strong> +65 9234 4868</p>
+                    </div>
+                    <button class="book-now-btn" onclick="openCoveBookingModal(1000, 'Pocket Room Cove 433')">BOOK NOW</button>
+                </div>
+                <div class="hotel-booking-photos" id="photos-cove8">
+                    <div class="hotel-photos-grid" id="photo-grid-cove8"></div>
+                </div>
+                <div class="hotel-booking-offers" id="offers-cove8">
+                    <h4>Special Offers Available:</h4>
+                    <p>🛍️ <strong>$40 Shopping Voucher</strong> - Get a $40 voucher for shopping at major retailers when you book this month!</p>
+                </div>
+                <div class="hotel-booking-floorplan" id="floorplan-cove8">
+                    <div class="floorplan-container"></div>
                 </div>
             </div>
 
@@ -341,9 +460,11 @@
                     <h3>Standard Room Cove 89 @ Havelock Road</h3>
                     <span class="location-tag">📍 Tiong Bahru</span>
                 </div>
-                <img src="https://media.coveliving.io/37879/conversions/C89-743B-Havelock-Road-Tiong-Bahru-MRT-Yellow-Room-1-large.jpg" alt="Standard Room Cove 89" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin: 1rem 0;">
                 <div class="hotel-booking-tabs">
                     <button class="hotel-tab-btn active" onclick="switchCoveTab(this, 'details-cove9')">Details</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'photos-cove9')">Photos</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'offers-cove9')">Offer(s)</button>
+                    <button class="hotel-tab-btn" onclick="switchCoveTab(this, 'floorplan-cove9')">Floor Plan/Virtual Tour (VR)</button>
                 </div>
                 <div class="hotel-booking-details active" id="details-cove9">
                     <p class="hotel-address">743b Havelock Road, Singapore, 169656</p>
@@ -355,7 +476,21 @@
                         <span class="amenity-badge">🧺 Washing Machine</span>
                         <span class="amenity-badge">💪 Gym</span>
                     </div>
-                    <a href="https://cove.sg/listings/1380-cove-89-standard-room-havelock-road" class="book-now-btn" target="_blank">CLICK TO EXPLORE</a>
+                    <div class="contact-info">
+                        <p><strong>📧 Email:</strong> bookings@cove.sg</p>
+                        <p><strong>📱 Phone:</strong> +65 9234 4869</p>
+                    </div>
+                    <button class="book-now-btn" onclick="openCoveBookingModal(1250, 'Standard Room Cove 89')">BOOK NOW</button>
+                </div>
+                <div class="hotel-booking-photos" id="photos-cove9">
+                    <div class="hotel-photos-grid" id="photo-grid-cove9"></div>
+                </div>
+                <div class="hotel-booking-offers" id="offers-cove9">
+                    <h4>Special Offers Available:</h4>
+                    <p>🍽️ <strong>$60 Dining Credit</strong> - Enjoy $60 credit for dining at partner restaurants when you book this month!</p>
+                </div>
+                <div class="hotel-booking-floorplan" id="floorplan-cove9">
+                    <div class="floorplan-container"></div>
                 </div>
             </div>
         </div>
@@ -996,6 +1131,139 @@
 
     <script src="styles.js"></script>
 
-    <script src="hotel-styles.js"></script>
+    <!-- Chatbot Icon Button -->
+    <button id="chatbotBtn" class="chatbot-btn" title="Chat with AI Assistant">💬</button>
+
+    <!-- Chatbot Modal -->
+    <div id="chatbotModal" class="chatbot-modal">
+        <div class="chatbot-modal-content">
+            <button id="closeChatbot" class="chatbot-close">&times;</button>
+            <iframe id="chatbotIframe" src="https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/11/17/06/20251117063831-2TFLV737.json" style="width: 100%; height: 100%; border: none; border-radius: 8px;"></iframe>
+        </div>
+    </div>
+
+    <style>
+        .chatbot-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #B40000;
+            color: white;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(180, 0, 0, 0.3);
+            z-index: 999;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-btn:hover {
+            background-color: #8B0000;
+            box-shadow: 0 6px 16px rgba(180, 0, 0, 0.4);
+            transform: scale(1.1);
+        }
+
+        .chatbot-btn:active {
+            transform: scale(0.95);
+        }
+
+        .chatbot-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .chatbot-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-modal-content {
+            background-color: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            height: 80vh;
+            max-height: 700px;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.3s ease;
+        }
+
+        .chatbot-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #666;
+            z-index: 1001;
+            transition: color 0.2s ease;
+        }
+
+        .chatbot-close:hover {
+            color: #000;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .chatbot-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .chatbot-modal-content {
+                width: 95%;
+                height: 90vh;
+            }
+        }
+    </style>
+
+    <script>
+        const chatbotBtn = document.getElementById('chatbotBtn');
+        const chatbotModal = document.getElementById('chatbotModal');
+        const closeChatbot = document.getElementById('closeChatbot');
+
+        chatbotBtn.addEventListener('click', function() {
+            window.open('https://cdn.botpress.cloud/webchat/v3.5/shareable.html?configUrl=https://files.bpcontent.cloud/2025/11/17/06/20251117063831-2TFLV737.json', 'ChatbotWindow', 'width=800,height=800');
+        });
+
+        closeChatbot.addEventListener('click', function() {
+            chatbotModal.classList.remove('show');
+        });
+
+        chatbotModal.addEventListener('click', function(event) {
+            if (event.target === chatbotModal) {
+                chatbotModal.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>
